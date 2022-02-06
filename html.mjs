@@ -1,3 +1,5 @@
+import { type } from "os";
+
 const VOID_ELEMENTS = {
   area: true,
   base: true,
@@ -20,17 +22,16 @@ const VOID_ELEMENTS = {
 export const createTag = (name, isVoid) => {
   const open = `<${name}`;
   const enter = '>';
-  const close = `</${name}>`;
-  let a;
-  let arg;
-  let entered;
-  let fragments;
-  return function tag () {
-    fragments = [open];
+  const close = VOID_ELEMENTS[name] || isVoid ? null : `</${name}>`;
 
+  return function tag () {
+    let a;
+    let arg;
+    let entered;
+    let fragments;
+    fragments = [open];
     for (a = 0; a < arguments.length; a++) {
       arg = arguments[a];
-      console.log('arg', arg);
       switch (true) {
         case typeof arg === 'string':
           if (!entered) {
@@ -45,16 +46,13 @@ export const createTag = (name, isVoid) => {
             entered = true;
           }
           arg.forEach((c) => {
-            if (Array.isArray(c)) c.forEach(f => fragments.push(f));
-            else fragments.push(c);
+            fragments.push(c);
           });
           break;
         default:
           for (let key in arg) {
             if (arg.hasOwnProperty(key)) {
-              fragments.push(" ");
-              fragments.push(key);
-              fragments.push(`="`);
+              fragments.push(` ${key}="`);
               fragments.push(arg[key]);
               fragments.push(`"`);
             }
@@ -182,10 +180,58 @@ export const ul = createTag('ul');
 export const video = createTag('video');
 export const wbr = createTag('wbr');
 
-console.log(
-  html([
-    'hello',
-    'there',
-    img({ src: 'a.jpg' })
-  ]).join('')
-)
+const isPromise = (o) => typeof o === 'object' && !!o.then;
+
+const render = async (p, onChunk) => {
+  if (isPromise(p)) p = await p;
+  let i = 0;
+  let a = p;
+  let frag;
+  let outer = [];
+  while (true) {
+    frag = a[i];
+    if (isPromise(frag)) frag = await frag;
+    
+    if (Array.isArray(frag)) {
+      outer.push([a, i + 1]);
+      i = 0;
+      a = frag;
+    } else {
+      if (typeof frag === 'undefined') {
+        if (outer.length) {
+          [a, i] = outer.pop();
+        } else {
+          break; // nothing left to do...
+        }
+      } else {
+        i++;
+        onChunk(frag);
+      }
+    }
+  }
+}
+
+render(Promise.resolve([
+  1,
+  Promise.resolve(2),
+  [
+    3,
+    4,
+    5,
+    6,
+    Promise.resolve([
+      7,
+      8
+    ]),
+    9
+  ],
+  10
+]), (f) => {
+  console.log(f);
+});
+
+// render(div([
+//   'hello',
+//   'there',
+//   img({ src: Promise.resolve('a.jpg') })
+// ]))
