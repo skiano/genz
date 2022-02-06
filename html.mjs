@@ -1,4 +1,4 @@
-import { type } from "os";
+const isPromise = (o) => typeof o === 'object' && !!o.then;
 
 const VOID_ELEMENTS = {
   area: true,
@@ -23,7 +23,6 @@ export const createTag = (name, isVoid) => {
   const open = `<${name}`;
   const enter = '>';
   const close = VOID_ELEMENTS[name] || isVoid ? null : `</${name}>`;
-
   return function tag () {
     let a;
     let arg;
@@ -33,7 +32,7 @@ export const createTag = (name, isVoid) => {
     for (a = 0; a < arguments.length; a++) {
       arg = arguments[a];
       switch (true) {
-        case typeof arg === 'string':
+        case typeof arg === 'string' || isPromise(arg):
           if (!entered) {
             fragments.push(enter);
             entered = true;
@@ -180,9 +179,7 @@ export const ul = createTag('ul');
 export const video = createTag('video');
 export const wbr = createTag('wbr');
 
-const isPromise = (o) => typeof o === 'object' && !!o.then;
-
-const render = async (p, onChunk) => {
+export const render = async (p, onChunk) => {
   if (isPromise(p)) p = await p;
   let i = 0;
   let a = p;
@@ -190,8 +187,8 @@ const render = async (p, onChunk) => {
   let outer = [];
   while (true) {
     frag = a[i];
+
     if (isPromise(frag)) frag = await frag;
-    
     if (Array.isArray(frag)) {
       outer.push([a, i + 1]);
       i = 0;
@@ -209,29 +206,25 @@ const render = async (p, onChunk) => {
       }
     }
   }
-}
+};
 
-render(Promise.resolve([
-  1,
-  Promise.resolve(2),
-  [
-    3,
-    4,
-    5,
-    6,
-    Promise.resolve([
-      7,
-      8
-    ]),
-    9
-  ],
-  10
-]), (f) => {
-  console.log(f);
-});
+(async () => {
+  const asyncComponent = async (str) => {
+    const slow = await Promise.resolve(`slow: ${str}`);
+    return div(slow);
+  }
 
-// render(div([
-//   'hello',
-//   'there',
-//   img({ src: Promise.resolve('a.jpg') })
-// ]))
+  const page = html(
+    head(),
+    body(
+      main(
+        asyncComponent('a'),
+        asyncComponent('b'),
+      )
+    )
+  );
+
+  const res = [];
+  await render(page, f => res.push(f));
+  console.log(res.join(''));
+})();
