@@ -179,52 +179,33 @@ export const ul = createTag('ul');
 export const video = createTag('video');
 export const wbr = createTag('wbr');
 
-export const render = async (p, onChunk) => {
+export const render = async (p) => {
   if (isPromise(p)) p = await p;
   let i = 0;
   let a = p;
   let frag;
   let outer = [];
-  while (true) {
-    frag = a[i];
 
+  return async function next() {
+    frag = a[i];
     if (isPromise(frag)) frag = await frag;
     if (Array.isArray(frag)) {
       outer.push([a, i + 1]);
       i = 0;
       a = frag;
+      return next();
     } else {
       if (typeof frag === 'undefined') {
         if (outer.length) {
           [a, i] = outer.pop();
+          return next();
         } else {
-          break; // nothing left to do...
+          return; // nothing left...
         }
       } else {
         i++;
-        onChunk(frag);
+        return frag;
       }
     }
   }
 };
-
-(async () => {
-  const asyncComponent = async (str) => {
-    const slow = await Promise.resolve(`slow: ${str}`);
-    return div(slow);
-  }
-
-  const page = html(
-    head(),
-    body(
-      main(
-        asyncComponent('a'),
-        asyncComponent('b'),
-      )
-    )
-  );
-
-  const res = [];
-  await render(page, f => res.push(f));
-  console.log(res.join(''));
-})();
