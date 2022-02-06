@@ -1,5 +1,6 @@
 import http from 'http';
 import {
+  p,
   img,
   div,
   html,
@@ -9,6 +10,7 @@ import {
   title,
   link,
   script,
+  style,
   render,
 } from './html.mjs';
 
@@ -22,15 +24,20 @@ const requestListener = async (req, res) => {
   res.writeHead(200);
 
   const components = [];
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 2000; i++) {
     components.push(asyncComponent(i));
+  }
+
+  for (let i = 0; i < 20000; i++) {
+    components.push(p({ style: 'color: red;' }, `just another paragraph....${i}`));
   }
 
   const next = await render(html(
     head(
       title('Skiano.com'),
-      link({ src: 'abc.css' }),
-      script({ src: 'abc.js' }),
+      // link({ src: 'abc.css' }),
+      // script({ src: 'abc.js' }),
+      style('html { color: blue; background: green }')
     ),
     body(
       main(
