@@ -13,40 +13,66 @@ import {
   style,
   render,
 } from './html.mjs';
+import {
+  css,
+  mediaQuery,
+} from './css.mjs';
 
 const asyncComponent = async (str) => {
   return new Promise((resolve) => setTimeout(resolve, 10, div(`slow: ${str}`)));
 };
 
 const requestListener = async (req, res) => {
-  res.setHeader('Content-Type', 'text/html; charset=UTF-8');
   res.setHeader('Transfer-Encoding', 'chunked');
+
+  let content;
+  if (req.url === '/') {
+    res.setHeader('Content-Type', 'text/html; charset=UTF-8');
+    const components = [];
+    for (let i = 0; i < 2000; i++) components.push(asyncComponent(i));
+    for (let i = 0; i < 20000; i++) components.push(p({ style: 'color: red;' }, `just another paragraph....${i}`));
+    
+    content = html(
+      head(
+        title('Skiano.com'),
+        link({ rel: 'stylesheet', href: 'style.css' })
+        // script({ src: 'abc.js' }),
+        // style('html { color: blue; background: green }')
+      ),
+      body(
+        main(
+          // img({ src: 'a.jpg' }),
+          // img({ src: 'b.jpg' }),
+          components
+        )
+      )
+    );
+  } else if (req.url === '/style.css') {
+    res.setHeader('Content-Type', 'text/css; charset=UTF-8');
+    content = [
+      css('html', {
+        'background-color': 'red',
+        color: 'white',
+      }),
+      mediaQuery('(max-width: 600px)', [
+        css('html', {
+          'background-color': 'orange',
+          color: 'green',
+        }),
+      ])
+    ];
+
+    console.log(content);
+  }
+
+  if (!content) {
+    res.writeHead(404);
+    return res.end();
+  }
+
   res.writeHead(200);
 
-  const components = [];
-  for (let i = 0; i < 2000; i++) {
-    components.push(asyncComponent(i));
-  }
-
-  for (let i = 0; i < 20000; i++) {
-    components.push(p({ style: 'color: red;' }, `just another paragraph....${i}`));
-  }
-
-  const next = await render(html(
-    head(
-      title('Skiano.com'),
-      // link({ src: 'abc.css' }),
-      // script({ src: 'abc.js' }),
-      style('html { color: blue; background: green }')
-    ),
-    body(
-      main(
-        img({ src: 'a.jpg' }),
-        img({ src: 'b.jpg' }),
-        components
-      )
-    )
-  ));
+  const next = await render(content);
 
   async function write() {
     let frag;
