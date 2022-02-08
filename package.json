@@ -1,7 +1,11 @@
 {
+  "type": "module",
   "dependencies": {
     "koa": "^2.13.4",
     "koa-compress": "^5.1.0",
     "koa-route": "^3.2.0"
+  },
+  "scripts": {
+    "dev": "node src/app.mjs"
   }
 }
