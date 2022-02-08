@@ -1,12 +1,8 @@
-import {
-  div,
-  p,
-  span
-} from './sizable.mjs';
+
 
 import { Readable } from 'stream';
 
-class Render extends Readable {
+export class Render extends Readable {
   constructor(frags) {
     super();
     this._a = frags;
@@ -42,6 +38,8 @@ class Render extends Readable {
     if (typeof frag !== 'undefined' && !Array.isArray(frag)) {
       this.push(frag);
       this._i++;
+    } else {
+      this.push(null);
     }
   }
 
@@ -82,25 +80,3 @@ class Render extends Readable {
 //   console.log(d.toString());
 // })
 // r.pipe(process.stdout);
-
-
-const latent = (v, t = 100) => new Promise((resolve) => setTimeout(resolve, t, v));
-
-(async () => {
-  const start = Date.now();
-  
-  const page = await div(
-    latent(p([
-      latent(span('a'), 100),
-      latent(span('a'), 100),
-    ]), 100),
-  );
-
-  console.log(`PAGE TIME ${Date.now() - start}`);
-  console.log(page);
-  
-  const pageStream = new Render(page);
-  console.log(`PAGE SIZE`, pageStream.stats);
-
-  pageStream.pipe(process.stdout);
-})();
