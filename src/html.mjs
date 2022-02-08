@@ -24,10 +24,10 @@ const VOID_ELEMENTS = {
 // TODO: ERROR HANDLING
 // catch slow or errant promises... and how to notifiy...
 
-export const createTag = (name, isVoid) => {
+export const createTag = (name, options = { isVoid: false, once: false }) => {
   const open = name === 'html' ? '<!DOCTYPE><html' : `<${name}`;
   const enter = '>';
-  const close = VOID_ELEMENTS[name] || isVoid ? null : `</${name}>`;
+  const close = VOID_ELEMENTS[name] || options.isVoid ? null : `</${name}>`;
   return async function tag () {
     let a;
     let arg;
@@ -61,6 +61,7 @@ export const createTag = (name, isVoid) => {
             append(await arg[i]);
           }
           break;
+        // TODO: bad default... handle falsy arg...
         default:
           for (let key in arg) {
             if (arg.hasOwnProperty(key)) {
@@ -74,9 +75,16 @@ export const createTag = (name, isVoid) => {
       }
     };
     if (close) append(close);
+
+    if (options.once) { 
+      fragments.skip = fragments.tail()
+      console.log('once!');
+    };
     return fragments;
   };
 };
+
+export const styleOnce = createTag('style', { once: true });
 
 export const a = createTag('a');
 export const abbr = createTag('abbr');

@@ -43,13 +43,23 @@ export const Home = async () => {
   ));
 };
 
+const ArticleStyle = _.styleOnce(
+  css('.article__body', {
+    border: '1px solid blue',
+  })
+);
+
+console.log(ArticleStyle)
+
 export const Article = async (articleId) => {
   const article = await Promise.resolve({
     body: `Lorem Ipsum for article: ${articleId}`,
   });
   return Page({
     title: 'Article'
-  },(
-    _.main(article.body)
-  ));
+  },([
+    ArticleStyle,
+    ArticleStyle,
+    _.main({ class: 'article__body' }, article.body)
+  ]));
 };
