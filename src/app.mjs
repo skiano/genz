@@ -5,10 +5,23 @@ import { Home, Article } from './components.mjs';
 
 const app = new Koa();
 
+app.use(async function logger (ctx, next) {
+  const start = Date.now();
+  await next();
+  ctx.res.once('finish', () => {
+    const ms = Date.now() - start;
+    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+  });
+});
+
 const page = (component) => {
   return async function handlePage(ctx, ...args) {
     args.pop();
+    
+    const start = Date.now();
     const fragments = await component(...args);
+    console.log(`render ${Date.now() - start}ms`);
+
     const renderStream = new Render(fragments);
     ctx.set('Content-Length', renderStream.stats.size);
     ctx.set('Content-Type', 'text/html; charset=UTF-8');

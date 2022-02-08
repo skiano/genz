@@ -57,6 +57,8 @@ export const createTag = (name, isVoid) => {
             append(enter);
             entered = true;
           }
+          // TODO: replace with Promise.all() ??????
+          // https://stackoverflow.com/questions/45285129/any-difference-between-await-promise-all-and-multiple-await/54291660#54291660
           for (let i = 0; i < arg.length; i++) {
             append(await arg[i]);
           }

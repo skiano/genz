@@ -1,7 +1,8 @@
 import { css } from './css.mjs';
 import * as _ from './html.mjs';
 
-const latent = (v, t = 100) => new Promise((resolve) => setTimeout(resolve, t, v));
+const latent = (v, t = 100) => v //
+// const latent = (v, t = 100) => v new Promise((resolve) => setTimeout(resolve, t, v));
 
 const aboveFoldCSS = [
   css('html', {
@@ -26,7 +27,7 @@ const Page = (opt, content) => {
 
 export const Home = async () => {
   const paragraphs = [];
-  for (let i = 0; i < 10000; i++) {
+  for (let i = 0; i < 20 * 1000; i++) {
     paragraphs.push(_.p(`paragraph ${i}`));
   }
   return Page({
