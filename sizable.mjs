@@ -19,6 +19,9 @@ const VOID_ELEMENTS = {
   wbr: true
 };
 
+// TODO: ERROR HANDLING
+// catch slow or errant promises... and how to notifiy...
+
 export const createTag = (name, isVoid) => {
   const open = `<${name}`;
   const enter = '>';
@@ -62,6 +65,11 @@ export const createTag = (name, isVoid) => {
       }
     };
     if (close) fragments.push(close);
+    // instead of looping here... add as i go...`
+    // ps... would there be any advantage in doing these as buffers...
+    fragments._bytes = fragments.reduce((l, f) => {
+      return l + (f._bytes || Buffer.byteLength(f));
+    }, 0);
     return fragments;
   };
 };
@@ -180,19 +188,18 @@ export const ul = createTag('ul');
 export const video = createTag('video');
 export const wbr = createTag('wbr');
 
+// const latent = (v, t = 100) => new Promise((resolve) => setTimeout(resolve, t, v));
 
-const latent = (v, t = 100) => new Promise((resolve) => setTimeout(resolve, t, v));
 
-
-(async () => {
-  const start = Date.now();
-  console.log(
-    await div(
-      latent(p([
-        latent(span('a'), 2000),
-        latent(span('a'), 2000),
-      ]), 4000),
-    )
-  );
-  console.log(`${Date.now() - start}ms`);
-})();
+// (async () => {
+//   const start = Date.now();
+//   console.log(
+//     await div(
+//       latent(p([
+//         latent(span('a'), 100),
+//         latent(span('a'), 100),
+//       ]), 100),
+//     )
+//   );
+//   console.log(`${Date.now() - start}ms`);
+// })();

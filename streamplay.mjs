@@ -1,56 +1,10 @@
-import { Duplex, Readable } from 'stream';
+import {
+  div,
+  p,
+  span
+} from './sizable.mjs';
 
-// const ksource = Symbol('source');
-
-// class Render extends Duplex {
-//   constructor(source, options) {
-//     super(options);
-//     this[ksource] = source;
-//   }
-
-//   _write(chunk, encoding, callback) {
-//     // The underlying source only deals with strings.
-//     if (Buffer.isBuffer(chunk)) {
-//       chunk = chunk.toString();
-//     }
-//     this[kSource].writeSomeData(chunk);
-//     callback();
-//   }
-
-//   _read(size) {
-//     this[kSource].fetchSomeData(size, (data, encoding) => {
-//       this.push(Buffer.from(data, encoding));
-//     });
-//   }
-// }
-
-// console.log(new Render('abc'));
-
-// SEE: https://nodejs.org/api/stream.html#api-for-stream-implementers
-// class Counter extends Readable {
-//   constructor(frags) {
-//     super();
-//     this._max = 10;
-//     this._index = 1;
-//   }
-
-//   _read() {
-//     const i = this._index++;
-//     if (i > this._max)
-//       this.push(null);
-//     else {
-//       const str = String(i);
-//       const buf = Buffer.from(str, 'ascii');
-//       setTimeout(() => {
-//         this.push(buff);
-//       }, 100);
-//     }
-//   }
-// }
-
-
-
-const isPromise = (o) => typeof o === 'object' && !!o.then;
+import { Readable } from 'stream';
 
 class Render extends Readable {
   constructor(frags) {
@@ -58,6 +12,9 @@ class Render extends Readable {
     this._a = frags;
     this._i = 0;
     this._outer = [];
+    this.stats = {
+      size: frags._bytes,
+    }
   }
 
   _construct(cb) { // TODO how to deal with top level async... and how to get the size :(
@@ -69,15 +26,16 @@ class Render extends Readable {
 
   _read() {
     let frag = this._a[this._i];
+
+    while(typeof frag === 'undefined' && this._outer.length) {
+      [this._a, this._i] = this._outer.pop();
+      frag = this._a[this._i];
+    }
+
     if (Array.isArray(frag)) {
       this._outer.push([this._a, this._i + 1]);
       this._i = 0;
       this._a = frag;
-      frag = this._a[this._i];
-    }
-
-    if (typeof frag === 'undefined' && this._outer.length) {
-      [this._a, this._i] = this._outer.pop();
       frag = this._a[this._i];
     }
 
@@ -92,34 +50,57 @@ class Render extends Readable {
   }
 }
 
-const r = new Render([
-  1,
-  2,
-  3,
-  [
-    4,
-    5,
-    6,
-    [
-      7,
-      8
-    ],
-    9
-  ],
-  10,
-  [
-    11,
-    [
-      12
-    ],
-  ],
-  13,
-  14,
-  15,
-]);
+// const r = new Render([
+//   1,
+//   2,
+//   [0, 0],
+//   [1, 1],
+//   3,
+//   [
+//     4,
+//     5,
+//     6,
+//     [
+//       7,
+//       8
+//     ],
+//     9
+//   ],
+//   10,
+//   [
+//     11,
+//     [
+//       12
+//     ],
+//   ],
+//   13,
+//   14,
+//   15,
+// ]);
 
 // r.on('data', (d) => {
 //   console.log(d.toString());
 // })
+// r.pipe(process.stdout);
 
-r.pipe(process.stdout);
+
+const latent = (v, t = 100) => new Promise((resolve) => setTimeout(resolve, t, v));
+
+(async () => {
+  const start = Date.now();
+  
+  const page = await div(
+    latent(p([
+      latent(span('a'), 100),
+      latent(span('a'), 100),
+    ]), 100),
+  );
+
+  console.log(`PAGE TIME ${Date.now() - start}`);
+  console.log(page);
+  
+  const pageStream = new Render(page);
+  console.log(`PAGE SIZE`, pageStream.stats);
+
+  pageStream.pipe(process.stdout);
+})();
