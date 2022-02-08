@@ -1,3 +1,5 @@
+import { Linked } from './linked.mjs';
+
 const isPromise = (o) => typeof o === 'object' && !!o.then;
 
 const VOID_ELEMENTS = {
@@ -30,13 +32,9 @@ export const createTag = (name, isVoid) => {
     let a;
     let arg;
     let entered;
-    let fragments = [];
-    fragments._bytes = 0;
-
+    const fragments = new Linked();
     const append = (frag) => {
-      frag = frag._bytes ? frag : Buffer.from(frag);
-      fragments._bytes += frag._bytes || frag.length;
-      fragments.push(frag);
+      fragments.add(Buffer.from(frag));
     };
 
     append(open);
@@ -51,6 +49,9 @@ export const createTag = (name, isVoid) => {
             entered = true;
           }
           append(arg);
+          break;
+        case arg instanceof Linked:
+          fragments.add(arg);
           break;
         case Array.isArray(arg):
           if (!entered) {

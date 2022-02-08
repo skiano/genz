@@ -1,6 +1,6 @@
 import Koa from 'koa';
 import route from 'koa-route';
-import { Render } from './render.mjs';
+import { NodeStream } from './linked.mjs';
 import { Home, Article } from './components.mjs';
 
 const app = new Koa();
@@ -22,8 +22,8 @@ const page = (component) => {
     const fragments = await component(...args);
     console.log(`render ${Date.now() - start}ms`);
 
-    const renderStream = new Render(fragments);
-    ctx.set('Content-Length', renderStream.stats.size);
+    const renderStream = new NodeStream(fragments);
+    ctx.set('Content-Length', fragments.length());
     ctx.set('Content-Type', 'text/html; charset=UTF-8');
     ctx.body = renderStream;
 
