@@ -23,7 +23,7 @@ const VOID_ELEMENTS = {
 // catch slow or errant promises... and how to notifiy...
 
 export const createTag = (name, isVoid) => {
-  const open = `<${name}`;
+  const open = name === 'html' ? '<!DOCTYPE><html' : `<${name}`;
   const enter = '>';
   const close = VOID_ELEMENTS[name] || isVoid ? null : `</${name}>`;
   return async function tag () {

@@ -1,23 +1,12 @@
-
-
 import { Readable } from 'stream';
 
 export class Render extends Readable {
   constructor(frags) {
     super();
-    this._a = frags;
     this._i = 0;
+    this._a = frags;
     this._outer = [];
-    this.stats = {
-      size: frags._bytes,
-    }
-  }
-
-  _construct(cb) { // TODO how to deal with top level async... and how to get the size :(
-    Promise.resolve(this._a).then((a) => {
-      this._a = a;
-      cb();
-    }).catch(cb);
+    this.stats = { size: frags._bytes };
   }
 
   _read() {
@@ -42,41 +31,18 @@ export class Render extends Readable {
       this.push(null);
     }
   }
-
-  _destroy(error, cb) {
-    cb();
-  }
 }
 
+// EXAMPLE... WORKS
 // const r = new Render([
-//   1,
-//   2,
-//   [0, 0],
-//   [1, 1],
-//   3,
-//   [
-//     4,
-//     5,
-//     6,
-//     [
-//       7,
-//       8
-//     ],
-//     9
-//   ],
-//   10,
-//   [
-//     11,
-//     [
-//       12
-//     ],
-//   ],
-//   13,
-//   14,
-//   15,
+//   ['1', '2', '3'],
+//   ['4', '5', '6'],
 // ]);
 
-// r.on('data', (d) => {
-//   console.log(d.toString());
-// })
+// EXAMPLE... BUSTED
+// const r = new Render([
+//   ['1', '2', '3'],
+//   ['4', '5', '6'],
+// ]);
+
 // r.pipe(process.stdout);
