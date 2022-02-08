@@ -23,8 +23,6 @@ const VOID_ELEMENTS = {
 // catch slow or errant promises... and how to notifiy...
 
 export const createTag = (name, isVoid) => {
-  // console.log(`<${name}`, Buffer.from(`<${name}`).length, Buffer.byteLength(`<${name}`));
-
   const open = `<${name}`;
   const enter = '>';
   const close = VOID_ELEMENTS[name] || isVoid ? null : `</${name}>`;
@@ -32,46 +30,51 @@ export const createTag = (name, isVoid) => {
     let a;
     let arg;
     let entered;
-    let fragments;
-    fragments = [open];
+    let fragments = [];
+    fragments._bytes = 0;
+
+    const append = (frag) => {
+      frag = frag._bytes ? frag : Buffer.from(frag);
+      fragments._bytes += frag._bytes || frag.length;
+      fragments.push(frag);
+    };
+
+    append(open);
+    
     for (a = 0; a < arguments.length; a++) {
       arg = arguments[a];
       if (isPromise(arg)) arg = await arg;
       switch (true) {
         case typeof arg === 'string':
           if (!entered) {
-            fragments.push(enter);
+            append(enter);
             entered = true;
           }
+          append(enter);
           fragments.push(arg);
           break;
         case Array.isArray(arg):
           if (!entered) {
-            fragments.push(enter);
+            append(enter);
             entered = true;
           }
           for (let i = 0; i < arg.length; i++) {
-            fragments.push(await arg[i]);
+            append(await arg[i]);
           }
           break;
         default:
           for (let key in arg) {
             if (arg.hasOwnProperty(key)) {
-              fragments.push(` ${key}="`);
-              fragments.push(arg[key]);
-              fragments.push(`"`);
+              append(` ${key}="`);
+              append(arg[key]);
+              append(`"`);
             }
           }
-          fragments.push(enter);
+          append(enter);
           entered = true;
       }
     };
-    if (close) fragments.push(close);
-    // instead of looping here... add as i go...`
-    // ps... would there be any advantage in doing these as buffers...
-    fragments._bytes = fragments.reduce((l, f) => {
-      return l + (f._bytes || Buffer.byteLength(f));
-    }, 0);
+    if (close) append(close);
     return fragments;
   };
 };
@@ -189,19 +192,3 @@ export const u = createTag('u');
 export const ul = createTag('ul');
 export const video = createTag('video');
 export const wbr = createTag('wbr');
-
-// const latent = (v, t = 100) => new Promise((resolve) => setTimeout(resolve, t, v));
-
-
-// (async () => {
-//   const start = Date.now();
-//   console.log(
-//     await div(
-//       latent(p([
-//         latent(span('a'), 100),
-//         latent(span('a'), 100),
-//       ]), 100),
-//     )
-//   );
-//   console.log(`${Date.now() - start}ms`);
-// })();
