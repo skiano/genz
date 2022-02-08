@@ -49,8 +49,6 @@ const ArticleStyle = _.styleOnce(
   })
 );
 
-console.log(ArticleStyle)
-
 export const Article = async (articleId) => {
   const article = await Promise.resolve({
     body: `Lorem Ipsum for article: ${articleId}`,
@@ -58,8 +56,7 @@ export const Article = async (articleId) => {
   return Page({
     title: 'Article'
   },([
-    ArticleStyle,
-    ArticleStyle,
+    // ArticleStyle,
     _.main({ class: 'article__body' }, article.body)
   ]));
 };

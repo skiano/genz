@@ -2,74 +2,71 @@ import { Readable } from 'stream';
 
 export class NodeStream extends Readable {
   #node
+  #stack
 
   constructor(list) {
     super();
     this.#node = list.head();
+    this.#stack = [];
   }
 
   _read() {
-    if (this.#node) {
-      this.push(this.#node.value);
-      this.#node = this.#node.in || (this.#node.out && this.#node.out.next) || this.#node.next;
-    } else {
-      this.push(null);
+    if (this.#node.value instanceof Linked) {
+      this.#stack.push(this.#node);
+      this.#node = this.#node.value.head();
     }
+    if (this.#node) this.push(this.#node.value);
+    this.#node = (this.#node || this.#stack.pop() || {}).next;
+    if (!this.#node) return this.push(null)
   }
 }
 
 export class Linked {
+  #len
   #head
   #tail
   #once
-  #length
   #measure
   #transform;
 
   constructor(options = {}) {
-    this.#length = 0;
+    this.#len = 0;
+    this.#once = options.once;
     this.#measure = options.measure || (v => v.length);
     this.#transform = options.transform;
-    this.#once = options.once;
   }
 
   head() { return this.#head }
 
   tail() { return this.#tail }
 
-  length() { return this.#length }
+  length() { return this.#len }
 
   isOnce() { return this.#once }
 
   add(value) {
-    // splice in child list
-    if (value instanceof Linked) {
-      if (!this.#tail) this.#head = this.#tail = {}; // if the list is the first item
-      this.#tail.in = value.head();
-      value.tail().out = this.#tail; // how to skip the repeat
-      this.#length += value.length(); // how to handle once!!!!
-    }
-    // normal node
-    else {
-      const node = {
-        value: this.#transform ? this.#transform(value) : value
-      };
+    const node = {
+      value: this.#transform && !(value instanceof Linked)
+        ? this.#transform(value)
+        : value
+    };
 
-      if (this.#tail) {
-        this.#tail.next = node;
-      } else {
-        this.#head = node;
-      }
-      this.#tail = node;
-      this.#length += this.#measure(value);
+    if (this.#tail) {
+      this.#tail.next = node;
+    } else {
+      this.#head = node;
     }
+    this.#tail = node;
+    this.#len += this.#measure(value); //but how to deduct once...
   }
 
   walk(cb) {
+    const s = [this];
+
     let n = this.#head;
     while (n) {
       cb(n);
-      n = n.in || (n.out && n.out.next) || n.next;
+      n = n.next;
     }
   }
 }
@@ -89,9 +86,9 @@ l1.add(l2);
 l1.add(6);
 l1.add(7);
 
-const s = new NodeStream(l1);
-s.pipe(process.stdout);
+// const s = new NodeStream(l1);
+// s.pipe(process.stdout);
 
-// l1.walk(({ value }) => {
-//   console.log(value)
-// });
+l1.walk(({ value }) => {
+  console.log(value)
+});

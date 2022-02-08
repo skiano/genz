@@ -32,7 +32,7 @@ export const createTag = (name, options = { isVoid: false, once: false }) => {
     let a;
     let arg;
     let entered;
-    const fragments = new Linked();
+    const fragments = new Linked({ once: options.once });
     const append = (frag) => {
       fragments.add(frag instanceof Linked ? frag : Buffer.from(frag));
     };
@@ -75,11 +75,6 @@ export const createTag = (name, options = { isVoid: false, once: false }) => {
       }
     };
     if (close) append(close);
-
-    if (options.once) { 
-      fragments.skip = fragments.tail()
-      console.log('once!');
-    };
     return fragments;
   };
 };
