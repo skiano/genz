@@ -34,24 +34,21 @@ export const createTag = (name, isVoid) => {
     let entered;
     const fragments = new Linked();
     const append = (frag) => {
-      fragments.add(Buffer.from(frag));
+      fragments.add(frag instanceof Linked ? frag : Buffer.from(frag));
     };
 
     append(open);
-    
+
     for (a = 0; a < arguments.length; a++) {
       arg = arguments[a];
       if (isPromise(arg)) arg = await arg;
       switch (true) {
-        case typeof arg === 'string':
+        case typeof arg === 'string' || arg instanceof Linked:
           if (!entered) {
             append(enter);
             entered = true;
           }
           append(arg);
-          break;
-        case arg instanceof Linked:
-          fragments.add(arg);
           break;
         case Array.isArray(arg):
           if (!entered) {

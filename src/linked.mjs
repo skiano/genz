@@ -40,9 +40,16 @@ export class Linked {
   add(value) {
     if (value instanceof Linked) {
       const subhead = value.head();
-      this.#tail.next = subhead;
-      this.#tail = value.tail();
-      if (!this.#head) this.#head = subhead;
+      const subtail = value.tail();
+
+      if (!this.#head) {
+        this.#head = subhead;
+        this.#tail = subtail;
+      } else {
+        this.#tail.next = subhead;
+        this.#tail = subtail; 
+      }
+
       this.#length += value.length();
     }
 
