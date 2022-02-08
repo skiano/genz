@@ -29,21 +29,30 @@ app.use(async (ctx, next) => {
 
 app.use(async ctx => {
   const start = Date.now();
+
   const latent = (v, t = 100) => new Promise((resolve) => setTimeout(resolve, t, v));
-  
-    
+
+  const paragraphs = [];
+  for (let i = 0; i < 10000; i++) {
+    paragraphs.push(p(`paragraph ${i}`));
+  }
+
   const page = await div(
     latent(p([
       latent(span('a'), 100),
       latent(span('a'), 100),
     ]), 100),
+    paragraphs,
   );
 
   console.log(`PAGE TIME ${Date.now() - start}`);
-  console.log(page);
   
   const pageStream = new Render(page);
-  console.log(`PAGE SIZE`, pageStream.stats);
+
+  ctx.res.on('drain', () => {
+    console.log('drain');
+  })
+
 
   ctx.set('Content-Type', 'text/html; charset=UTF-8');
   ctx.set('Content-Length', pageStream.stats.size);
