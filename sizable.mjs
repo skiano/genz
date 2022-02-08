@@ -50,8 +50,7 @@ export const createTag = (name, isVoid) => {
             append(enter);
             entered = true;
           }
-          append(enter);
-          fragments.push(arg);
+          append(arg);
           break;
         case Array.isArray(arg):
           if (!entered) {

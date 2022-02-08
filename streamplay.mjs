@@ -40,7 +40,7 @@ class Render extends Readable {
     }
 
     if (typeof frag !== 'undefined' && !Array.isArray(frag)) {
-      this.push(String(frag), 'utf8');
+      this.push(frag);
       this._i++;
     }
   }
