@@ -8,7 +8,7 @@ function* each(l) {
   }
 }
 
-export function* traverse (arr) {
+function* traverse (arr) {
   let queue = [each(arr)];
   while (queue.length) {
     const { value, done } = queue[0].next();
@@ -20,6 +20,21 @@ export function* traverse (arr) {
         queue.shift();
       }
     }
+  }
+}
+
+class NodeStream extends Readable {
+  #iterator
+
+  constructor(list) {
+    super();
+    this.#iterator = traverse(list);
+  }
+
+  _read() {
+    const { value, done } = this.#iterator.next();
+    if (done) this.push(null);
+    else this.push(value.value);
   }
 }
 
@@ -76,20 +91,7 @@ export class Linked {
   }
 }
 
-export class NodeStream extends Readable {
-  #iterator
 
-  constructor(list) {
-    super();
-    this.#iterator = traverse(list);
-  }
-
-  _read() {
-    const { value, done } = this.#iterator.next();
-    if (done) this.push(null);
-    else this.push(value.value);
-  }
-}
 
 // EXAMPLE...
 //

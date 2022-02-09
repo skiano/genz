@@ -1,6 +1,5 @@
 import Koa from 'koa';
 import route from 'koa-route';
-import { NodeStream } from './linked.mjs';
 import { Home, Article } from './components.mjs';
 
 const app = new Koa();
@@ -16,10 +15,8 @@ app.use(async function logger (ctx, next) {
 
 const page = (component) => {
   return async function handlePage(ctx, ...args) {
-    args.pop();
-    
     const start = Date.now();
-    const fragments = await component(...args);
+    const fragments = await component(args.slice(0, -1));
     console.log(`render ${Date.now() - start}ms`);
 
     ctx.set('Content-Length', fragments.length());
