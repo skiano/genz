@@ -43,22 +43,42 @@ export function* mediaQuery(media, ...rules) {
 }
 
 export const createTag = (name, options = { isVoid: false }) => {
+  const isRecursive = Symbol('isRecursive');
+
   return function* tag() {
-    yield name === 'html' ? '<!DOCTYPE><html' : `<${name}`;
+    const topLevel = arguments[0] !== isRecursive;
+    if (topLevel) {
+      yield name === 'html' ? '<!DOCTYPE><html' : `<${name}`;
+    }
 
     let o;
     let arg;
-    let entered;
+    let entered = !topLevel;
+    let pending;
 
     for (arg of traverse(arguments)) {
       switch (true) {
-        case !arg:
-          // omit falsy children...
+        // omit falsy children...
+        case !arg || arg === isRecursive:
+          break;
+        
+        // defer control to stream if we encounter a promise
+        case typeof arg === 'object' && !!arg.then:
+          pending = { pending: arg, ret: null };
+          yield pending; // let the consumer pause...
+          for (o of tag(isRecursive, pending.finished)) yield o;
           break;
 
+        // plain text
         case typeof arg === 'string':
           if (!entered) yield entered = true && '>';
-          yield arg;
+          yield arg; // TODO: do something about very large strings...
+          break;
+
+        // coerce numbers to strings
+        case typeof arg === 'number':
+          if (!entered) yield entered = true && '>';
+          yield String(arg);
           break;
 
         // yield any child nodes
@@ -66,7 +86,8 @@ export const createTag = (name, options = { isVoid: false }) => {
           if (!entered) yield entered = true && '>';
           for (o of arg) yield o;
           break;
-        
+
+        // yield node attributes
         case (arg && typeof arg === 'object'):
           for (o in arg) yield ` ${o}="${arg[o]}"`;
           if (!entered) yield entered = true && '>';
@@ -77,8 +98,8 @@ export const createTag = (name, options = { isVoid: false }) => {
       }
     }
 
-    if (!entered) yield '>';
-    if (!options.isVoid) yield `</${name}>`;
+    if (topLevel && !entered) yield '>';
+    if (topLevel && !options.isVoid) yield `</${name}>`;
   };
 };
 
@@ -91,13 +112,40 @@ export class TagStream extends Readable {
   }
 
   _read() {
-    const { value, done } = this.#iterator.next();
-    if (done) this.push(null);
-    else this.push(value);
+    let { value, done } = this.#iterator.next();
+
+    if (value && value.pending) {
+      // console.log(value.pending)
+
+      value.pending.then((v) => {
+        value.finished = v;
+        const i = this.#iterator.next();
+        if (i.done) this.push(null);
+        else this.push(i.value);
+      });
+    } else {
+      if (done) this.push(null);
+      else this.push(value);
+    }
   }
 }
 
-export default TAG_NAMES.reduce((o, name) => {
+export const $ = TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
   return o;
 }, {});
+
+export default $;
+
+// EXAMPLE
+new TagStream(
+  $.div(
+    1,
+    2,
+    Promise.resolve($.p(
+      'yes',
+      Promise.resolve($.strong('shitttt'))
+    )),
+    3
+  )
+).pipe(process.stdout);
