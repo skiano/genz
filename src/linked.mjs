@@ -59,7 +59,9 @@ export class Linked {
       this.#head = node;
     }
     this.#tail = node;
-    this.#len += this.#measure(value); //but how to deduct once...
+    this.#len += value instanceof Linked  //but how to deduct once...
+      ? value.length()
+      : this.#measure(value);
   }
 
   walk(cb) {
@@ -67,6 +69,10 @@ export class Linked {
     for (let i of it) {
       cb(i);
     }
+  }
+
+  stream() {
+    return new NodeStream(this);
   }
 }
 

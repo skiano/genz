@@ -22,10 +22,9 @@ const page = (component) => {
     const fragments = await component(...args);
     console.log(`render ${Date.now() - start}ms`);
 
-    const renderStream = new NodeStream(fragments);
     ctx.set('Content-Length', fragments.length());
     ctx.set('Content-Type', 'text/html; charset=UTF-8');
-    ctx.body = renderStream;
+    ctx.body = fragments.stream();
 
     // checkout the way it pauses!!!!
     // ctx.body.on('pause', () => { console.log('pagestream: pause') });

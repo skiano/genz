@@ -1,6 +1,6 @@
 import { Linked } from './linked.mjs';
 
-const isPromise = (o) => typeof o === 'object' && !!o.then;
+const isPromise = (o) => o && typeof o === 'object' && !!o.then;
 
 const VOID_ELEMENTS = {
   area: true,
@@ -61,7 +61,12 @@ export const createTag = (name, options = { isVoid: false, once: false }) => {
             append(await arg[i]);
           }
           break;
-        // TODO: bad default... handle falsy arg...
+        case !arg === true:
+          if (!entered) {
+            append(enter);
+            entered = true;
+          }
+          break;
         default:
           for (let key in arg) {
             if (arg.hasOwnProperty(key)) {
@@ -74,6 +79,7 @@ export const createTag = (name, options = { isVoid: false, once: false }) => {
           entered = true;
       }
     };
+    if (!entered) append(enter);
     if (close) append(close);
     return fragments;
   };

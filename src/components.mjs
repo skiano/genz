@@ -56,7 +56,15 @@ export const Article = async (articleId) => {
   return Page({
     title: 'Article'
   },([
-    // ArticleStyle,
+    ArticleStyle,
+    ArticleStyle,
     _.main({ class: 'article__body' }, article.body)
   ]));
 };
+
+// EXAMPLE
+// (async () => {
+//   const a = await Article('123');
+//   console.log('final length', a.length())
+//   a.stream().pipe(process.stdout);
+// })();
