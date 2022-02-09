@@ -1,66 +1,56 @@
 import _, { css } from './tagen.mjs';
 
-const aboveFoldCSS = [
-  css('html', {
-    'color': 'red',
-  }),
-  css('p', {
-    'text-decoration': 'underline',
-  })
-];
+const Head = (opt, ...args) => (
+  _.head(
+    _.title(opt.title || 'My Site'),
+    args,
+    _.style([
+      css('html', {
+        'color': 'blue',
+      }),
+      css('p', {
+        'border': '1px solid red',
+        'padding': '10px',
+      })
+    ])
+  )
+)
 
-const Page = (opt, content) => {
-  return (
-    _.html(
-      _.head(
-        _.title(opt.title),
-        _.style(aboveFoldCSS)
-      ),
-      _.body(content),
-    )
-  );
-}
+const Well = (...args) => (
+  _.body(
+    _.main({ class: 'well' }, ...args)
+  )
+)
 
 export const Home = () => {
   const paragraphs = [];
   for (let i = 0; i < 20 * 1000; i++) {
     paragraphs.push(_.p(`paragraph ${i}`));
   }
-  return Page({
-    title: 'Home Page',
-  }, (
-    _.main(
-      _.p([
-        _.span('a'), 100,
-        _.span('a'),
-      ]),
-      paragraphs,
+  return (
+    _.html(
+      Head({ title: 'Home' }),
+      Well(
+        _.div(
+          _.p(_.strong('a super big page!'))
+        ),
+        paragraphs
+      )
     )
-  ));
+  );
 };
 
-const ArticleStyle = _.style(
-  css('.article__body', {
-    border: '1px solid blue',
-  })
-);
-
 export const Article = (articleId) => {
-  const article = {
-    body: `Lorem Ipsum for article: ${articleId}`,
-  };
-  return Page({
-    title: 'Article'
-  },([
-    ArticleStyle,
-    _.div(
-      _.section(
-        ArticleStyle
+  return (
+    _.html(
+      Head({ title: articleId }),
+      Well(
+        _.section(
+          _.p(`Article content for ${articleId}`)
+        )
       )
-    ),
-    ArticleStyle,
-    _.main({ class: 'article__body' }, article.body)
-  ]));
+    )
+  )
 };
 
 // EXAMPLE

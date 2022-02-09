@@ -1,5 +1,6 @@
 import Koa from 'koa';
 import route from 'koa-route';
+import { TagStream } from './tagen.mjs';
 import { Home, Article } from './components.mjs';
 
 const app = new Koa();
@@ -16,12 +17,12 @@ app.use(async function logger (ctx, next) {
 const page = (component) => {
   return async function handlePage(ctx, ...args) {
     const start = Date.now();
-    const fragments = await component(args.slice(0, -1));
+    const tree = await component(args.slice(0, -1));
     console.log(`render ${Date.now() - start}ms`);
 
-    ctx.set('Content-Length', fragments.length());
     ctx.set('Content-Type', 'text/html; charset=UTF-8');
-    ctx.body = fragments.stream();
+    ctx.set('Transfer-Encoding', 'chunked');
+    ctx.body = new TagStream(tree);
 
     // checkout the way it pauses!!!!
     // ctx.body.on('pause', () => { console.log('pagestream: pause') });

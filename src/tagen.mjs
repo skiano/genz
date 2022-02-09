@@ -27,7 +27,7 @@ export function* css(selectors, ...declarations) {
   let p;
   let declaration;
   for (declaration of traverse(declarations)) {
-    for (p in declaration) yield `${p}:"${declaration[p]};`;
+    for (p in declaration) yield `${p}:${declaration[p]};`;
   }
   yield '}';
 }
