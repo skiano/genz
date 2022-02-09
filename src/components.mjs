@@ -13,16 +13,24 @@ const Head = (opt, ...args) => (
         'padding': '10px',
       })
     ]),
-    _.script({ type: 'text/javascript' }, '_XT=[];_XTI=t=>_XT.push(t);')
+    // _.script({ type: 'text/javascript' }, '_XT=[];_XTI=t=>_XT.push(t);')
+    _.script({ type: 'text/javascript' }, `    
+      const _XT = { push: (node) => {
+        setInterval(() => {
+          node.style.visibility = node.style.visibility === 'visible' ? 'hidden' : 'visible';
+        }, 200);
+      }
+      }
+    `)
   )
 )
 
 const Well = (...args) => (
   _.body(
-    _.script({
-      type: 'module',
-      src: '/client.js'
-    }),
+    // _.script({
+    //   type: 'text/javascript',
+    //   src: '/client.js'
+    // }),
     _.main({ class: 'well' }, ...args)
   )
 )
