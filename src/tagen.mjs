@@ -49,17 +49,28 @@ export const createTag = (name, options = { isVoid: false }) => {
 
     for (arg of traverse(arguments)) {
       switch (true) {
-        case typeof arg === 'string': // IDEA: chunk it if it's super long?
-          if (!entered) {
-            entered = true;
-            yield '>';
-          }
+        case !arg:
+          // omit falsy children...
+          break;
+
+        case typeof arg === 'string':
+          if (!entered) yield entered = true && '>';
           yield arg;
           break;
 
+        // yield any child nodes
         case util.types.isGeneratorObject(arg):
+          if (!entered) yield entered = true && '>';
           for (o of arg) yield o;
           break;
+        
+        case (arg && typeof arg === 'object'):
+          for (o in arg) yield ` ${o}="${arg[o]}"`;
+          if (!entered) yield entered = true && '>';
+          break;
+
+        default:
+          throw new Error('Invalid tag argument');
       }
     }
 
