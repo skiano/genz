@@ -1,4 +1,4 @@
-import * as _ from './tagen.mjs';
+import _ from './tagen.mjs';
 
 const d = _.div(
   _.strong('hello'),
