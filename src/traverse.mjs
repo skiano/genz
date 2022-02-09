@@ -5,10 +5,17 @@ function* each(arr) {
 
 export function* traverse (arr) {
   let queue = [each(arr)];
+  let seen = new WeakSet();
+
   while (queue.length) {
     const { value, done } = queue[0].next();
     if (Array.isArray(value)) {
-      queue.unshift(each(value));
+      let skip;
+      if (value.__once__) {
+        if (seen.has(value)) skip = true;
+        else seen.add(value);
+      }
+      if (!skip) queue.unshift(each(value))
     } else {
       if (value) yield value;
       if (done) {
@@ -18,12 +25,17 @@ export function* traverse (arr) {
   }
 }
 
+const unique = ['a', 'b', ['c', 'd']];
+unique.__once__ = true;
+
 const it = traverse([
   1,
+  unique,
   2,
-  [3, 4, [5], [6, 7]],
+  [3, 4, [5], [6, 7], unique],
   8,
   [[]],
+  unique,
   9
 ])
 
