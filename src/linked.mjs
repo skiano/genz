@@ -1,23 +1,25 @@
 import { Readable } from 'stream';
 
-export class NodeStream extends Readable {
-  #node
-  #stack
-
-  constructor(list) {
-    super();
-    this.#node = list.head();
-    this.#stack = [];
+function* each(l) {
+  let n = l.head();
+  while(n) {
+    yield n;
+    n = n.next;
   }
+}
 
-  _read() {
-    if (this.#node.value instanceof Linked) {
-      this.#stack.push(this.#node);
-      this.#node = this.#node.value.head();
+export function* traverse (arr) {
+  let queue = [each(arr)];
+  while (queue.length) {
+    const { value, done } = queue[0].next();
+    if (value && value.value instanceof Linked) {
+      queue.unshift(each(value.value));
+    } else {
+      if (value) yield value;
+      if (done) {
+        queue.shift();
+      }
     }
-    if (this.#node) this.push(this.#node.value);
-    this.#node = (this.#node || this.#stack.pop() || {}).next;
-    if (!this.#node) return this.push(null)
   }
 }
 
@@ -61,34 +63,46 @@ export class Linked {
   }
 
   walk(cb) {
-    const s = [this];
-
-    let n = this.#head;
-    while (n) {
-      cb(n);
-      n = n.next;
+    const it = traverse(this);
+    for (let i of it) {
+      cb(i);
     }
+  }
+}
+
+export class NodeStream extends Readable {
+  #iterator
+
+  constructor(list) {
+    super();
+    this.#iterator = traverse(list);
+  }
+
+  _read() {
+    const { value, done } = this.#iterator.next();
+    if (done) this.push(null);
+    else this.push(value.value);
   }
 }
 
 // EXAMPLE...
 //
-const l1 = new Linked({ transform: v => String(v) });
-l1.add(1);
-l1.add(2);
-l1.add(3);
+// const l1 = new Linked({ transform: v => String(v) });
+// l1.add(1);
+// l1.add(2);
+// l1.add(3);
 
-const l2 = new Linked({ transform: v => String(v) });
-l2.add(4);
-l2.add(5);
+// const l2 = new Linked({ transform: v => String(v) });
+// l2.add(4);
+// l2.add(5);
 
-l1.add(l2);
-l1.add(6);
-l1.add(7);
+// l1.add(l2);
+// l1.add(6);
+// l1.add(7);
 
 // const s = new NodeStream(l1);
 // s.pipe(process.stdout);
 
-l1.walk(({ value }) => {
-  console.log(value)
-});
+// l1.walk((v) => {
+//   console.log(v.value)
+// });

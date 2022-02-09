@@ -3,7 +3,7 @@ function* each(arr) {
   for (i = 0; i < arr.length; i++) yield arr[i];
 }
 
-function* traverse (arr) {
+export function* traverse (arr) {
   let queue = [each(arr)];
   while (queue.length) {
     const { value, done } = queue[0].next();
