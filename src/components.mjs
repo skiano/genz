@@ -12,15 +12,24 @@ const Head = (opt, ...args) => (
         'border': '1px solid red',
         'padding': '10px',
       })
-    ])
+    ]),
+    _.script({ type: 'text/javascript' }, '_XT=[];_XTI=t=>_XT.push(t);')
   )
 )
 
 const Well = (...args) => (
   _.body(
+    _.script({
+      type: 'module',
+      src: '/client.js'
+    }),
     _.main({ class: 'well' }, ...args)
   )
 )
+
+const Init = (id) => {
+  return _.script({ type: 'text/javascript' }, `_XT.push(document.getElementById('${id}'))`);
+}
 
 export const Home = () => {
   const paragraphs = [];
@@ -32,7 +41,9 @@ export const Home = () => {
       Head({ title: 'Home' }),
       Well(
         _.div(
-          _.p(_.strong('a super big page!'))
+          { id: 'exampleId' },
+          _.p(_.strong('a super big page!')),
+          Init('exampleId'),
         ),
         paragraphs
       )

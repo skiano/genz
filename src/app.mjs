@@ -1,4 +1,5 @@
 import Koa from 'koa';
+import send from 'koa-send';
 import route from 'koa-route';
 import { TagStream } from './tagen.mjs';
 import { Home, Article } from './components.mjs';
@@ -32,6 +33,11 @@ const page = (component) => {
 
 app.use(route.get('/', page(Home)));
 app.use(route.get('/article/:articleId', page(Article)));
+
+// serve some client js...
+app.use(route.get('/client.js', async (ctx) => {
+  await send(ctx, 'src/client.js');
+}))
 
 app.on('error', (error) => {
   if (error.code === 'EPIPE' || error.code === 'ECONNRESET') {
