@@ -62,7 +62,14 @@ export const createTag = (name, options = { isVoid: false }) => {
         case !arg || arg === isRecursive:
           break;
         
-        // defer control to stream if we encounter a promise
+        /**
+         * OK... so this is some insane voodooo
+         * to allow promises in SOME components WITHOUT turing everything
+         * everywhere into promises
+         * The idea is to yield the promise so that the Readable stream
+         * can be the one that waits and then passes back the value
+         * when that is ready the iterator yields back the final value
+         */
         case typeof arg === 'object' && !!arg.then:
           pending = { pending: arg, ret: null };
           yield pending; // let the consumer pause...
@@ -115,8 +122,6 @@ export class TagStream extends Readable {
     let { value, done } = this.#iterator.next();
 
     if (value && value.pending) {
-      // console.log(value.pending)
-
       value.pending.then((v) => {
         value.finished = v;
         const i = this.#iterator.next();
@@ -138,14 +143,17 @@ export const $ = TAG_NAMES.reduce((o, name) => {
 export default $;
 
 // EXAMPLE
-new TagStream(
-  $.div(
-    1,
-    2,
-    Promise.resolve($.p(
-      'yes',
-      Promise.resolve($.strong('shitttt'))
-    )),
-    3
-  )
-).pipe(process.stdout);
+
+// new TagStream(
+//   $.div(
+//     1,
+//     2,
+//     Promise.resolve($.p(
+//       'yes',
+//       Promise.resolve($.strong('shitttt'))
+//     )),
+//     3
+//   )
+// ).pipe(process.stdout).on('end', () => {
+//   console.log('finished')
+// });

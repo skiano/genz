@@ -40,13 +40,18 @@ export const Home = () => {
   );
 };
 
-export const Article = (articleId) => {
+export const Article = async (articleId) => {
+  // simulate a async data request...
+  const data = await Promise.resolve({
+    body: `Article content for ${articleId}`,
+  })
+
   return (
     _.html(
       Head({ title: articleId }),
       Well(
         _.section(
-          _.p(`Article content for ${articleId}`)
+          _.p(data.body)
         )
       )
     )
