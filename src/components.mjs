@@ -1,8 +1,4 @@
-import { css } from './css.mjs';
-import * as _ from './html.mjs';
-
-const latent = (v, t = 100) => v //
-// const latent = (v, t = 100) => v new Promise((resolve) => setTimeout(resolve, t, v));
+import _, { css } from './tagen.mjs';
 
 const aboveFoldCSS = [
   css('html', {
@@ -25,7 +21,7 @@ const Page = (opt, content) => {
   );
 }
 
-export const Home = async () => {
+export const Home = () => {
   const paragraphs = [];
   for (let i = 0; i < 20 * 1000; i++) {
     paragraphs.push(_.p(`paragraph ${i}`));
@@ -34,25 +30,25 @@ export const Home = async () => {
     title: 'Home Page',
   }, (
     _.main(
-      latent(_.p([
-        latent(_.span('a'), 100),
-        latent(_.span('a'), 100),
-      ]), 100),
+      _.p([
+        _.span('a'), 100,
+        _.span('a'),
+      ]),
       paragraphs,
     )
   ));
 };
 
-const ArticleStyle = _.styleOnce(
+const ArticleStyle = _.style(
   css('.article__body', {
     border: '1px solid blue',
   })
 );
 
-export const Article = async (articleId) => {
-  const article = await Promise.resolve({
+export const Article = (articleId) => {
+  const article = {
     body: `Lorem Ipsum for article: ${articleId}`,
-  });
+  };
   return Page({
     title: 'Article'
   },([
@@ -68,10 +64,5 @@ export const Article = async (articleId) => {
 };
 
 // EXAMPLE
-(async () => {
-  const a = await Article('123');
-  console.log('final length', a.length()) // should < 304
-  console.log('')
-  console.log('')
-  a.stream().pipe(process.stdout);
-})();
+// const a = await Article('123');
+// for (let f of a) console.log(f);
