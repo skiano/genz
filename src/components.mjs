@@ -57,14 +57,21 @@ export const Article = async (articleId) => {
     title: 'Article'
   },([
     ArticleStyle,
+    _.div(
+      _.section(
+        ArticleStyle
+      )
+    ),
     ArticleStyle,
     _.main({ class: 'article__body' }, article.body)
   ]));
 };
 
 // EXAMPLE
-// (async () => {
-//   const a = await Article('123');
-//   console.log('final length', a.length())
-//   a.stream().pipe(process.stdout);
-// })();
+(async () => {
+  const a = await Article('123');
+  console.log('final length', a.length()) // should < 304
+  console.log('')
+  console.log('')
+  a.stream().pipe(process.stdout);
+})();

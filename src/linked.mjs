@@ -48,9 +48,11 @@ export class Linked {
 
   constructor(options = {}) {
     this.#len = 0;
-    this.#once = options.once;
+    this.#once = !!options.once;
     this.#measure = options.measure || (v => v.length);
     this.#transform = options.transform;
+    this.used = new Map();
+    this.name = options.name;
   }
 
   head() { return this.#head }
@@ -74,6 +76,19 @@ export class Linked {
       this.#head = node;
     }
     this.#tail = node;
+
+    if (value instanceof Linked && value.isOnce()) {
+      console.log(value.name, value.used);
+      this.used.set(value, (this.used.get(value) || 0) + 1);
+    }
+
+    if (value instanceof Linked && value.used.size) {
+      console.log(value.name, value.used);
+      for (let [key, num] of value.used) {
+        this.used.set(key, (this.used.get(key) || 0) + num);
+      }
+    }
+
     this.#len += value instanceof Linked  //but how to deduct once...
       ? value.length()
       : this.#measure(value);
