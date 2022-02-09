@@ -1,8 +1,11 @@
-import { Linked } from './linked.mjs';
-
 export const css = (selectors, rules = {}) => {
-  const fragments = new Linked();
-  const append = (frag) => fragments.add(Buffer.from(frag));
+  const fragments = [];
+  fragments._bytes = 0;
+  const append = (frag) => {
+    frag = Buffer.from(frag);
+    fragments._bytes += frag.length;
+    fragments.push(frag);
+  };
 
   selectors = Array.isArray(selectors) ? selectors.join(',') : selectors;
   append(`${selectors} {`);
@@ -17,10 +20,15 @@ export const css = (selectors, rules = {}) => {
 };
 
 export const mediaQuery = (def, rules) => {
-  const fragments = new Linked();
-  const append = (frag) => fragments.add(Buffer.from(frag));
+  const fragments = [];
+  fragments._bytes = 0;
+  const append = (frag) => {
+    frag = Buffer.from(frag);
+    fragments._bytes += frag.length;
+    fragments.push(frag);
+  };
   append(`@media ${def} {`);
-  rules.forEach(r => fragments.add(r));
+  rules.forEach(append);
   append('}');
   return fragments;
 };

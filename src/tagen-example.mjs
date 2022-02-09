@@ -1,15 +1,13 @@
-import _ from './tagen.mjs';
+import _, { TagStream, css, mediaQuery } from './tagen.mjs';
 
-const d = _.div(
-  _.strong('hello'),
-  'hello',
-  ['world'],
-  [_.span('!')],
-  _.img({ src: 'abc.jog' })
-);
+const d = mediaQuery('max-width=600', [
+  css(['.class', '.other'], {
+    color: 'red',
+    background: 'blue',
+  }),
+], css('p', {
+  color: 'red',
+  background: 'blue',
+}))
 
-const chunks = [];
-for (let s of d) {
-  chunks.push(s);
-}
-console.log(chunks.join(''));
+new TagStream(d).pipe(process.stdout);

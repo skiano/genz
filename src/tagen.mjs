@@ -1,4 +1,5 @@
 import util from 'util';
+import { Readable } from 'stream';
 import { VOID_ELEMENTS, TAG_NAMES } from './constants.mjs';
 
 function* each(arr) {
@@ -19,6 +20,26 @@ function* traverse (arr) {
       }
     }
   }
+}
+
+export function* css(selectors, ...declarations) {
+  yield (Array.isArray(selectors) ? selectors.join(',') : selectors) + '{';
+  let p;
+  let declaration;
+  for (declaration of traverse(declarations)) {
+    for (p in declaration) yield `${p}:"${declaration[p]};`;
+  }
+  yield '}';
+}
+
+export function* mediaQuery(media, ...rules) {
+  yield `@media ${media} {`;
+  let r;
+  let rule;
+  for (rule of traverse(rules)) {
+    for (r of rule) yield r;
+  }
+  yield '}';
 }
 
 export const createTag = (name, options = { isVoid: false }) => {
@@ -60,6 +81,21 @@ export const createTag = (name, options = { isVoid: false }) => {
     if (!options.isVoid) yield `</${name}>`;
   };
 };
+
+export class TagStream extends Readable {
+  #iterator
+
+  constructor(tag) {
+    super();
+    this.#iterator = tag;
+  }
+
+  _read() {
+    const { value, done } = this.#iterator.next();
+    if (done) this.push(null);
+    else this.push(value);
+  }
+}
 
 export default TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
