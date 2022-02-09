@@ -43,7 +43,7 @@ export function* mediaQuery(media, ...rules) {
 }
 
 export const createTag = (name, options = { isVoid: false }) => {
-  return function* tag() {
+  return async function* tag() {
     yield name === 'html' ? '<!DOCTYPE><html' : `<${name}`;
 
     let o;
@@ -51,6 +51,8 @@ export const createTag = (name, options = { isVoid: false }) => {
     let entered;
 
     for (arg of traverse(arguments)) {
+      arg = await Promise.resolve(arg);
+
       switch (true) {
         case !arg:
           // omit falsy children...
@@ -64,7 +66,7 @@ export const createTag = (name, options = { isVoid: false }) => {
         // yield any child nodes
         case util.types.isGeneratorObject(arg):
           if (!entered) yield entered = true && '>';
-          for (o of arg) yield o;
+          for await (o of arg) yield o;
           break;
         
         case (arg && typeof arg === 'object'):
@@ -91,13 +93,42 @@ export class TagStream extends Readable {
   }
 
   _read() {
-    const { value, done } = this.#iterator.next();
-    if (done) this.push(null);
-    else this.push(value);
+    this.#iterator.next()
+      .then(({ value, done }) => {
+        if (done) this.push(null);
+        else this.push(value);
+      })
+      .catch((e) => {
+        this._destroy(e);
+      });
   }
 }
 
-export default TAG_NAMES.reduce((o, name) => {
+export const $ = TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
   return o;
 }, {});
+
+export default $; // for convienience
+
+// (async () => {
+//   const Custom = (id) => {
+//     const data = Promise.resolve(`yay! ${id}`);
+//     return $.p(data);
+//   };
+
+//   const t = await $.div(
+//     $.p('a'),
+//     $.p('b'),
+//     Custom(1),
+//     Custom(2),
+//   );
+
+//   console.log(t);
+
+//   const chunks = [];
+//   for await (let i of t) {
+//     chunks.push(i);
+//   }
+//   console.log(chunks.join(''));
+// })();
