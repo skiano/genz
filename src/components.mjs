@@ -1,4 +1,4 @@
-import _, { css } from './tagen.mjs';
+import _, { css } from './tag.mjs';
 
 const Head = (opt, ...args) => (
   _.head(

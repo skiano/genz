@@ -1,7 +1,7 @@
 import Koa from 'koa';
 import send from 'koa-send';
 import route from 'koa-route';
-import { TagStream } from './tagen.mjs';
+import { TagStream } from './tag.mjs';
 import { Home, Article } from './components.mjs';
 
 const app = new Koa();

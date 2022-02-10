@@ -68,7 +68,10 @@ export const createTag = (name, options = { isVoid: false }) => {
          * everywhere into promises
          * The idea is to yield the promise so that the Readable stream
          * can be the one that waits and then passes back the value
-         * when that is ready the iterator yields back the final value
+         * when that is ready the iterator yields back the final value...
+         * ****
+         * I tried doing this more idiomatically by having an empty yield to pause..
+         * but so far no luck
          */
         case typeof arg === 'object' && !!arg.then:
           pending = { pending: arg, ret: null };
@@ -144,13 +147,16 @@ export default $;
 
 // EXAMPLE
 
+// const superSlow = () => new Promise(r => setTimeout(r, 800, $.em('slow it down')))
+
 // new TagStream(
 //   $.div(
 //     1,
 //     2,
 //     Promise.resolve($.p(
 //       'yes',
-//       Promise.resolve($.strong('shitttt'))
+//       Promise.resolve($.strong('shitttt')),
+//       superSlow()
 //     )),
 //     3
 //   )
