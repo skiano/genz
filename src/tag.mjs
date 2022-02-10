@@ -163,3 +163,6 @@ export default $;
 // ).pipe(process.stdout).on('end', () => {
 //   console.log('finished')
 // });
+
+// proof that the streams interleave
+// new TagStream($.video('X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X')).pipe(process.stdout)
