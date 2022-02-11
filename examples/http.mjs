@@ -1,5 +1,5 @@
 import http from 'http';
-import _, { css, mediaQuery, tagStream } from './tag.mjs';
+import _, { css, mediaQuery, tagStream } from '../src/tag.mjs';
 
 const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');

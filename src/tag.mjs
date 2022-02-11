@@ -188,25 +188,3 @@ export const $ = TAG_NAMES.reduce((o, name) => {
 }, {});
 
 export default $;
-
-// EXAMPLE
-
-// const superSlow = () => new Promise(r => setTimeout(r, 800, $.em('slow it down')))
-
-// new TagStream(
-//   $.div(
-//     1,
-//     2,
-//     Promise.resolve($.p(
-//       'yes',
-//       Promise.resolve($.strong('shitttt')),
-//       superSlow()
-//     )),
-//     3
-//   )
-// ).pipe(process.stdout).on('end', () => {
-//   console.log('finished')
-// });
-
-// proof that the streams interleave
-// new TagStream($.video('X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X')).pipe(process.stdout)
