@@ -7,6 +7,10 @@ A server-first approach to js apps
 Sometimes a desire to have a monolithic front-end app makes the server-side a nightmare. For apps that have fairly static pages, 
 perhaps we can go the other direction. SSR in popular frameworks seems secondary. But what if it was primary?
 
+## What it is
+
+A set of functions for creating a stream of html (similar to `h()` in many frameworks), which prioritizing streaming. The hope is three-fold: avoid templating, keep the main thread as open as possible, and support streaming very large pages.
+
 ### Examples:
 
 Here is an app that responds with a 20,000 item list:
