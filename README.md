@@ -21,7 +21,7 @@ Here is an app that responds with a 20,000 item list:
 
 ```js
 import http from 'http';
-import _, { tagStream } from '@skiano/edison';
+import _, { tagStream } from 'genz';
 
 const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');
@@ -48,7 +48,7 @@ server.listen(3000);
 And an example how html attributes work:
 
 ```js
-import _ from '@skiano/edison';
+import _ from 'genz';
 
 _.img({ src: '/abc.jpg' });
 
@@ -58,7 +58,7 @@ _.p({ class: 'my-class' }, 'paragraph text...');
 Children can be arrats (and nested deeply):
 
 ```js
-import _ from '@skiano/edison';
+import _ from 'genz';
 
 _.section(
   _.p(
@@ -74,7 +74,7 @@ _.section(
 And for above the fold inlined css:
 
 ```js
-import _, { css, mediaQuery } from '@skiano/edison';
+import _, { css, mediaQuery } from 'genz';
 
 
 _.style(
@@ -93,7 +93,7 @@ _.style(
 You can incorporate a file stream to inline something from disk:
 
 ```js
-import _, { inlineFile } from '@skiano/edison';
+import _, { inlineFile } from 'genz';
 
 _.head(
   _.script({ type: 'module' }, inlineFile('dist/gpt-snippet.js')) 
