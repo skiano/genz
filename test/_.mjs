@@ -22,7 +22,7 @@ import { fileURLToPath } from 'url';
         await test();
         console.log(`✓ ${test.name}`);
       } catch (err) {
-        console.log(`✗ ${test.name} Failed!`);
+        console.log(`✗ ${test.name} failed!\n`);
         console.log(err.stack);
         console.log('');
       }
