@@ -1,4 +1,5 @@
-import _, { css } from './tag.mjs';
+import { stdout } from 'process';
+import _, { css, inlineFile } from './tag.mjs';
 
 const Head = (opt, ...args) => (
   _.head(
@@ -13,6 +14,7 @@ const Head = (opt, ...args) => (
         'padding': '10px',
       })
     ]),
+    _.script({ type: 'module' }, inlineFile('src/inline.js')),
     // _.script({ type: 'text/javascript' }, '_XT=[];_XTI=t=>_XT.push(t);')
     _.script({ type: 'text/javascript' }, `    
       const _XT = { push: (node) => {
@@ -80,3 +82,6 @@ export const Article = async (articleId) => {
 // EXAMPLE
 // const a = await Article('123');
 // for (let f of a) console.log(f);
+// tagStream(
+//   _.script(inlineFile('src/inline.js'))
+// ).pipe(stdout);
