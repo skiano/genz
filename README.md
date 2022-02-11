@@ -10,6 +10,9 @@ perhaps we can go the other direction. SSR in popular frameworks seems secondary
 ### Example:
 
 ```js
+import http from 'http';
+import _, { tagStream } from '@skiano/edison';
+
 const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');
   res.statusCode = 200;
@@ -22,7 +25,7 @@ const server = http.createServer((req, res) => {
       _.main(
         _.h1('Hello Edison'),
         _.ul(
-          [1, 2, 3].map(v => _.li(`item ${v}`))
+          [...new Array(20 * 1000)].map((v, i) => _.li(`item ${i}`))
         )
       )
     )
