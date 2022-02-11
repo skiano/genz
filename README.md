@@ -9,7 +9,7 @@ perhaps we can go the other direction. SSR in popular frameworks seems secondary
 
 ### Examples:
 
-Here is an app that responds with a 20,000 item list...
+Here is an app that responds with a 20,000 item list:
 
 ```js
 import http from 'http';
@@ -37,7 +37,7 @@ const server = http.createServer((req, res) => {
 server.listen(3000);
 ```
 
-And an example how html attributes work...
+And an example how html attributes work:
 
 ```js
 import _ from '@skiano/edison';
@@ -47,7 +47,7 @@ _.img({ src: '/abc.jpg' });
 _.p({ class: 'my-class' }, 'paragraph text...');
 ```
 
-Children can be arrats (and nested deeply)...
+Children can be arrats (and nested deeply):
 
 ```js
 import _ from '@skiano/edison';
@@ -63,7 +63,7 @@ _.section(
 );
 ```
 
-And for above the fold inlined css...
+And for above the fold inlined css:
 
 ```
 import _, { css, mediaQuery } from '@skiano/edison';
@@ -82,7 +82,7 @@ _.style(
 
 ```
 
-You can incorporate a file stream to inline something from disk...
+You can incorporate a file stream to inline something from disk:
 
 ```
 import _, { inlineFile } from '@skiano/edison';
