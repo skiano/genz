@@ -37,7 +37,7 @@ function createTag (name) {
       /////////////////
 
       if (opening) {
-        str = name === 'html' ? `<${name}` : `<${name}`;
+        str = name === 'html' ? '<!DOCTYPE html' : `<${name}`;
         if (hasAttributes) {
           for (let a in arg0) {
             str += ` ${a}="${arg0[a]}"`
@@ -100,7 +100,7 @@ export const _ = TAG_NAMES.reduce((o, name) => {
   return o;
 }, {});
 
-const n = _.div(
+const n = _.html(
   1,
   2,
   [3, 4, 5],
