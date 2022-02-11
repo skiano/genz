@@ -1,7 +1,6 @@
 import fs from 'fs';
-import path from 'path';
 import util from 'util';
-import { Readable, Stream } from 'stream';
+import { Readable } from 'stream';
 import { VOID_ELEMENTS, TAG_NAMES } from './constants.mjs';
 
 function* each(arr) {
@@ -147,6 +146,7 @@ export class TagStream extends Readable {
       // This does not cancel pending read operations, and if there is such an
       // operation, the process may still not be able to exit successfully
       // until it finishes. (https://nodejs.org/api/fs.html#filehandlecreatereadstreamoptions)
+      // TODO: not sure if this is totally needed
       this.#reading.push(null);
       this.#reading.read(0);
       this.#reading = null;
