@@ -16,7 +16,7 @@ export default [
     success('Deep Nesting');
   },
 
-  () => {
+  async () => {
     const it = _.div(_.p('hello ', _.span('yes')));
     const a = [];
     for (let c of it) a.push(c);
