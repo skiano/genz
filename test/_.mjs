@@ -7,22 +7,26 @@ import { fileURLToPath } from 'url';
   const dirname = path.dirname(filename);
   const files = await fs.promises.readdir(dirname);
 
-  files.forEach(async function runSuite (f) {
-    if (f.startsWith('_') || !f.endsWith('.mjs')) return;
+  for (let f = 0; f < files.length; f++) {
+    const file = files[f];
+    if (file.startsWith('_') || !file.endsWith('.mjs')) continue;
 
-    const m = await import(path.resolve(dirname, f));
-    if (!Array.isArray(m.default)) throw new Error(`Suite ${p} invalid`);
+    const m = await import(path.resolve(dirname, file));
+    if (!Array.isArray(m.default)) throw new Error(`Suite ${file} invalid`);
 
-    m.default.forEach(async function runTest(t) {
+    console.log(`Running Suite: ${file}\n`);
+
+    for (let t = 0; t < m.default.length; t++) {
+      const test = m.default[t];
       try {
-        await t();
-        console.log(`✓ ${t.name}`);
-      } catch (e) {
-        console.log('');
-        console.log(e.stack);
+        await test();
+        console.log(`✓ ${test.name}`);
+      } catch (err) {
+        console.log(`✗ ${test.name} Failed!`);
+        console.log(err.stack);
         console.log('');
       }
-    });
-
-  });
+    }
+  }
+  console.log('\nTests Complete!\n');
 })();
