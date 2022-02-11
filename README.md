@@ -71,7 +71,7 @@ _.section(
 
 And for above the fold inlined css:
 
-```
+```js
 import _, { css, mediaQuery } from '@skiano/edison';
 
 
@@ -90,7 +90,7 @@ _.style(
 
 You can incorporate a file stream to inline something from disk:
 
-```
+```js
 import _, { inlineFile } from '@skiano/edison';
 
 _.head(
