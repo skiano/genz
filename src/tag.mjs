@@ -1,3 +1,4 @@
+import { Readable } from 'stream';
 import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
 function createTag (name) {
@@ -77,7 +78,8 @@ function createTag (name) {
             return next();
           }
 
-          return child_value;
+          // OUPUT A CHILD STRING!
+          return typeof child_value === 'number' ? String(child_value) : child_value;
         } else if (queue_i[0] >= queue_a[0].length) {
           // 5) if there is nothing left in this array, move shallower
           queue_a.shift();
@@ -95,6 +97,36 @@ function createTag (name) {
   };
 }
 
+class TagStream extends Readable {
+  #next;
+  #chunks;
+
+  constructor (next) {
+    super();
+    this.#next = next;
+  }
+
+  _read(size) {
+    let n = this.#next();
+
+    if (n) {
+      let s = 0;
+      let buffers = [];
+      while (n && s < size) {
+        n = Buffer.from(n);
+        s += n.byteLength;
+        buffers.push(n);
+        n = this.#next();
+      }
+
+      buffers = Buffer.concat(buffers, s);
+      this.push(buffers);
+    } else {
+      this.push();
+    }
+  }
+}
+
 export const _ = TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
   return o;
@@ -109,10 +141,16 @@ const n = _.html(
   4
 );
 
-let f;
-do {
-  f = n();
-  if (f) console.log(f);
-} while(f);
+const s = new TagStream(n)
+
+// console.log((s.read(200) || '').toString());
+
+s.pipe(process.stdout);
+
+// let f;
+// do {
+//   f = n();
+//   if (f) console.log(f);
+// } while(f);
 
 
