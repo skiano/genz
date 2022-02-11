@@ -1,190 +1,98 @@
-import fs from 'fs';
-import util from 'util';
-import { Readable } from 'stream';
-import { VOID_ELEMENTS, TAG_NAMES } from './constants.mjs';
+import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
-function* each(arr) {
-  let i;
-  for (i = 0; i < arr.length; i++) yield arr[i];
-}
+function createTag (name) {
+  return function tag () {
+    let arg0 = arguments[0];
 
-function* traverse (arr) {
-  let queue = [each(arr)];
-  while (queue.length) {
-    const { value, done } = queue[0].next();
-    if (Array.isArray(value)) { 
-      queue.unshift(each(value))
-    } else {
-      if (value) yield value;
-      if (done) {
-        queue.shift();
+    const hasAttributes = (
+      typeof arg0 === 'object' &&
+      arg0 !== null &&
+      typeof arg0.then !== 'function'
+    );
+
+    let str;
+    let done;
+    let opening = true;
+
+    let i = hasAttributes ? 1 : 0;
+    let queue_a = [arguments];
+    let queue_i = [i];
+    let child_value;
+    let defer;
+
+    function next() {
+      if (done) return;
+
+      if (defer) {
+        child_value = defer();
+        if (typeof child_value === 'undefined') {
+          defer = null;
+          return next();
+        }
+        return child_value;
       }
-    }
-  }
-}
 
-export const inlineFile = (f) => {
-  return fs.createReadStream(f);
-}
+      /////////////////
+      // Opening tag //
+      /////////////////
 
-export function* css(selectors, ...declarations) {
-  yield (Array.isArray(selectors) ? selectors.join(',') : selectors) + '{';
-  let p;
-  let declaration;
-  for (declaration of traverse(declarations)) {
-    for (p in declaration) yield `${p}:${declaration[p]};`;
-  }
-  yield '}';
-}
+      if (opening) {
+        str = name === 'html' ? `<${name}` : `<${name}`;
+        if (hasAttributes) {
+          for (let a in arg0) {
+            str += ` ${a}="${arg0[a]}"`
+          }
+        }
+        opening = false;
+        return str += '>';
+      }
 
-export function* mediaQuery(media, ...rules) {
-  yield `@media ${media} {`;
-  let r;
-  let rule;
-  for (rule of traverse(rules)) {
-    for (r of rule) yield r;
-  }
-  yield '}';
-}
+      //////////////////////
+      // Process children //
+      //////////////////////
 
-export const createTag = (name, options = { isVoid: false }) => {
-  const isRecursive = Symbol('isRecursive');
+      // 1) return end tag if there are no more children
+      if (!queue_a.length) {
+        done = true;
+        return VOID_ELEMENTS[name] ? '/>' : `</${name}>`;
+      }
 
-  return function* tag() {
-    const topLevel = arguments[0] !== isRecursive;
-    if (topLevel) {
-      yield name === 'html' ? '<!DOCTYPE><html' : `<${name}`;
-    }
+      // 2) get current child
+      i = queue_i[0];
+      child_value = queue_a[0][i];
+      queue_i[0] = i + 1;   
+  
+      // 3) if the child is an array, move deeper and search there
+      if (Array.isArray(child_value)) { 
+        queue_a.unshift(child_value);
+        queue_i.unshift(0);
+        return next();
+      } else {
+        // 4) if the child has a value, return it
+        if ((child_value ?? false) !== false) {
+          
+          // use the child node
+          if (child_value.__isNext__) {
+            defer = child_value;
+            return next();
+          }
 
-    // TODO:
-    // Should I yield the entire opening tag and closing tag at once
-    // to reduce tiny yields??? What/how would I measure to inform that decision?
-
-    let o;
-    let arg;
-    let entered = !topLevel;
-    let pending;
-
-    for (arg of traverse(arguments)) {
-      switch (true) {
-        // omit falsy children...
-        case !arg || arg === isRecursive:
-          break;
-        
-        /**
-         * OK... so this is some insane voodooo
-         * to allow promises in SOME components WITHOUT turing everything
-         * everywhere into promises
-         * The idea is to yield the promise so that the Readable stream
-         * can be the one that waits and then passes back the value
-         * when that is ready the iterator yields back the final value...
-         * ****
-         * I tried doing this more idiomatically by having an empty yield to pause..
-         * but so far no luck
-         */
-        case typeof arg === 'object' && !!arg.then:
-          if (!entered) yield entered = true && '>';
-          pending = { pending: arg, ret: null };
-          yield pending; // let the consumer pause...
-          for (o of tag(isRecursive, pending.finished)) yield o;
-          break;
-
-        /**
-         * Support readable streams (ie. files)
-         */
-         case arg instanceof Readable:
-          if (!entered) yield entered = true && '>';
-          yield arg; // let the consumer pause... and resume after finished
-          break;
-
-        // plain text
-        case typeof arg === 'string':
-          if (!entered) yield entered = true && '>';
-          yield arg; // TODO: do something about very large strings...
-          break;
-
-        // coerce numbers to strings
-        case typeof arg === 'number':
-          if (!entered) yield entered = true && '>';
-          yield String(arg);
-          break;
-
-        // yield any child nodes
-        case util.types.isGeneratorObject(arg):
-          if (!entered) yield entered = true && '>';
-          for (o of arg) yield o;
-          break;
-
-        // yield node attributes
-        case (arg && typeof arg === 'object'):
-          for (o in arg) yield ` ${o}="${arg[o]}"`;
-          if (!entered) yield entered = true && '>';
-          break;
-
-        default:
-          throw new Error('Invalid tag argument');
+          return child_value;
+        } else if (queue_i[0] >= queue_a[0].length) {
+          // 5) if there is nothing left in this array, move shallower
+          queue_a.shift();
+          queue_i.shift();
+          return next();
+        } else {
+          // 6) if the value is false, null, or undefined, skip it
+          return next();
+        }
       }
     }
 
-    if (topLevel && !entered) yield '>';
-    if (topLevel && !options.isVoid) yield `</${name}>`;
+    next.__isNext__ = true;
+    return next;
   };
-};
-
-class TagStream extends Readable {
-  #iterator
-  #reading
-
-  constructor(tag) {
-    super();
-    this.#iterator = tag;
-  }
-
-  _tap(length) {
-    if (length < this.#reading.readableLength) {
-      this.push(this.#reading.read(length));
-    } else {
-      this.push(this.#reading.read(this.#reading.readableLength));
-      this.#reading.close(); // This may not close the stream.
-      // Artificially marking end-of-stream, as if the underlying resource had
-      // indicated end-of-file by itself, allows the stream to close.
-      // This does not cancel pending read operations, and if there is such an
-      // operation, the process may still not be able to exit successfully
-      // until it finishes. (https://nodejs.org/api/fs.html#filehandlecreatereadstreamoptions)
-      // TODO: not sure if this is totally needed
-      this.#reading.push(null);
-      this.#reading.read(0);
-      this.#reading = null;
-      const i = this.#iterator.next();
-      if (i.done) this.push(null);
-      else this.push(i.value);
-    }
-  }
-
-  _read(length) {
-    if (this.#reading) return this._tap(length);
-
-    let { value, done } = this.#iterator.next();
-
-    if (value instanceof Readable) {
-      this.#reading = value;
-      value.once('readable', () => { this._tap(length); });
-    } else if (value && value.pending) {
-      value.pending.then((v) => {
-        value.finished = v;
-        const i = this.#iterator.next();
-        if (i.done) this.push(null);
-        else this.push(i.value);
-      });
-    } else {
-      if (done) this.push(null);
-      else this.push(value);
-    }
-  }
-}
-
-export const tagStream = (o) => {
-  return o instanceof Readable ? o : new TagStream(o);
 }
 
 export const _ = TAG_NAMES.reduce((o, name) => {
@@ -192,4 +100,19 @@ export const _ = TAG_NAMES.reduce((o, name) => {
   return o;
 }, {});
 
-export default _;
+const n = _.div(
+  1,
+  2,
+  [3, 4, 5],
+  3,
+  _.span({ class: "yes"}, 'yello'),
+  4
+);
+
+let f;
+do {
+  f = n();
+  if (f) console.log(f);
+} while(f);
+
+
