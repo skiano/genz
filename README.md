@@ -2,6 +2,8 @@
 
 A server-first approach to js apps
 
+_NOTE: this is VERY exprimental and not ready for use_
+
 ## Motivation
 
 Sometimes a desire to have a monolithic front-end app makes the server-side a nightmare. For apps that have fairly static pages, 
