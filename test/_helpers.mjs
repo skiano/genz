@@ -4,6 +4,12 @@ export const success = (msg) => {
   console.log(`✓ ${msg}`)
 };
 
+export const syncStringify = (it) => {
+  const a = [];
+  for (let c of it) a.push(c);
+  return a.join('');
+}
+
 export const stringify = (gen) => new Promise((resolve, reject) => {
   const s = tagStream(gen);
   const chunks = [];

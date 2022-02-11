@@ -1,16 +1,27 @@
-[
-  './basic.mjs',
-].forEach(async (p) => {
-  const m = await import(p);
-  if (!Array.isArray(m.default)) throw new Error(`Suite ${p} invalid`);
+import fs from "fs";
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-  m.default.forEach(async (t) => {
-    try {
-      await t();
-    } catch (e) {
-      console.log('');
-      console.log(e.stack);
-      console.log('');
-    }
+(async () => {
+  const filename = fileURLToPath(import.meta.url);
+  const dirname = path.dirname(filename);
+  const files = await fs.promises.readdir(dirname);
+
+  files.forEach(async (f) => {
+    if (f.startsWith('_') || !f.endsWith('.mjs')) return;
+
+    const m = await import(path.resolve(dirname, f));
+    if (!Array.isArray(m.default)) throw new Error(`Suite ${p} invalid`);
+
+    m.default.forEach(async (t) => {
+      try {
+        await t();
+      } catch (e) {
+        console.log('');
+        console.log(e.stack);
+        console.log('');
+      }
+    });
+
   });
-});
+})();
