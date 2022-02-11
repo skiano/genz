@@ -1,6 +1,6 @@
 # edison
 
-A server-first approach to js apps
+A streaming-first approach to SSR in Node apps.
 
 _NOTE: this is VERY exprimental and not ready for use_
 
