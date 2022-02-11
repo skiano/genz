@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from 'path';
+import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 
 (async function runTests() {
@@ -14,19 +15,19 @@ import { fileURLToPath } from 'url';
     const m = await import(path.resolve(dirname, file));
     if (!Array.isArray(m.default)) throw new Error(`Suite ${file} invalid`);
 
-    console.log(`Running Suite: ${file}\n`);
+    console.log(chalk.underline(`Running Suite: ${file}\n`));
 
     for (let t = 0; t < m.default.length; t++) {
       const test = m.default[t];
       try {
         await test();
-        console.log(`✓ ${test.name}`);
+        console.log(chalk.green(`✓ ${test.name}`));
       } catch (err) {
-        console.log(`✗ ${test.name} failed!\n`);
+        console.log(chalk.redBright(`✗ ${test.name} failed!\n`));
         console.log(err.stack);
         console.log('');
       }
     }
   }
-  console.log('\nTests Complete!\n');
+  console.log(chalk.underline('\nTests Complete!\n'));
 })();
