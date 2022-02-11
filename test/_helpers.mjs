@@ -1,9 +1,5 @@
 import _, { tagStream } from '../src/tag.mjs';
 
-export const success = (msg) => {
-  console.log(`✓ ${msg}`)
-};
-
 export const syncStringify = (it) => {
   const a = [];
   for (let c of it) a.push(c);

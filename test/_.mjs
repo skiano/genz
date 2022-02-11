@@ -16,6 +16,7 @@ import { fileURLToPath } from 'url';
     m.default.forEach(async function runTest(t) {
       try {
         await t();
+        console.log(`✓ ${t.name}`);
       } catch (e) {
         console.log('');
         console.log(e.stack);
