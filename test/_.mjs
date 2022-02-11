@@ -2,7 +2,7 @@ import fs from "fs";
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-(async () => {
+(async function runTests() {
   const filename = fileURLToPath(import.meta.url);
   const dirname = path.dirname(filename);
   const files = await fs.promises.readdir(dirname);
