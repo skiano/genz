@@ -5,8 +5,8 @@ import { syncStringify } from './_helpers.mjs';
 export default [
 
   function TEST_DOC_TYPE () {
-    const ret = syncStringify(_.div('Hello ', 'world. ', [], ['I'], [ [' ', 'am here!'] ]));
-    assert.equal(ret, '<div>Hello world. I am here!</div>');
+    const ret = syncStringify(_.html());
+    assert.equal(ret, '<!DOCTYPE><html></html>');
   },
 
   function TEST_VOID_ELEMENTS () {
