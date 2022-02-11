@@ -56,6 +56,10 @@ export const createTag = (name, options = { isVoid: false }) => {
       yield name === 'html' ? '<!DOCTYPE><html' : `<${name}`;
     }
 
+    // TODO:
+    // Should I yield the entire opening tag and closing tag at once
+    // to reduce tiny yields??? What/how would I measure to inform that decision?
+
     let o;
     let arg;
     let entered = !topLevel;
