@@ -1,8 +1,14 @@
-# edison
+# Gen Z
 
 A streaming-first approach to SSR in Node apps.
 
 _NOTE: this is VERY exprimental and not ready for use_
+
+## installation
+
+```bash
+$ npm install genz
+```
 
 ## Motivation
 
