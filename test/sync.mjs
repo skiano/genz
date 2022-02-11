@@ -6,7 +6,7 @@ export default [
 
   function TEST_VOID_ELEMENTS () {
     // TODO: decide if it should be <img> or <img/>?
-    assert.equal(syncStringify(_.hr()), '<hr');
+    assert.equal(syncStringify(_.hr()), '<hr>');
     assert.equal(syncStringify(_.img({ src: '/a.jpg' })), '<img src="/a.jpg">');
     success('Void Elements');
   },
