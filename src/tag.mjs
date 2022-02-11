@@ -1,3 +1,4 @@
+import fs from 'fs';
 import util from 'util';
 import { Readable } from 'stream';
 import { VOID_ELEMENTS, TAG_NAMES } from './constants.mjs';
@@ -20,6 +21,10 @@ function* traverse (arr) {
       }
     }
   }
+}
+
+export const inlineFile = (f) => {
+  return fs.createReadStream(f);
 }
 
 export function* css(selectors, ...declarations) {
@@ -79,6 +84,14 @@ export const createTag = (name, options = { isVoid: false }) => {
           for (o of tag(isRecursive, pending.finished)) yield o;
           break;
 
+        /**
+         * Support readable streams (ie. files)
+         */
+         case arg instanceof Readable:
+          if (!entered) yield entered = true && '>';
+          yield arg; // let the consumer pause... and resume after finished
+          break;
+
         // plain text
         case typeof arg === 'string':
           if (!entered) yield entered = true && '>';
@@ -115,16 +128,43 @@ export const createTag = (name, options = { isVoid: false }) => {
 
 export class TagStream extends Readable {
   #iterator
+  #reading
 
   constructor(tag) {
     super();
     this.#iterator = tag;
   }
 
-  _read() {
+  _tap(length) {
+    if (length < this.#reading.readableLength) {
+      this.push(this.#reading.read(length));
+    } else {
+      this.push(this.#reading.read(this.#reading.readableLength));
+      this.#reading.close(); // This may not close the stream.
+      // Artificially marking end-of-stream, as if the underlying resource had
+      // indicated end-of-file by itself, allows the stream to close.
+      // This does not cancel pending read operations, and if there is such an
+      // operation, the process may still not be able to exit successfully
+      // until it finishes. (https://nodejs.org/api/fs.html#filehandlecreatereadstreamoptions)
+      // TODO: not sure if this is totally needed
+      this.#reading.push(null);
+      this.#reading.read(0);
+      this.#reading = null;
+      const i = this.#iterator.next();
+      if (i.done) this.push(null);
+      else this.push(i.value);
+    }
+  }
+
+  _read(length) {
+    if (this.#reading) return this._tap(length);
+
     let { value, done } = this.#iterator.next();
 
-    if (value && value.pending) {
+    if (value instanceof Readable) {
+      this.#reading = value;
+      value.once('readable', () => { this._tap(length); });
+    } else if (value && value.pending) {
       value.pending.then((v) => {
         value.finished = v;
         const i = this.#iterator.next();
@@ -136,6 +176,10 @@ export class TagStream extends Readable {
       else this.push(value);
     }
   }
+}
+
+export const tagStream = (o) => {
+  return o instanceof Readable ? o : new TagStream(o);
 }
 
 export const $ = TAG_NAMES.reduce((o, name) => {
