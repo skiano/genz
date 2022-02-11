@@ -8,7 +8,7 @@
     "elmer-fudd": "^1.3.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/_.mjs"
   },
   "repository": {
     "type": "git",

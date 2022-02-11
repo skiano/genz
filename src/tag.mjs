@@ -126,7 +126,7 @@ export const createTag = (name, options = { isVoid: false }) => {
   };
 };
 
-export class TagStream extends Readable {
+class TagStream extends Readable {
   #iterator
   #reading
 
@@ -182,9 +182,9 @@ export const tagStream = (o) => {
   return o instanceof Readable ? o : new TagStream(o);
 }
 
-export const $ = TAG_NAMES.reduce((o, name) => {
+export const _ = TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
   return o;
 }, {});
 
-export default $;
+export default _;
