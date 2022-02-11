@@ -1,4 +1,4 @@
-import _, { css } from './tagen.mjs';
+import _, { css } from './tag.mjs';
 
 const Head = (opt, ...args) => (
   _.head(
@@ -12,15 +12,32 @@ const Head = (opt, ...args) => (
         'border': '1px solid red',
         'padding': '10px',
       })
-    ])
+    ]),
+    // _.script({ type: 'text/javascript' }, '_XT=[];_XTI=t=>_XT.push(t);')
+    _.script({ type: 'text/javascript' }, `    
+      const _XT = { push: (node) => {
+        setInterval(() => {
+          node.style.visibility = node.style.visibility === 'visible' ? 'hidden' : 'visible';
+        }, 200);
+      }
+      }
+    `)
   )
 )
 
 const Well = (...args) => (
   _.body(
+    // _.script({
+    //   type: 'text/javascript',
+    //   src: '/client.js'
+    // }),
     _.main({ class: 'well' }, ...args)
   )
 )
+
+const Init = (id) => {
+  return _.script({ type: 'text/javascript' }, `_XT.push(document.getElementById('${id}'))`);
+}
 
 export const Home = () => {
   const paragraphs = [];
@@ -32,7 +49,9 @@ export const Home = () => {
       Head({ title: 'Home' }),
       Well(
         _.div(
-          _.p(_.strong('a super big page!'))
+          { id: 'exampleId' },
+          _.p(_.strong('a super big page!')),
+          Init('exampleId'),
         ),
         paragraphs
       )
@@ -40,13 +59,18 @@ export const Home = () => {
   );
 };
 
-export const Article = (articleId) => {
+export const Article = async (articleId) => {
+  // simulate a async data request...
+  const data = await Promise.resolve({
+    body: `Article content for ${articleId}`,
+  })
+
   return (
     _.html(
       Head({ title: articleId }),
       Well(
         _.section(
-          _.p(`Article content for ${articleId}`)
+          _.p(data.body)
         )
       )
     )
