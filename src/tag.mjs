@@ -99,7 +99,6 @@ function createTag (name) {
 
 class TagStream extends Readable {
   #next;
-  #chunks;
 
   constructor (next) {
     super();
@@ -118,9 +117,8 @@ class TagStream extends Readable {
         buffers.push(n);
         n = this.#next();
       }
-
-      buffers = Buffer.concat(buffers, s);
-      this.push(buffers);
+      console.log(s);
+      this.push(Buffer.concat(buffers, s));
     } else {
       this.push();
     }
@@ -143,7 +141,7 @@ const n = _.html(
 
 const s = new TagStream(n)
 
-// console.log((s.read(200) || '').toString());
+// console.log((s.read(40).toString()));
 
 s.pipe(process.stdout);
 
