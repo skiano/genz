@@ -54,6 +54,7 @@ function createTag (name) {
         opening = false;
         return str += '>';
       }
+
       str = children(); // i should be able to pause the stream in a similar way for promises...
       if (typeof str === 'undefined') {
         str = VOID_ELEMENTS[name] ? '/>' : `</${name}>`;
