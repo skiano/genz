@@ -1,36 +1,5 @@
 import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
-function traverse (arr, i = 0) {
-  let value;
-  const queue_a = [arr];
-  const queue_i = [i];
-  
-  return function next() {
-    if (!queue_a.length) return;
-
-    i = queue_i[0];
-
-    value = queue_a[0][i];
-    queue_i[0] = i + 1;
-
-    if (Array.isArray(value)) { 
-      queue_a.unshift(value);
-      queue_i.unshift(0);
-      return next();
-    } else {
-      if ((value ?? false) !== false) {
-        return value;
-      } else if (queue_i[0] >= queue_a[0].length) {
-        queue_a.shift();
-        queue_i.shift();
-        return next();
-      } else {
-        return next();
-      }
-    }
-  }
-}
-
 function createTag (name) {
   return function tag () {
     const hasAttributes = (
