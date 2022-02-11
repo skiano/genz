@@ -83,6 +83,7 @@ export const createTag = (name, options = { isVoid: false }) => {
          * but so far no luck
          */
         case typeof arg === 'object' && !!arg.then:
+          if (!entered) yield entered = true && '>';
           pending = { pending: arg, ret: null };
           yield pending; // let the consumer pause...
           for (o of tag(isRecursive, pending.finished)) yield o;

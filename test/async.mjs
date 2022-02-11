@@ -13,7 +13,7 @@ export default [
       ))
     ));
 
-    assert.equal(ret, '<main><div<p>yay</p>></div></main>');
+    assert.equal(ret, '<main><div><p>yay</p></div></main>');
   },
 
 ];
