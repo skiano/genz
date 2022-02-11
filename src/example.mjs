@@ -1,5 +1,5 @@
 import http from 'http';
-import _, { tagStream } from './tag.mjs';
+import _, { css, mediaQuery, tagStream } from './tag.mjs';
 
 const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');
@@ -7,6 +7,17 @@ const server = http.createServer((req, res) => {
   tagStream(_.html(
     _.head(
       _.title('My First Edison Page'),
+      _.meta({ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }),
+      _.style([
+        css('html', {
+          color: 'red',
+        }),
+        mediaQuery('(max-width: 800px)', [
+          css('html', {
+            color: 'blue',
+          }),
+        ])
+      ])
     ),
     _.body(
       _.main(
@@ -19,4 +30,7 @@ const server = http.createServer((req, res) => {
   )).pipe(res);
 });
 
-server.listen(3000);
+const PORT = process.env.PORT || 3000;
+server.listen(3000, () => {
+  console.log(`http://localhost:${PORT}`);
+});
