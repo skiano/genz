@@ -1,4 +1,3 @@
-import { Readable } from 'stream';
 import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
 function createTag (name) {
@@ -38,7 +37,7 @@ function createTag (name) {
       /////////////////
 
       if (opening) {
-        str = name === 'html' ? '<!DOCTYPE html' : `<${name}`;
+        str = name === 'html' ? '<!DOCTYPE html><html' : `<${name}`;
         if (hasAttributes) {
           for (let a in arg0) {
             str += ` ${a}="${arg0[a]}"`
@@ -55,7 +54,7 @@ function createTag (name) {
       // 1) return end tag if there are no more children
       if (!queue_a.length) {
         done = true;
-        return VOID_ELEMENTS[name] ? '/>' : `</${name}>`;
+        return VOID_ELEMENTS[name] ? '' : `</${name}>`;
       }
 
       // 2) get current child
@@ -97,58 +96,7 @@ function createTag (name) {
   };
 }
 
-class TagStream extends Readable {
-  #next;
-
-  constructor (next) {
-    super();
-    this.#next = next;
-  }
-
-  _read(size) {
-    let n = this.#next();
-
-    if (n) {
-      let s = 0;
-      let buffers = [];
-      while (n && s < size) {
-        n = Buffer.from(n);
-        s += n.byteLength;
-        buffers.push(n);
-        n = this.#next();
-      }
-      console.log(s);
-      this.push(Buffer.concat(buffers, s));
-    } else {
-      this.push();
-    }
-  }
-}
-
-export const _ = TAG_NAMES.reduce((o, name) => {
+export default TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
   return o;
 }, {});
-
-const n = _.html(
-  1,
-  2,
-  [3, 4, 5],
-  3,
-  _.span({ class: "yes"}, 'yello'),
-  4
-);
-
-const s = new TagStream(n)
-
-// console.log((s.read(40).toString()));
-
-s.pipe(process.stdout);
-
-// let f;
-// do {
-//   f = n();
-//   if (f) console.log(f);
-// } while(f);
-
-
