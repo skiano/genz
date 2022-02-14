@@ -23,6 +23,10 @@ function createTag (name) {
     function next() {
       if (done) return;
 
+      ////////////////////////
+      // SUPPORT CHILD TAGS //
+      ////////////////////////
+
       if (defer) {
         child_value = defer();
         if (typeof child_value === 'undefined') {
@@ -77,8 +81,11 @@ function createTag (name) {
             return next();
           }
 
-          // OUPUT A CHILD STRING!
-          return typeof child_value === 'number' ? String(child_value) : child_value;
+          // OUPUT A CHILD STRING!!!!!!
+          return typeof child_value === 'number'
+            ? String(child_value)
+            : child_value;
+
         } else if (queue_i[0] >= queue_a[0].length) {
           // 5) if there is nothing left in this array, move shallower
           queue_a.shift();
