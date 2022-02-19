@@ -33,4 +33,3 @@ export default TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
   return o;
 }, {});
-
