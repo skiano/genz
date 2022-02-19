@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "description": "Streaming HTML",
-  "main": "src/tag.mjs",
+  "main": "genz.mjs",
   "devDependencies": {
     "chalk": "^5.0.0"
   },

@@ -1,4 +1,4 @@
-import _ from '../tag.mjs';
+import _ from '../genz.mjs';
 import assert from 'assert';
 import { syncStringify } from './_helpers.mjs';
 
