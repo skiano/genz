@@ -117,20 +117,29 @@ export default TAG_NAMES.reduce((o, name) => {
   return o;
 }, {});
 
-export const render = (next, onFragment) => {
-  const loop = async () => {
+export const render = (next, onFragment, MAX_SYNC = 400) => {
+  const loop = async (i) => {
     let frag = next();
 
     if ((frag ?? false) !== false) {
+      // if the fragment is promised, pause to get the result...
       // TODO: test edges...
       if (frag.then) {
         frag = next(await frag);
+        onFragment(frag);
+        loop(0);
+      } else {
+        onFragment(frag);
+        if (i >= MAX_SYNC) {
+          process.nextTick(loop, 0);
+        } else {
+          loop(i + 1);
+        }
       }
-      onFragment(frag);
-      loop(); // TODO: decide when to process.nextTick...
     } else {
       onFragment();
     }
   }
-  loop();
+  // start the loop
+  loop(1);
 }

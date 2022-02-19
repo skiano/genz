@@ -82,4 +82,34 @@ export default [
     assert.equal(frags.join(''), '<div><p>123</p><p>Yay<strong>!</strong></p></div>');
   },
 
+  async function TEST_NEXT_TICK_ON_MAX () {
+    const next = _.div('hello');
+    const frags = [];
+    const promise = new Promise((resolve) => {
+      render(next, (frag) => {
+        if (typeof frag === 'undefined') resolve();
+        else frags.push(frag);
+      }, 0);
+    });
+    frags.push('interrupt');
+    process.nextTick(() => {
+      frags.push('interrupt');
+    });
+    await promise;
+    assert.deepEqual(frags, [ '<div>', 'interrupt', 'hello', 'interrupt', '</div>' ]);
+  },
+
+  async function TEST_NEXT_TICK_ON_MAX_CONFIGURABLE () {
+    const next = _.div('hello');
+    const frags = [];
+    const promise = new Promise((resolve) => {
+      render(next, (frag) => {
+        if (typeof frag === 'undefined') resolve();
+        else frags.push(frag);
+      }, 2);
+    });
+    frags.push('interrupt');
+    await promise;
+    assert.deepEqual(frags, [ '<div>', 'hello', 'interrupt', '</div>' ]);
+  }
 ];
