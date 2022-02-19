@@ -74,6 +74,10 @@ function createTag (name) {
       } else {
         // 4) if the child has a value, return it
         if ((child_value ?? false) !== false) {
+          // pass back any promises...
+          if (child_value.then) { // TODO: add tests for weird promise-looking things...
+            return child_value;
+          }
           
           // use the child node
           if (child_value.__isNext__) {

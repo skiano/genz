@@ -28,6 +28,7 @@ import { fileURLToPath } from 'url';
         console.log('');
       }
     }
+    console.log('');
   }
   console.log(chalk.underline('\nTests Complete!\n'));
 })();
