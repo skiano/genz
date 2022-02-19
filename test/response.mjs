@@ -1,3 +1,4 @@
+import assert from 'assert';
 import { Writable } from 'stream';
 import _, { reqRes } from '../src/tag.mjs'; 
 
@@ -8,46 +9,31 @@ class ResponseLike extends Writable {
   }
 
   _write(chunk, encoding, next) {
-    process.nextTick(() => {
-      this.arr.push(chunk.toString());
-      next();
-    });
+    this.arr.push(chunk.toString());
+    next();
   }
 }
 
 
 export default [
 
-  async function TEST_STREAMING_RESPONSE () {
+  async function TEST_RESPECTS_HIGHWATER_MARK () {
+    await new Promise((resolve) => {
 
-    const component = () => {
-      return _.p('hello');
-    }
+      const highWaterMark = 6;
+      const res = new ResponseLike({ highWaterMark });
+  
+      res.on('drain', () => {
+        res.arr.push('DRAIN');
+      });
 
-    function page() {
-      return _.div(
-        _.section('section!'),
-        component(),
-      )
-    }
-
-    const res = new ResponseLike({
-      highWaterMark: 4,
+      res.on('close', () => {
+        assert.equal(res.arr.join(' '), '<div> <section> DRAIN section! DRAIN </section> DRAIN <p> hello </p> </div> DRAIN');
+        resolve();
+      });
+  
+      reqRes(_.div(_.section('section!'), _.p('hello')), res);
     });
-
-    res.on('drain', (a) => {
-      console.log('drain')
-    });
-
-    res.on('close', () => {
-      console.log('close', res.arr, res.arr.length);
-    });
-
-    const req = {
-      ur: 'sdfsdf/sdfdsf'
-    };
-
-    reqRes(page(), res, req);
   },
 
 ]
