@@ -35,11 +35,11 @@ export const _ = TAG_NAMES.reduce((o, name) => {
 }, {});
 
 export function traverse (arr) {
+  let i;
+  let value;
   let queue_a = [arr];
   let queue_i = [0];
 
-  let i;
-  let value;
   return function next(replaceValue) {
     if (arguments.length) {
       value = replaceValue;
@@ -50,6 +50,7 @@ export function traverse (arr) {
     }
 
     if (typeof value === 'object' && typeof value.length !== 'undefined') {
+      
       // Move deeper
       queue_a.unshift(value);
       queue_i.unshift(0);
@@ -66,6 +67,8 @@ export function traverse (arr) {
         return typeof value === 'string' ? value : String(value);
 
       } else if (queue_i[0] >= queue_a[0].length) {
+
+        // Move shallower
         queue_a.shift();
         queue_i.shift();
 
@@ -77,7 +80,6 @@ export function traverse (arr) {
           return;
         }
 
-        // Move shallower
         return next();
       } else {
         // Skip undefined/null
