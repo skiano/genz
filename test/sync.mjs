@@ -13,31 +13,24 @@ const syncStringify = (it) => {
 }
 
 export default [
-
-  function TEST_DOC_TYPE () {
+  function TEST_NESTED_EXAMPLE () {
     
     const content = _.html(
-      _.header(
-        _.nav(
-          _.a({ href: '/' }, 'home'),
-          _.a({ href: '/about' }, 'about'),
-        )
+      _.head(
+        _.title('Hello World'),
       ),
-      _.main(
-        _.section(
-          _.p('Paragraph 1'),
-          _.p('Paragraph 2'),
-        )
+      _.body(
+        _.p('P 1'),
+        _.p('P 2'),
       ),
-      _.ul([
-        _.li('List item 1'),
-        _.li('List item 2'),
-      ])
     );
 
     const txt = syncStringify(traverse(content));
 
-    console.log(txt);
+    assert.equal(
+      txt,
+      '<!DOCTYPE html><html><head><title>Hello World</title></head><body><p>P 1</p><p>P 2</p></body></html>'
+    );
   },
 
 ];
