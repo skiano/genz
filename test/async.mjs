@@ -1,43 +1,32 @@
-// import _, { render, setChunkThreshold } from '../genz.mjs';
-// import assert from 'assert';
+import { _, traverse } from '../genz.mjs';
+import assert from 'assert';
 
 export default [
 
-  // async function TEST_RETURNS_PROMISES () {
-  //   const p = Promise.resolve('a');
-  //   const next = _.div(p);
-  //   const f1 = next();
-  //   const f2 = next();
-  //   assert.equal(f1, '<div>', 'Should open');
-  //   assert.equal(f2, p, 'Should pass back a promise');
-  // },
+  async function TEST_RETURNS_PROMISES () {
+    const p = Promise.resolve('a');
+    const next = traverse(_.div(p));
+    const f1 = next();
+    const f2 = next();
+    assert.equal(f1, '<div>', 'Should open');
+    assert.equal(f2, p, 'Should pass back a promise');
+  },
+  async function TEST_MANUALLY_PROMISES () {
+    const next = traverse(_.div(_.p(Promise.resolve('hi'))));
 
-  // async function TEST_PASSING_BACK_RESOLVED_PROMISE () {
-  //   const p = Promise.resolve('a');
-  //   const next = _.div(p);
-  //   const open = next();
-  //   const resolved = await next();
-  //   const child = next(resolved) // pass it back in...
-  //   const close = next();
-  //   assert.equal(open + child + close, '<div>a</div>');
-  // },
+    const div_open = next();
+    const p_open = next();
+    const p_child_promise = next();
+    const p_child = next(await p_child_promise);
+    const p_close = next();
+    const div_close = next();
 
-  // async function TEST_MANUALLY_PASSING_NESTED_1 () {
-  //   const next = _.div(_.p(Promise.resolve('hi')));
-
-  //   const div_open = next();
-  //   const p_open = next();
-  //   const p_child_promise = next();
-  //   const p_child = next(await p_child_promise);
-  //   const p_close = next();
-  //   const div_close = next();
-
-  //   assert.equal(div_open, '<div>');
-  //   assert.equal(p_open, '<p>');
-  //   assert.equal(p_child, 'hi');
-  //   assert.equal(p_close, '</p>');
-  //   assert.equal(div_close, '</div>');
-  // },
+    assert.equal(div_open, '<div>');
+    assert.equal(p_open, '<p>');
+    assert.equal(p_child, 'hi');
+    assert.equal(p_close, '</p>');
+    assert.equal(div_close, '</div>');
+  },
 
   // async function TEST_ASYNC_RENDER_SIMPLE () {
   //   const next = _.div(Promise.resolve('a'));
