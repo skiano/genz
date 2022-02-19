@@ -20,7 +20,7 @@ function createTag (name) {
     let child_value;
     let defer;
 
-    function next() {
+    function next(resolvedChild) {
       if (done) return;
 
       ////////////////////////
@@ -62,9 +62,13 @@ function createTag (name) {
       }
 
       // 2) get current child
-      i = queue_i[0];
-      child_value = queue_a[0][i];
-      queue_i[0] = i + 1;   
+      if (resolvedChild) {
+        child_value = resolvedChild;
+      } else {
+        i = queue_i[0];
+        child_value = queue_a[0][i];
+        queue_i[0] = i + 1; 
+      }  
   
       // 3) if the child is an array, move deeper and search there
       if (Array.isArray(child_value)) { 
