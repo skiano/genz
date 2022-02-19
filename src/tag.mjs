@@ -4,9 +4,10 @@ function createTag (name) {
   return function tag () {
     let arg0 = arguments[0];
 
-    const hasAttributes = (
+    const hasAttributes = ( // TODO: how can i simplify this check?
       typeof arg0 === 'object' &&
       arg0 !== null &&
+      !Array.isArray(arg0) &&
       typeof arg0.then !== 'function'
     );
 
@@ -28,7 +29,7 @@ function createTag (name) {
       ////////////////////////
 
       if (defer) {
-        child_value = defer();
+        child_value = defer(resolvedChild);
         if (typeof child_value === 'undefined') {
           defer = null;
           return next();
@@ -62,7 +63,7 @@ function createTag (name) {
       }
 
       // 2) get current child
-      if (resolvedChild) {
+      if (typeof resolvedChild !== 'undefined') {
         child_value = resolvedChild;
       } else {
         i = queue_i[0];
@@ -122,7 +123,9 @@ export const render = (next, onFragment) => {
 
     if ((frag ?? false) !== false) {
       // TODO: test edges...
-      if (frag.then) frag = next(await frag);
+      if (frag.then) {
+        frag = next(await frag);
+      }
       onFragment(frag);
       loop(); // TODO: decide when to process.nextTick...
     } else {

@@ -19,6 +19,11 @@ export default [
     assert.equal(ret, '<div>Hello world. I am here!</div>');
   },
 
+  function TEST_ARRAY_CHILD () {
+    const ret = syncStringify(_.div(['hello', _.span(['world'])]));
+    assert.equal(ret, '<div>hello<span>world</span></div>');
+  },
+
   function TEST_NUMBERS () {
     const ret = syncStringify(_.main(12, _.em(3)));
     assert.equal(ret, '<main>12<em>3</em></main>');
