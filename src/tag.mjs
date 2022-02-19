@@ -115,3 +115,19 @@ export default TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
   return o;
 }, {});
+
+export const render = (next, onFragment) => {
+  const loop = async () => {
+    let frag = next();
+
+    if ((frag ?? false) !== false) {
+      // TODO: test edges...
+      if (frag.then) frag = next(await frag);
+      onFragment(frag);
+      loop(); // TODO: decide when to process.nextTick...
+    } else {
+      onFragment();
+    }
+  }
+  loop();
+}
