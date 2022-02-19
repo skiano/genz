@@ -35,6 +35,8 @@ export const _ = TAG_NAMES.reduce((o, name) => {
 }, {});
 
 export function traverse (arr) {
+  arr = Array.isArray(arr) ? arr : [arr]; // test this..., and, is it necessary?
+
   let i;
   let value;
   let queue_a = [arr];
@@ -87,4 +89,35 @@ export function traverse (arr) {
       }
     }
   }
+}
+
+export function toStream (arr, res) {
+
+  // TODO: handle weird events (like aborts) in req or res
+  // TODO: decide what if anything to do with this max sync...
+  const MAX_SYNC = 400;
+  const next = traverse(arr);
+
+  async function loop (i = 1) {
+    let frag = next();
+    let open;
+
+    if ((frag ?? false) !== false) {
+      if (frag.then) {
+        frag = next(await frag); // TODO: handle the error in some way...
+        open = res.write(frag);
+        if (open) loop(0);
+        else res.once('drain', loop);
+      } else {
+        open = res.write(frag);
+        if (!open) res.once('drain', loop);
+        else if (i >= MAX_SYNC) process.nextTick(loop);
+        else loop(i + 1);
+      }
+    } else {
+      res.end();
+    }
+  }
+
+  loop(); // start the loop
 }
