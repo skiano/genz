@@ -111,5 +111,9 @@ export default [
     frags.push('interrupt');
     await promise;
     assert.deepEqual(frags, [ '<div>', 'hello', 'interrupt', '</div>' ]);
+  },
+
+  async function TEST_SUPPORTS_WRITABLE_STREAMS () {
+    throw new Error('not ready for streams!');
   }
 ];
