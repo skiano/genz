@@ -1,6 +1,5 @@
-import _, { render } from '../src/tag.mjs';
+import _, { render, setChunkThreshold } from '../src/tag.mjs';
 import assert from 'assert';
-import { resolve } from 'path';
 
 export default [
 
@@ -83,6 +82,9 @@ export default [
   },
 
   async function TEST_NEXT_TICK_ON_MAX () {
+
+    setChunkThreshold(0);
+
     const next = _.div('hello');
     const frags = [];
     const promise = new Promise((resolve) => {
@@ -100,9 +102,9 @@ export default [
   },
 
   async function TEST_NEXT_TICK_ON_MAX_CONFIGURABLE () {
-    // TODO: perhaps expose a function to "set" the max
-    // rather than pass an arg
-    // that way it might parallel what I'm imagining for error handling...
+
+    setChunkThreshold(2);
+
     const next = _.div('hello');
     const frags = [];
     const promise = new Promise((resolve) => {

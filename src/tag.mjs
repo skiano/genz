@@ -1,5 +1,8 @@
 import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
+let MAX_SYNC = 400;
+export const setChunkThreshold = (n) => MAX_SYNC = n;
+
 function createTag (name) {
   return function tag () {
     let arg0 = arguments[0];
@@ -117,7 +120,7 @@ export default TAG_NAMES.reduce((o, name) => {
   return o;
 }, {});
 
-export const render = (next, onFragment, MAX_SYNC = 400) => {
+export const render = (next, onFragment) => {
   const loop = async (i) => {
     let frag = next();
 
@@ -144,9 +147,7 @@ export const render = (next, onFragment, MAX_SYNC = 400) => {
   loop(1);
 }
 
-export const reqRes = (next, res) => {
-  const MAX_SYNC = 400;
-
+export function reqRes (next, res, req) {
   // TODO: handle weird events (like aborts) in req or res
 
   const loop = async (i = 1) => {
