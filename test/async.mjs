@@ -1,4 +1,4 @@
-import _, { render, setChunkThreshold } from '../src/tag.mjs';
+import _, { render, setChunkThreshold } from '../tag.mjs';
 import assert from 'assert';
 
 export default [
