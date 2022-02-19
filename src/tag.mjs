@@ -125,7 +125,7 @@ export const render = (next, onFragment, MAX_SYNC = 400) => {
       // if the fragment is promised, pause to get the result...
       // TODO: test edges...
       if (frag.then) {
-        frag = next(await frag);
+        frag = next(await frag); // TODO: handle the error in some way...
         onFragment(frag);
         loop(0);
       } else {
@@ -142,4 +142,32 @@ export const render = (next, onFragment, MAX_SYNC = 400) => {
   }
   // start the loop
   loop(1);
+}
+
+export const reqRes = (next, res) => {
+  const MAX_SYNC = 400;
+
+  // TODO: handle weird events (like aborts) in req or res
+
+  const loop = async (i = 1) => {
+    let frag = next();
+    let open;
+
+    if ((frag ?? false) !== false) {
+      if (frag.then) {
+        frag = next(await frag); // TODO: handle the error in some way...
+        open = res.write(frag);
+        if (open) loop(0);
+        else res.once('drain', loop);
+      } else {
+        open = res.write(frag);
+        if (!open) res.once('drain', loop);
+        else if (i >= MAX_SYNC) process.nextTick(loop);
+        else loop(i + 1);
+      }
+    } else {
+      res.end();
+    }
+  }
+  loop(); // start the loop
 }

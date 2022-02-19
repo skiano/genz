@@ -100,6 +100,9 @@ export default [
   },
 
   async function TEST_NEXT_TICK_ON_MAX_CONFIGURABLE () {
+    // TODO: perhaps expose a function to "set" the max
+    // rather than pass an arg
+    // that way it might parallel what I'm imagining for error handling...
     const next = _.div('hello');
     const frags = [];
     const promise = new Promise((resolve) => {
@@ -113,7 +116,4 @@ export default [
     assert.deepEqual(frags, [ '<div>', 'hello', 'interrupt', '</div>' ]);
   },
 
-  async function TEST_SUPPORTS_WRITABLE_STREAMS () {
-    throw new Error('not ready for streams!');
-  }
 ];
