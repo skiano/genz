@@ -1,32 +1,10 @@
 import _ from '../genz.mjs';
 import assert from 'assert';
-import { syncStringify } from './_helpers.mjs';
 
 export default [
 
   function TEST_DOC_TYPE () {
-    const ret = syncStringify(_.html());
-    assert.equal(ret, '<!DOCTYPE html><html></html>');
-  },
-
-  function TEST_VOID_ELEMENTS () {
-    assert.equal(syncStringify(_.hr()), '<hr>'); // TODO: decide if it should be <img>
-    assert.equal(syncStringify(_.img({ src: '/a.jpg' })), '<img src="/a.jpg">');
-  },
-
-  function TEST_DEEP_NESTING () {
-    const ret = syncStringify(_.div('Hello ', 'world. ', [], ['I'], [ [' ', 'am here!'] ]));
-    assert.equal(ret, '<div>Hello world. I am here!</div>');
-  },
-
-  function TEST_ARRAY_CHILD () {
-    const ret = syncStringify(_.div(['hello', _.span(['world'])]));
-    assert.equal(ret, '<div>hello<span>world</span></div>');
-  },
-
-  function TEST_NUMBERS () {
-    const ret = syncStringify(_.main(12, _.em(3)));
-    assert.equal(ret, '<main>12<em>3</em></main>');
+    console.log(_.img({ class: 'hello' }))
   },
 
 ];
