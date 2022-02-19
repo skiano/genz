@@ -2,11 +2,12 @@ import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
 function createTag (name) {
   return function tag (a0) {
-    a0 = a0 ?? false; // coerce null/undefined to false...
+    // 1. If attibutes are passed
     let a;
     let attr;
     if (
-      typeof a0 === 'object' && 
+      a0 &&
+      typeof a0 === 'object' &&
       typeof a0.then !== 'function' && 
       !Array.isArray(a0)
     ) {
@@ -18,12 +19,13 @@ function createTag (name) {
       arguments[0] = attr;
       return VOID_ELEMENTS[name]
         ? [`<${name}`, attr]
-        : [`<${name}`, arguments, `</${name}>`];
+        : [name === 'html' ? '<!DOCTYPE html><html' : `<${name}`, arguments, `</${name}>`];
     }
-    
+
+    // 2. If attributes are omitted
     return VOID_ELEMENTS[name]
-      ? [`<${name}`, attr, '>']
-      : [`<${name}`, arguments, `</${name}>`];
+      ? `<${name}>`
+      : [name === 'html' ? '<!DOCTYPE html><html>' : `<${name}>`, arguments, `</${name}>`];
   };
 }
 
