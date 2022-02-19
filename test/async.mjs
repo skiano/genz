@@ -4,14 +4,14 @@ import { resolve } from 'path';
 
 export default [
 
-  // async function TEST_RETURNS_PROMISES () {
-  //   const p = Promise.resolve('a');
-  //   const next = _.div(p);
-  //   const f1 = next();
-  //   const f2 = next();
-  //   assert.equal(f1, '<div>', 'Should open');
-  //   assert.equal(f2, p, 'Should pass back a promise');
-  // },
+  async function TEST_RETURNS_PROMISES () {
+    const p = Promise.resolve('a');
+    const next = _.div(p);
+    const f1 = next();
+    const f2 = next();
+    assert.equal(f1, '<div>', 'Should open');
+    assert.equal(f2, p, 'Should pass back a promise');
+  },
 
   async function TEST_PASSING_BACK_RESOLVED_PROMISE () {
     const p = Promise.resolve('a');
