@@ -40,39 +40,47 @@ export function traverse (arr) {
 
   let i;
   let value;
-  return function next() {
-    if (!(queue_a && queue_a.length)) {
-      queue_a = undefined;
-      queue_i = undefined;
-      return;
+  return function next(replaceValue) {
+    if (arguments.length) {
+      value = replaceValue;
+    } else {
+      i = queue_i[0];
+      value = queue_a[0][i] ?? false; // make sure that undefined/null => false
+      queue_i[0] = i + 1;
     }
 
-    i = queue_i[0];
-    value = queue_a[0][i];
-    queue_i[0] = i + 1;
-
-    if (typeof value === 'object' && typeof value.length !== 'undefined') { 
+    if (typeof value === 'object' && typeof value.length !== 'undefined') {
+      // Move deeper
       queue_a.unshift(value);
       queue_i.unshift(0);
       return next();
     } else {
-      if ((value ?? false) !== false) {
+      if (value !== false) {
 
-        // pass back any promises...
-        if (value.then) { // TODO: add tests for weird promise-looking things...
-          return value;
-        }
+        // Pass back any promises
+        // with the expectation that the resolved value
+        // will be replaced with next
+        if (value.then) return value;
 
-        // OUPUT A CHILD STRING!!!!!!
-        return typeof value === 'string'
-          ? value
-          : String(value);
+        // return a child string
+        return typeof value === 'string' ? value : String(value);
 
       } else if (queue_i[0] >= queue_a[0].length) {
         queue_a.shift();
         queue_i.shift();
+
+        // End the traversal
+        if (!(queue_a && queue_a.length)) {
+          value = undefined
+          queue_a = undefined;
+          queue_i = undefined;
+          return;
+        }
+
+        // Move shallower
         return next();
       } else {
+        // Skip undefined/null
         return next();
       }
     }
