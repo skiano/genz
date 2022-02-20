@@ -34,11 +34,6 @@ export const _ = TAG_NAMES.reduce((o, name) => {
   return o;
 }, {});
 
-export const dedupe = (v) => {
-  v._DEDUPE_ = true;
-  return v;
-};
-
 export function traverse (arr) {
   arr = Array.isArray(arr) ? arr : [arr]; // test this..., and, is it necessary?
 
@@ -131,3 +126,16 @@ export function toStream (arr, res) {
 
   loop(); // start the loop
 }
+
+////////////
+// EXTRAS //
+////////////
+
+export const dedupe = (v) => {
+  v._DEDUPE_ = true;
+  return v;
+};
+
+export const css = (selectors, declarations) => {
+  // Array.isArray()
+};
