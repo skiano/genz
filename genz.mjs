@@ -41,7 +41,7 @@ export function traverse (arr) {
   let value;
   let queue_a = [arr];
   let queue_i = [0];
-  let dedupes = new WeakSet();
+  let dedupes = {};
 
   return function next(replaceValue) {
     if (arguments.length) {
@@ -55,8 +55,8 @@ export function traverse (arr) {
     if (typeof value === 'object' && typeof value.length !== 'undefined') {
       // skip if we dedupe
       if (value._DEDUPE_) {
-        if (dedupes.has(value)) return next();
-        dedupes.add(value);
+        if (dedupes[value._DEDUPE_]) return next();
+        dedupes[value._DEDUPE_] = true;
       }
       
       // Move deeper
@@ -84,6 +84,7 @@ export function traverse (arr) {
           value = undefined
           queue_a = undefined;
           queue_i = undefined;
+          dedupes = undefined;
           return;
         }
 
@@ -131,8 +132,8 @@ export function toStream (arr, res) {
 // EXTRAS //
 ////////////
 
-export const dedupe = (v) => {
-  v._DEDUPE_ = true;
+export const dedupe = (v, id) => {
+  v._DEDUPE_ = id;
   return v;
 };
 

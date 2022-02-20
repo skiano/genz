@@ -34,7 +34,7 @@ export default [
   },
 
   function TEST_DEDUPING () {
-    const once = dedupe(_.style('{{ unique }}'));
+    const once = dedupe(_.style('{{ unique }}'), 'component-style');
     const multi = _.style('{{ repeat }}');
 
     const content = _.body(
