@@ -34,6 +34,11 @@ export const _ = TAG_NAMES.reduce((o, name) => {
   return o;
 }, {});
 
+export const dedupe = (v) => {
+  v._DEDUPE_ = true;
+  return v;
+};
+
 export function traverse (arr) {
   arr = Array.isArray(arr) ? arr : [arr]; // test this..., and, is it necessary?
 
@@ -41,6 +46,7 @@ export function traverse (arr) {
   let value;
   let queue_a = [arr];
   let queue_i = [0];
+  let dedupes = new WeakSet();
 
   return function next(replaceValue) {
     if (arguments.length) {
@@ -52,6 +58,11 @@ export function traverse (arr) {
     }
 
     if (typeof value === 'object' && typeof value.length !== 'undefined') {
+      // skip if we dedupe
+      if (value._DEDUPE_) {
+        if (dedupes.has(value)) return next();
+        dedupes.add(value);
+      }
       
       // Move deeper
       queue_a.unshift(value);
@@ -59,7 +70,6 @@ export function traverse (arr) {
       return next();
     } else {
       if (value !== false) {
-
         // Pass back any promises
         // with the expectation that the resolved value
         // will be replaced with next

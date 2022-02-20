@@ -1,4 +1,4 @@
-import { _, traverse } from '../genz.mjs';
+import { _, traverse, dedupe } from '../genz.mjs';
 import assert from 'assert';
 
 const syncStringify = (it) => {
@@ -30,6 +30,27 @@ export default [
     assert.equal(
       txt,
       '<!DOCTYPE html><html><head><title>Hello World</title></head><body><p>P 1</p><p>P 2</p></body></html>'
+    );
+  },
+
+  function TEST_DEDUPING () {
+    const once = dedupe(_.style('{{ unique }}'));
+    const multi = _.style('{{ repeat }}');
+
+    const content = _.body(
+      once,
+      _.div(
+        once,
+        multi,
+      ),
+      multi
+    );
+
+    const txt = syncStringify(traverse(content));
+
+    assert.equal(
+      txt,
+      '<body><style>{{ unique }}</style><div><style>{{ repeat }}</style></div><style>{{ repeat }}</style></body>'
     );
   },
 
