@@ -101,7 +101,7 @@ export function toStream (arr, res) {
 
   // TODO: handle weird events (like aborts) in req or res
   // TODO: decide what if anything to do with this max sync...
-  const MAX_SYNC = 400;
+  const MAX_SYNC = 5000;
   const next = traverse(arr);
 
   async function loop (i = 1) {
