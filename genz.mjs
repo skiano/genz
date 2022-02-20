@@ -14,8 +14,8 @@ export function createTag (name) {
       for (a in a0) {
         if (!attr) attr = [];
         attr.push(` ${a}="${a0[a]}"`);
-        attr.push('>')
       }
+      attr.push('>');
       arguments[0] = attr;
       return VOID_ELEMENTS[name]
         ? [`<${name}`, attr]
@@ -51,7 +51,7 @@ export function traverse (arr, ctx = {}) {
       value = queue_a[0][i] ?? false; // make sure that undefined/null => false
       queue_i[0] = i + 1;
 
-      if (typeof value === 'function') value = value(ctx);
+      if (typeof value === 'function') value = value(ctx); // todo: error handling?
     }
 
     if (typeof value === 'object' && typeof value.length !== 'undefined') {
@@ -83,10 +83,11 @@ export function traverse (arr, ctx = {}) {
 
         // End the traversal
         if (!(queue_a && queue_a.length)) {
-          value = undefined
-          queue_a = undefined;
-          queue_i = undefined;
-          dedupes = undefined;
+          arr = null;
+          value = null;
+          queue_a = null;
+          queue_i = null;
+          dedupes = null;
           return;
         }
 
@@ -100,34 +101,30 @@ export function traverse (arr, ctx = {}) {
 }
 
 export function toStream (arr, res) {
-
   // TODO: handle weird events (like aborts) in req or res
   // TODO: decide what if anything to do with this max sync...
-  const MAX_SYNC = 5000;
   const next = traverse(arr);
 
-  async function loop (i = 1) {
+  async function loop () {
     let frag = next();
-    let open;
 
-    if ((frag ?? false) !== false) {
-      if (frag.then) {
-        frag = next(await frag); // TODO: handle the error in some way...
-        open = res.write(frag);
-        if (open) loop(0);
-        else res.once('drain', loop);
+    while (typeof frag !== 'undefined') {
+      if (frag.then) frag = next(await frag);
+      // is it ok to just bumbard with a bunch of tiny writes?
+      // or should they be ganged up somehow
+      if (res.write(frag)) {
+        frag = next();
       } else {
-        open = res.write(frag);
-        if (!open) res.once('drain', loop);
-        else if (i >= MAX_SYNC) process.nextTick(loop);
-        else loop(i + 1);
+        return; // break the loop and allow a drain...
       }
-    } else {
-      res.end();
     }
+
+    return res.end();
   }
 
   loop(); // start the loop
+  res.on('drain', loop);
+  res.on('end', () => { arr = null; });
 }
 
 ////////////

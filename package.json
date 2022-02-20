@@ -5,7 +5,8 @@
   "description": "Streaming HTML",
   "main": "genz.mjs",
   "devDependencies": {
-    "chalk": "^5.0.0"
+    "chalk": "^5.0.0",
+    "puppeteer": "^13.3.2"
   },
   "scripts": {
     "test": "node test/_.mjs"

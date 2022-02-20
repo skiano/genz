@@ -17,7 +17,7 @@ class ResponseLike extends Writable {
 export default [
 
   async function TEST_STREAM_EXAMPLE () {
-    await new Promise((resolve) => {
+    await new Promise((resolve, reject) => {
       const highWaterMark = 6;
       const res = new ResponseLike({ highWaterMark });
 
@@ -29,6 +29,8 @@ export default [
         assert.equal(res.arr.join(' '), '<div> <section> DRAIN section! DRAIN </section> DRAIN <p> hello </p> </div> DRAIN');
         resolve();
       });
+
+      res.on('error', reject);
 
       toStream(_.div(_.section('section!'), _.p('hello')), res);
     });

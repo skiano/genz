@@ -14,7 +14,7 @@ export const VOID_ELEMENTS = {
   param: true,
   source: true,
   track: true,
-  wbr: true
+  wbr: true,
 };
 
 export const TAG_NAMES = [
@@ -35,6 +35,7 @@ export const TAG_NAMES = [
   'button',
   'canvas',
   'caption',
+  'center', // OLD ASS HTML
   'cite',
   'code',
   'col',
