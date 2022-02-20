@@ -54,4 +54,15 @@ export default [
     );
   },
 
+  function TEST_LAZY_FUNCTIONS () {
+
+    const content = _.div(
+      () => _.p(['lazy', ' day'])
+    );
+
+    const txt = syncStringify(traverse(content));
+
+    assert.equal(txt, '<div><p>lazy day</p></div>');
+  },
+
 ];

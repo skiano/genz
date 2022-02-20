@@ -50,6 +50,8 @@ export function traverse (arr) {
       i = queue_i[0];
       value = queue_a[0][i] ?? false; // make sure that undefined/null => false
       queue_i[0] = i + 1;
+
+      if (typeof value === 'function') value = value();
     }
 
     if (typeof value === 'object' && typeof value.length !== 'undefined') {
