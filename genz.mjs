@@ -34,7 +34,7 @@ export const _ = TAG_NAMES.reduce((o, name) => {
   return o;
 }, {});
 
-export function traverse (arr) {
+export function traverse (arr, ctx = {}) {
   arr = Array.isArray(arr) ? arr : [arr]; // test this..., and, is it necessary?
 
   let i;
@@ -51,7 +51,7 @@ export function traverse (arr) {
       value = queue_a[0][i] ?? false; // make sure that undefined/null => false
       queue_i[0] = i + 1;
 
-      if (typeof value === 'function') value = value();
+      if (typeof value === 'function') value = value(ctx);
     }
 
     if (typeof value === 'object' && typeof value.length !== 'undefined') {

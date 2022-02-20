@@ -65,4 +65,15 @@ export default [
     assert.equal(txt, '<div><p>lazy day</p></div>');
   },
 
+  function TEST_LAZY_FUNCTIONS_CTX () {
+
+    const content = _.div(
+      (ctx) => _.p(['lazy ', ctx.user])
+    );
+
+    const txt = syncStringify(traverse(content, { user: 'greg' }));
+
+    assert.equal(txt, '<div><p>lazy greg</p></div>');
+  },
+
 ];
