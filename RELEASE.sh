@@ -27,12 +27,14 @@ git checkout main
 git branch -D temp-deploy
 git status
 
-# echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
+echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
 npm version $1
 git push origin --tags
 
+# Remove cruft for smaller unpacked size
 rm README.md;
 
+echo -e "\n2. PUBLISHING\n"
 npm publish;
 
-git reset;
+git reset --hard;
