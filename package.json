@@ -1,9 +1,15 @@
 {
   "name": "genz",
+  "author": "Greg Skiano",
+  "license": "MIT",
   "type": "module",
   "version": "0.1.0",
   "description": "Streaming HTML",
-  "main": "genz.mjs",
+  "main": "src/genz.mjs",
+  "scripts": {
+    "test": "node test/_.mjs",
+    "dev": "nodemon example/app.mjs"
+  },
   "devDependencies": {
     "@vue/compiler-ssr": "^3.2.31",
     "chalk": "^5.0.0",
@@ -13,16 +19,10 @@
     "regexparam": "^2.0.0",
     "vue": "^3.2.31"
   },
-  "scripts": {
-    "test": "node test/_.mjs",
-    "dev": "nodemon example/app.mjs"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skiano/edison.git"
   },
-  "author": "Greg Skiano",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/skiano/edison/issues"
   },

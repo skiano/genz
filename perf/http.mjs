@@ -1,5 +1,5 @@
 import http from 'http';
-import { _, toStream } from '../genz.mjs';
+import { _, toStream } from '../src/genz.mjs';
 import fixture from './fixture.mjs';
 
 const server = http.createServer((req, res) => {

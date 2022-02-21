@@ -1,5 +1,5 @@
 import http from 'http';
-import { _, toStream } from '../genz.mjs';
+import { _, toStream } from '../src/genz.mjs';
 
 http.createServer((req, res) => {
   if (req.url !== '/') return res.end();

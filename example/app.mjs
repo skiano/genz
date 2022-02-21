@@ -1,6 +1,6 @@
 import express from 'express';
 import { parse as parseRoute } from 'regexparam';
-import { _, toStream } from '../genz.mjs';
+import { _, toStream } from '../src/genz.mjs';
 
 //////////////
 // SERVICES //

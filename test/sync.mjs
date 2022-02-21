@@ -1,4 +1,4 @@
-import { _, traverse, dedupe } from '../genz.mjs';
+import { _, traverse, dedupe } from '../src/genz.mjs';
 import assert from 'assert';
 
 const syncStringify = (it) => {

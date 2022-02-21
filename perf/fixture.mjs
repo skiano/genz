@@ -1,4 +1,4 @@
-import { _ } from '../genz.mjs'
+import { _ } from '../src/genz.mjs'
 
 export default () => _.html(
   {"lang":"en-GB","class":"js enhanced js-focus-visible","data-o-component":"o-typography","style":"overflow-x:hidden;background-color:#fff1e5;color:#33302e","data-js-focus-visible":""},
@@ -211,7 +211,7 @@ export default () => _.html(
     _.meta({"http-equiv":"origin-trial","content":"A8FHS1NmdCwGqD9DwOicnHHY+y27kdWfxKa0YHSGDfv0CSpDKRHTQdQmZVPDUdaFWUsxdgVxlwAd6o+dhJykPA0AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"}),
     _.meta({"http-equiv":"origin-trial","content":"A8zdXi6dr1hwXEUjQrYiyYQGlU3557y5QWDnN0Lwgj9ePt66XMEvNkVWOEOWPd7TP9sBQ25X0Q15Lr1Nn4oGFQkAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"}),
     _.meta({"http-equiv":"origin-trial","content":"A4/Htern2udN9w3yJK9QgWQxQFruxOXsXL7cW60DyCl0EZFGCSme/J33Q/WzF7bBkVvhEWDlcBiUyZaim5CpFQwAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"}),
-    _.script({"src":"https://securepubads.g.doubleclick.net/gpt/pubads_impl_2022021502.js?31064987","async":""})
+    _.script({"src":"https://securepubads.g.doubleclick.net/gpt/pubads_impl_2022021401.js?31065011","async":""})
   ),
   _.iframe({"src":"https://z.moatads.com/hd09824092/iframe.html#header=1","width":"0","height":"0","name":"financialtimesprebidheader859796398452_MOAT_IFRAME","style":"display: none; width: 0px; height: 0px;"}),
   _.body(
@@ -280,9 +280,8 @@ export default () => _.html(
 `Shanghai`
                         ),
                         _.span(
-                          {"class":"markets-data__item-change markets-data__item-change--up"},
-`+`,
-`0.66`,
+                          {"class":"markets-data__item-change markets-data__item-change--down"},
+`-0.41`,
 `%`
                         )
                       )
@@ -311,8 +310,9 @@ export default () => _.html(
 `Euro/Dollar`
                         ),
                         _.span(
-                          {"class":"markets-data__item-change markets-data__item-change--down"},
-`-0.33`,
+                          {"class":"markets-data__item-change markets-data__item-change--up"},
+`+`,
+`0.34`,
 `%`
                         )
                       )
@@ -326,9 +326,8 @@ export default () => _.html(
 `Brent Crude Oil`
                         ),
                         _.span(
-                          {"class":"markets-data__item-change markets-data__item-change--up"},
-`+`,
-`0.72`,
+                          {"class":"markets-data__item-change markets-data__item-change--down"},
+`-0.67`,
 `%`
                         )
                       )
@@ -704,6 +703,13 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/22996c27-4882-4297-a845-228857bc382e","data-trackable":"link"},
+`Joe Biden and Vladimir Putin agree ‘in principle’ to Ukraine summit`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
                                   {"class":"o-header__mega-link","href":"https://www.ft.com/content/ecec713e-9be8-49cf-ad00-a5a0678896ad","data-trackable":"link"},
 `Russia using deception as pretext for Ukraine invasion, western leaders warn`
                                 )
@@ -711,29 +717,22 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/22996c27-4882-4297-a845-228857bc382e","data-trackable":"link"},
-`Belarus says Russian troops to stay in country indefinitely`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/b505d504-6447-4ffb-bb7d-3a33db837c9a","data-trackable":"link"},
-`China moves to counter India with arms sales to Pakistan`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
                                   {"class":"o-header__mega-link","href":"https://www.ft.com/content/b23082f5-030d-42df-be8b-3d55ef613b1a","data-trackable":"link"},
-`Germany fears Russian gas retaliation if war breaks out`
+`Germany warns of Russian gas retaliation if war breaks out`
                                 )
                               ),
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/910849fd-3f45-4b1a-9fa9-fa5bc1bcaa7e","data-trackable":"link"},
-`Epstein associate Jean-Luc Brunel found dead in prison cell`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/ab9b6235-762e-494e-a698-0ff510d21cbd","data-trackable":"link"},
+`Chinese naval vessel aims laser at Australian surveillance plane`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/2a2de3d7-0486-4af4-8e45-0afc18b40213","data-trackable":"link"},
+`On Ukraine’s eastern frontline, ominous signs that a major onslaught is coming`
                                 )
                               )
                             )
@@ -809,6 +808,13 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/22996c27-4882-4297-a845-228857bc382e","data-trackable":"link"},
+`Joe Biden and Vladimir Putin agree ‘in principle’ to Ukraine summit`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
                                   {"class":"o-header__mega-link","href":"https://www.ft.com/content/ecec713e-9be8-49cf-ad00-a5a0678896ad","data-trackable":"link"},
 `Russia using deception as pretext for Ukraine invasion, western leaders warn`
                                 )
@@ -823,22 +829,15 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/541c3fb4-9808-45ad-9917-33fea6f7f30b","data-trackable":"link"},
-`Two Fed officials back steady rise in interest rates starting in March`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/4c9c992b-8b89-4879-8d65-21c4665ea02d","data-trackable":"link"},
-`Canary Wharf launches flexible office service as work patterns shift`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
                                   {"class":"o-header__mega-link","href":"https://www.ft.com/content/af236fd9-f757-4acd-b3bc-f78b44d40625","data-trackable":"link"},
 `Tanker companies warn of rise in armada of ghost ships`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/541c3fb4-9808-45ad-9917-33fea6f7f30b","data-trackable":"link"},
+`Two Fed officials back steady rise in interest rates starting in March`
                                 )
                               )
                             )
@@ -963,22 +962,22 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/636f289c-97dd-473a-a74a-69d639942558","data-trackable":"link"},
-`Novavax bets fears over mRNA technology will give its Covid jab an edge`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/4c9c992b-8b89-4879-8d65-21c4665ea02d","data-trackable":"link"},
-`Canary Wharf launches flexible office service as work patterns shift`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
                                   {"class":"o-header__mega-link","href":"https://www.ft.com/content/2852b800-4a03-4cf6-a47f-65c306a22657","data-trackable":"link"},
 `Big Oil on course for near-record $38bn in share buybacks`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/a4a6bca4-d60e-425a-919e-61015eb3300d","data-trackable":"link"},
+`Carl Icahn nominates directors to McDonald’s board to change pig policy`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/636f289c-97dd-473a-a74a-69d639942558","data-trackable":"link"},
+`Novavax bets fears over mRNA technology will give its Covid jab an edge`
                                 )
                               ),
                               _.li(
@@ -991,8 +990,8 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/7169d255-1774-416f-aaf3-1066091f179a","data-trackable":"link"},
-`Sackler owners offer up to $6bn to settle Purdue Pharma bankruptcy`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/4c9c992b-8b89-4879-8d65-21c4665ea02d","data-trackable":"link"},
+`Canary Wharf launches flexible office service as work patterns shift`
                                 )
                               )
                             )
@@ -1131,22 +1130,8 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/000f659a-34ce-49ef-bc62-1335e3d40293","data-trackable":"link"},
-`Boring UK market eclipses racier rivals`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
                                   {"class":"o-header__mega-link","href":"https://www.ft.com/content/4082fc8e-68fe-4fe4-858e-edcaa6d79e37","data-trackable":"link"},
 `Fishing for Brexit opportunities will end with an unsatisfactory haul`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/aeb0990d-8b71-40f1-8a8c-3dbfc49e1122","data-trackable":"link"},
-`‘The juncture’ looms for investors`
                                 )
                               ),
                               _.li(
@@ -1159,8 +1144,22 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/847c5472-65b6-4a13-a951-bcf02c07fddb","data-trackable":"link"},
-`Regulators have cryptocurrencies in their sights`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/000f659a-34ce-49ef-bc62-1335e3d40293","data-trackable":"link"},
+`Boring UK market eclipses racier rivals`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/aeb0990d-8b71-40f1-8a8c-3dbfc49e1122","data-trackable":"link"},
+`‘The juncture’ looms for investors`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/d0b9bab8-9445-4e16-b370-fda85fd5f431","data-trackable":"link"},
+`Live news: China’s SenseTime shares rise after Hang Seng announces inclusion to tech index`
                                 )
                               )
                             )
@@ -1264,6 +1263,13 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/73df6814-49fa-4645-97cf-a6732933bc38","data-trackable":"link"},
+`How Putin took Europe to the brink of war`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
                                   {"class":"o-header__mega-link","href":"https://www.ft.com/content/538f3649-8a30-4b35-a2ee-bd1392180b25","data-trackable":"link"},
 `Hybrid working enters a third dimension`
                                 )
@@ -1271,29 +1277,22 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/1f83d3dc-a95b-4947-92ba-4f08899228a3","data-trackable":"link"},
-`Canada’s illiberal response to protesters`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/4082fc8e-68fe-4fe4-858e-edcaa6d79e37","data-trackable":"link"},
+`Fishing for Brexit opportunities will end with an unsatisfactory haul`
                                 )
                               ),
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/d0d78cbd-afb9-49d4-9018-6c974afe8458","data-trackable":"link"},
-`The pleasure principle`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/89b66c3e-20a5-490b-8a0d-4da03a777860","data-trackable":"link"},
+`Japan’s ‘national resilience’ has taken a battering`
                                 )
                               ),
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/acef2e7f-deff-48ce-b9bc-9b28d4060166","data-trackable":"link"},
-`The Queen deserves a rest from her sons’ humiliations`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/0822a3cd-c24c-418e-b2ed-4a600c2b90ba","data-trackable":"link"},
-`Why fiftysomething wisdom is losing its value`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/32f328ba-2773-4914-a978-de32707e5120","data-trackable":"link"},
+`Academic pensions are not a gift, but a right we have earned`
                                 )
                               )
                             )
@@ -1404,8 +1403,15 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/1b85bb76-f142-42e6-b480-e28f20e62892","data-trackable":"link"},
-`Do you suffer from ‘meeting bloat’ ?`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/b0b90040-f7d1-400c-8c8d-4f5fc2515d4b","data-trackable":"link"},
+`Pushing boundaries: the rise of German business schools`
+                                )
+                              ),
+                              _.li(
+                                {"class":"o-header__mega-item"},
+                                _.a(
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/5e1c34a9-61ba-40f7-a02f-c1063927e7ec","data-trackable":"link"},
+`Hong Kong: a case study of managing in extreme uncertainty`
                                 )
                               ),
                               _.li(
@@ -1413,13 +1419,6 @@ export default () => _.html(
                                 _.a(
                                   {"class":"o-header__mega-link","href":"https://www.ft.com/content/14246bc6-420c-4f23-b4d3-adc70c6c4077","data-trackable":"link"},
 `Virtual internships were a learning curve — now the future is hybrid`
-                                )
-                              ),
-                              _.li(
-                                {"class":"o-header__mega-item"},
-                                _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/504e7fd8-7d60-4250-8ee3-2778e59d6f08","data-trackable":"link"},
-`English football: is it time to adopt compulsory hiring quotas for minorities?`
                                 )
                               )
                             )
@@ -1530,15 +1529,15 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/098ba985-1284-46c6-9abe-f626fa9e47f0","data-trackable":"link"},
-`Kaja Kallas: ‘There is a certain naivety towards Russia’`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/37839ee5-e3b6-48bf-adcc-87f6b02c792a","data-trackable":"link"},
+`Five chic city stays for £200 or less`
                                 )
                               ),
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/37839ee5-e3b6-48bf-adcc-87f6b02c792a","data-trackable":"link"},
-`Five chic city stays for £200 or less`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/098ba985-1284-46c6-9abe-f626fa9e47f0","data-trackable":"link"},
+`Kaja Kallas: ‘There is a certain naivety towards Russia’`
                                 )
                               ),
                               _.li(
@@ -1551,8 +1550,8 @@ export default () => _.html(
                               _.li(
                                 {"class":"o-header__mega-item"},
                                 _.a(
-                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/d0d78cbd-afb9-49d4-9018-6c974afe8458","data-trackable":"link"},
-`The pleasure principle`
+                                  {"class":"o-header__mega-link","href":"https://www.ft.com/content/0822a3cd-c24c-418e-b2ed-4a600c2b90ba","data-trackable":"link"},
+`Why fiftysomething wisdom is losing its value`
                                 )
                               ),
                               _.li(
@@ -1864,7 +1863,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:storygroup;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"storygroup","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"3","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:ukraine-conflict;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"ukraine-conflict","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"3","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group-stacked"},
                             _.div(
@@ -1880,12 +1879,22 @@ export default () => _.html(
                                       _.div(
                                         {"class":"primary-story__teaser"},
                                         _.div(
+                                          {"class":"story-group__title"},
+                                          _.a(
+                                            {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/ukraine-conflict","class":"link","target":"_self","aria-describedby":""},
+                                            _.span(
+                                              {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
+`Ukraine conflict`
+                                            )
+                                          )
+                                        ),
+                                        _.div(
                                           {"class":"headline js-teaser-headline headline--scale-7","data-content-id":"22996c27-4882-4297-a845-228857bc382e"},
                                           _.a(
                                             {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/22996c27-4882-4297-a845-228857bc382e","class":"link","target":"_self","aria-describedby":""},
                                             _.span(
                                               {"class":"text text--color-black text-display--scale-7 text--weight-500","id":""},
-`Belarus says Russian troops to stay in country indefinitely`
+`Biden and Putin agree ‘in principle’ to Ukraine summit`
                                             )
                                           )
                                         ),
@@ -1895,23 +1904,14 @@ export default () => _.html(
                                             {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/22996c27-4882-4297-a845-228857bc382e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.span(
                                               {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Western leaders warn Moscow of stringent sanctions if it invades Ukraine`
+`‘Last possible efforts’ to avoid war as blame game over Donbas clashes continues`
                                             )
                                           )
                                         )
                                       ),
                                       _.div(
                                         {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                        _.div(
-                                          {"class":"metadata metadata__timestamp"},
-                                          _.div(
-                                            {"class":"timestamp"},
-                                            _.time(
-                                              {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-20T12:27:13+0000","title":"February 20 2022 4:27 am","data-o-date-js":""},
-`4 hours ago`
-                                            )
-                                          )
-                                        )
+                                        _.div({"class":"metadata metadata__timestamp"})
                                       )
                                     )
                                   )
@@ -1926,18 +1926,41 @@ export default () => _.html(
                                 _.div(
                                   {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"3","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                   _.div(
-                                    {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"ecec713e-9be8-49cf-ad00-a5a0678896ad"},
+                                    {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"8297e92b-4656-4021-a293-97d3f554467d"},
                                     _.a(
-                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/ecec713e-9be8-49cf-ad00-a5a0678896ad","class":"link","target":"_self","aria-describedby":""},
+                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/8297e92b-4656-4021-a293-97d3f554467d","class":"link","target":"_self","aria-describedby":""},
+                                      _.span(
+                                        {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                        _.span(
+                                          {"class":"icon icon--markets icon--scale-2"},
+                                          _.span(
+                                            {"class":"o-normalise-visually-hidden"},
+`markets content.`
+                                          )
+                                        ),
+                                        _.span(
+                                          {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`Markets Briefing.`
+                                        )
+                                      ),
                                       _.span(
                                         {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Russia using deception as pretext for Ukraine invasion, western leaders warn`
+`Crude oil swings to loss on possibility of Biden-Putin summit`
                                       )
                                     )
                                   ),
                                   _.div(
                                     {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                    _.div({"class":"metadata metadata__timestamp"})
+                                    _.div(
+                                      {"class":"metadata metadata__timestamp"},
+                                      _.div(
+                                        {"class":"timestamp"},
+                                        _.time(
+                                          {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T04:06:50+0000","title":"February 20 2022 8:06 pm","data-o-date-js":""},
+`2 hours ago`
+                                        )
+                                      )
+                                    )
                                   )
                                 )
                               ),
@@ -1947,19 +1970,19 @@ export default () => _.html(
                                 _.div(
                                   {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"3","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                   _.div(
-                                    {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"b23082f5-030d-42df-be8b-3d55ef613b1a"},
+                                    {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"51fb7e97-db8d-4d77-a10a-23b807c5a7a1"},
                                     _.a(
-                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/b23082f5-030d-42df-be8b-3d55ef613b1a","class":"link","target":"_self","aria-describedby":""},
+                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/51fb7e97-db8d-4d77-a10a-23b807c5a7a1","class":"link","target":"_self","aria-describedby":""},
                                       _.span(
                                         {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                         _.span(
                                           {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Interview.`
+`News in-depth.`
                                         )
                                       ),
                                       _.span(
                                         {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Germany fears Russian gas retaliation if war breaks out`
+`West considers support for Ukrainian resistance if Russia invades`
                                       )
                                     )
                                   ),
@@ -1993,11 +2016,11 @@ export default () => _.html(
                                     _.div(
                                       {"class":"featured-story__image"},
                                       _.a(
-                                        {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/2a2de3d7-0486-4af4-8e45-0afc18b40213","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                        {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/6a0788fe-dd69-458d-af03-71d9445255d9","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                         _.picture(
-                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9af82675-3992-4660-8c6c-2ef0d3b17190.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9af82675-3992-4660-8c6c-2ef0d3b17190.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9af82675-3992-4660-8c6c-2ef0d3b17190.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"On Ukraine’s eastern frontline, ominous signs that a major onslaught is coming","class":"image image--width-580"})
+                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff502e6f2-9b65-42bf-96a1-aa4e35b79abd.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff502e6f2-9b65-42bf-96a1-aa4e35b79abd.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff502e6f2-9b65-42bf-96a1-aa4e35b79abd.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Ukraine crisis tests Xi’s pivot to Putin ","class":"image image--width-580"})
                                         )
                                       )
                                     ),
@@ -2014,9 +2037,9 @@ export default () => _.html(
                                         )
                                       ),
                                       _.div(
-                                        {"class":"headline js-teaser-headline headline--scale-5","data-content-id":"2a2de3d7-0486-4af4-8e45-0afc18b40213"},
+                                        {"class":"headline js-teaser-headline headline--scale-5","data-content-id":"6a0788fe-dd69-458d-af03-71d9445255d9"},
                                         _.a(
-                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/2a2de3d7-0486-4af4-8e45-0afc18b40213","class":"link","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/6a0788fe-dd69-458d-af03-71d9445255d9","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                             _.span(
@@ -2026,7 +2049,7 @@ export default () => _.html(
                                           ),
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-5 text--weight-400","id":""},
-`On Ukraine’s eastern frontline, ominous signs that a major onslaught is coming`
+`Ukraine crisis tests Xi’s pivot to Putin`
                                           )
                                         )
                                       )
@@ -2078,28 +2101,31 @@ export default () => _.html(
                                           _.div(
                                             {"class":"primary-story__image primary-story__image--1-cols"},
                                             _.a(
-                                              {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/38b1906f-4302-4a09-b304-dc2ecf5dc771","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/73df6814-49fa-4645-97cf-a6732933bc38","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.picture(
-                                                _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2c5d0a9c-5235-4b61-b51c-2caef92d44b8.jpg?source=next-home-page&dpr=2&width=180&fit=scale-down"}),
-                                                _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2c5d0a9c-5235-4b61-b51c-2caef92d44b8.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                                _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2c5d0a9c-5235-4b61-b51c-2caef92d44b8.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Baltic states fear encirclement as Russia threat rises","class":"image image--width-180"})
+                                                _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2d48c3e5-00db-442f-8484-c5551c3cba7b.jpg?source=next-home-page&dpr=2&width=180&fit=scale-down"}),
+                                                _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2d48c3e5-00db-442f-8484-c5551c3cba7b.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                                _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2d48c3e5-00db-442f-8484-c5551c3cba7b.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"How Putin took Europe to the brink of war","class":"image image--width-180"})
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"38b1906f-4302-4a09-b304-dc2ecf5dc771"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"73df6814-49fa-4645-97cf-a6732933bc38"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/38b1906f-4302-4a09-b304-dc2ecf5dc771","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/73df6814-49fa-4645-97cf-a6732933bc38","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                                 _.span(
-                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
-`News in-depth.`
+                                                  {"class":"icon icon--opinion icon--scale-3"},
+                                                  _.span(
+                                                    {"class":"o-normalise-visually-hidden"},
+`opinion content.`
+                                                  )
                                                 )
                                               ),
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Baltic states fear encirclement as Russia threat rises`
+`How Putin took Europe to the brink of war`
                                               )
                                             )
                                           )
@@ -2107,12 +2133,20 @@ export default () => _.html(
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
                                           _.div(
-                                            {"class":"metadata metadata__timestamp"},
+                                            {"class":"metadata metadata__opinion"},
+                                            _.picture(
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_gideon-rachman-7ec68ec7-44fe-4c90-9543-ea8481f6a952.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_gideon-rachman-7ec68ec7-44fe-4c90-9543-ea8481f6a952.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_gideon-rachman-7ec68ec7-44fe-4c90-9543-ea8481f6a952.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Gideon Rachman","class":"image image--width-40"})
+                                            ),
                                             _.div(
-                                              {"class":"timestamp"},
-                                              _.time(
-                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-20T12:10:40+0000","title":"February 20 2022 4:10 am","data-o-date-js":""},
-`4 hours ago`
+                                              {"class":"author-opinion-details"},
+                                              _.a(
+                                                {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/gideon-rachman","class":"link","target":"_self","aria-describedby":""},
+                                                _.span(
+                                                  {"class":"text text--color-black text-sans--scale-0","id":""},
+`Gideon Rachman`
+                                                )
                                               )
                                             )
                                           )
@@ -2133,19 +2167,19 @@ export default () => _.html(
                                   _.div(
                                     {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"2","class":"grid grid--1-columns grid--s3-spacing"},
                                     _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"e31332a0-6349-4420-a09e-8c0b1fceed12"},
+                                      {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"2a2de3d7-0486-4af4-8e45-0afc18b40213"},
                                       _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/e31332a0-6349-4420-a09e-8c0b1fceed12","class":"link","target":"_self","aria-describedby":""},
+                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/2a2de3d7-0486-4af4-8e45-0afc18b40213","class":"link","target":"_self","aria-describedby":""},
                                         _.span(
                                           {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
-`The Big Read.`
+`News in-depth.`
                                           )
                                         ),
                                         _.span(
                                           {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Has Biden got inside Putin’s head?`
+`On Ukraine’s eastern frontline, ominous signs that a major onslaught is coming`
                                         )
                                       )
                                     ),
@@ -2215,7 +2249,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:chinese-military;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"chinese-military","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:ft-live-news;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"ft-live-news","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
@@ -2225,7 +2259,7 @@ export default () => _.html(
                                 _.div(
                                   {"class":"story-group__article story-group__article--lead"},
                                   _.div(
-                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"2","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
+                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"1","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
                                     _.div(
                                       {"class":"grid-item grid-item--span-3"},
                                       _.div(
@@ -2233,11 +2267,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/ab9b6235-762e-494e-a698-0ff510d21cbd","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/d0b9bab8-9445-4e16-b370-fda85fd5f431","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0c0986bf-4282-475f-b478-5d46226e19ee.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0c0986bf-4282-475f-b478-5d46226e19ee.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0c0986bf-4282-475f-b478-5d46226e19ee.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Chinese naval vessel aims laser at Australian surveillance plane","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6e138d2e-4dcd-42cf-9bef-2ed0dcee5843.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6e138d2e-4dcd-42cf-9bef-2ed0dcee5843.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6e138d2e-4dcd-42cf-9bef-2ed0dcee5843.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Live news: China’s SenseTime shares rise after Hang Seng announces inclusion to tech index","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -2246,66 +2280,41 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/9243a711-4ca4-4686-81c9-db4240fee47c","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/71da3673-1793-4e83-a4b1-2d08639fe0f6","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Chinese military`
+`FT live news`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"ab9b6235-762e-494e-a698-0ff510d21cbd"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"d0b9bab8-9445-4e16-b370-fda85fd5f431"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/ab9b6235-762e-494e-a698-0ff510d21cbd","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/d0b9bab8-9445-4e16-b370-fda85fd5f431","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Chinese naval vessel aims laser at Australian surveillance plane`
-                                              )
-                                            )
-                                          ),
-                                          _.p(
-                                            {"class":"standfirst"},
-                                            _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/ab9b6235-762e-494e-a698-0ff510d21cbd","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
-                                              _.span(
-                                                {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Prime minister describes encounter in the Arafura Sea as an ‘act of intimidation’`
+`Live news: China’s SenseTime shares rise after Hang Seng announces inclusion to tech index`
                                               )
                                             )
                                           )
                                         ),
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div({"class":"metadata metadata__timestamp"})
+                                          _.div(
+                                            {"class":"metadata metadata__live-blog"},
+                                            _.span(
+                                              {"class":"metadata__live-blog-label"},
+                                              _.span(
+                                                {"class":"o-labels-indicator o-labels-indicator--live o-labels-indicator--inverse"},
+                                                _.span(
+                                                  {"class":"o-labels-indicator__status"},
+`Live`
+                                                )
+                                              )
+                                            )
+                                          )
                                         )
                                       )
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"story-group__separator"},
-                                  _.div({"class":"separator--solid"})
-                                )
-                              ),
-                              _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
-                                _.div(
-                                  {"class":"story-group__article story-group__article--secondary"},
-                                  _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"2","class":"grid grid--1-columns grid--s3-spacing"},
-                                    _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"b505d504-6447-4ffb-bb7d-3a33db837c9a"},
-                                      _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/b505d504-6447-4ffb-bb7d-3a33db837c9a","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`China moves to counter India with arms sales to Pakistan`
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
                                     )
                                   )
                                 ),
@@ -2324,9 +2333,9 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:oil-and-gas-industry;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"oil-and-gas-industry","data-trackable-context-storygroup-position":"1","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:fund-management;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"fund-management","data-trackable-context-storygroup-position":"1","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
-                            {"class":"story-group story-group--featured"},
+                            {"class":"story-group"},
                             _.div(
                               {"class":"grid grid--1-columns grid--fullHeight","style":"grid-template-rows:min-content;-ms-grid-rows:min-content"},
                               _.div(
@@ -2334,7 +2343,7 @@ export default () => _.html(
                                 _.div(
                                   {"class":"story-group__article story-group__article--lead"},
                                   _.div(
-                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"2","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
+                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"1","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
                                     _.div(
                                       {"class":"grid-item grid-item--span-3"},
                                       _.div(
@@ -2342,11 +2351,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/2852b800-4a03-4cf6-a47f-65c306a22657","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/f4662b44-c0a2-4503-bbb5-bddaca500c36","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F68bca4aa-86ae-4c56-82ff-837e0e375efd.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F68bca4aa-86ae-4c56-82ff-837e0e375efd.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F68bca4aa-86ae-4c56-82ff-837e0e375efd.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Big Oil on course for near-record $38bn in share buybacks ","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ffee4b0df-7093-4560-b656-8d00f8f081f6.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ffee4b0df-7093-4560-b656-8d00f8f081f6.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ffee4b0df-7093-4560-b656-8d00f8f081f6.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Insurer-owned fund managers lose out in hunt for returns ","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -2355,66 +2364,48 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/companies/oil-gas","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/fund-management","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Oil & Gas industry`
+`Fund management`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"2852b800-4a03-4cf6-a47f-65c306a22657"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"f4662b44-c0a2-4503-bbb5-bddaca500c36"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/2852b800-4a03-4cf6-a47f-65c306a22657","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/f4662b44-c0a2-4503-bbb5-bddaca500c36","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
-                                                {"class":"text text--color-black text-display--scale-3 text--weight-400","id":""},
-`Big Oil on course for near-record $38bn in share buybacks`
+                                                {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
+`Insurer-owned fund managers lose out in hunt for returns`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/2852b800-4a03-4cf6-a47f-65c306a22657","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/f4662b44-c0a2-4503-bbb5-bddaca500c36","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Seven majors set for supercharged stock purchasing on top of estimated $50bn of dividends`
+`Those that traditionally served as parent group’s default manager under increasing pressure from rivals`
                                               )
                                             )
                                           )
                                         ),
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div({"class":"metadata metadata__timestamp"})
+                                          _.div(
+                                            {"class":"metadata metadata__timestamp"},
+                                            _.div(
+                                              {"class":"timestamp"},
+                                              _.time(
+                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
+                                              )
+                                            )
+                                          )
                                         )
                                       )
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"story-group__separator"},
-                                  _.div({"class":"separator--solid"})
-                                )
-                              ),
-                              _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
-                                _.div(
-                                  {"class":"story-group__article story-group__article--secondary"},
-                                  _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"2","class":"grid grid--1-columns grid--s3-spacing"},
-                                    _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"af236fd9-f757-4acd-b3bc-f78b44d40625"},
-                                      _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/af236fd9-f757-4acd-b3bc-f78b44d40625","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"class":"text text--color-black text-display--scale-2 text--weight-400","id":""},
-`Tanker companies warn of rise in armada of ghost ships`
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
                                     )
                                   )
                                 ),
@@ -2433,7 +2424,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:sexual-misconduct-allegations;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"sexual-misconduct-allegations","data-trackable-context-storygroup-position":"2","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:woodside-petroleum-ltd;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"woodside-petroleum-ltd","data-trackable-context-storygroup-position":"2","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
@@ -2451,11 +2442,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/910849fd-3f45-4b1a-9fa9-fa5bc1bcaa7e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/3c721f4b-f908-44b8-a234-3616683fa5a6","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3781e363-3e36-4a25-9c7b-ca6c9a66ac8f.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3781e363-3e36-4a25-9c7b-ca6c9a66ac8f.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3781e363-3e36-4a25-9c7b-ca6c9a66ac8f.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Epstein associate Jean-Luc Brunel found dead in prison cell","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa36bd9df-b3db-4afd-b1a0-ffb76c2c0a1c.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa36bd9df-b3db-4afd-b1a0-ffb76c2c0a1c.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa36bd9df-b3db-4afd-b1a0-ffb76c2c0a1c.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Woodside vows to take on US shale oil producers after BHP merger","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -2464,30 +2455,30 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/9c4e64d2-1aca-4ed0-9ec0-dc1748415e2d","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/654428ad-fbea-464a-9ee6-27c9cd078e66","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Sexual misconduct allegations`
+`Woodside Petroleum Ltd`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"910849fd-3f45-4b1a-9fa9-fa5bc1bcaa7e"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"3c721f4b-f908-44b8-a234-3616683fa5a6"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/910849fd-3f45-4b1a-9fa9-fa5bc1bcaa7e","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/3c721f4b-f908-44b8-a234-3616683fa5a6","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Epstein associate Jean-Luc Brunel found dead in prison cell`
+`Woodside vows to take on US shale oil producers after BHP merger`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/910849fd-3f45-4b1a-9fa9-fa5bc1bcaa7e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/3c721f4b-f908-44b8-a234-3616683fa5a6","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Former Paris model agency boss was being investigated for rape and procurement of girls`
+`Australian group says it will avoid costly extraction methods but has been criticised over climate record`
                                               )
                                             )
                                           )
@@ -2515,7 +2506,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:esg-investing;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"esg-investing","data-trackable-context-storygroup-position":"3","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:food-and-beverage;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"food-and-beverage","data-trackable-context-storygroup-position":"3","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
@@ -2525,7 +2516,7 @@ export default () => _.html(
                                 _.div(
                                   {"class":"story-group__article story-group__article--lead"},
                                   _.div(
-                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"2","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
+                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"1","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
                                     _.div(
                                       {"class":"grid-item grid-item--span-3"},
                                       _.div(
@@ -2533,11 +2524,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/ae78c05a-0481-4774-8f9b-d3f02e4f2c6f","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/a4a6bca4-d60e-425a-919e-61015eb3300d","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F710085e2-9adf-4f37-bd9f-0c1ce7817308.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F710085e2-9adf-4f37-bd9f-0c1ce7817308.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F710085e2-9adf-4f37-bd9f-0c1ce7817308.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Green investing: the risk of a new mis-selling scandal ","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F523e38ca-6d20-4d6c-93cf-15d27281d66c.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F523e38ca-6d20-4d6c-93cf-15d27281d66c.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F523e38ca-6d20-4d6c-93cf-15d27281d66c.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Carl Icahn nominates directors to McDonald’s board to change pig policy","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -2546,37 +2537,30 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/esg-investing","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/food-beverage","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`ESG investing`
+`Food & Beverage`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"ae78c05a-0481-4774-8f9b-d3f02e4f2c6f"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"a4a6bca4-d60e-425a-919e-61015eb3300d"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/ae78c05a-0481-4774-8f9b-d3f02e4f2c6f","class":"link","target":"_self","aria-describedby":""},
-                                              _.span(
-                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                                _.span(
-                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
-`The Big Read.`
-                                                )
-                                              ),
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/a4a6bca4-d60e-425a-919e-61015eb3300d","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Green investing: the risk of a new mis-selling scandal`
+`Carl Icahn nominates directors to McDonald’s board to change pig policy`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/ae78c05a-0481-4774-8f9b-d3f02e4f2c6f","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/a4a6bca4-d60e-425a-919e-61015eb3300d","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`ESG funds are popular, but research has found the sector is rife with greenwashing. Lawyers warn a reckoning is coming`
+`Non-profit working with activist investor calls for fast-food chain to more humanely source pork`
                                               )
                                             )
                                           )
@@ -2586,33 +2570,6 @@ export default () => _.html(
                                           _.div({"class":"metadata metadata__timestamp"})
                                         )
                                       )
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"story-group__separator"},
-                                  _.div({"class":"separator--solid"})
-                                )
-                              ),
-                              _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
-                                _.div(
-                                  {"class":"story-group__article story-group__article--secondary"},
-                                  _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"2","class":"grid grid--1-columns grid--s3-spacing"},
-                                    _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"86102111-3361-43e6-8e86-3dc6dfe7bb6f"},
-                                      _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/86102111-3361-43e6-8e86-3dc6dfe7bb6f","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`US companies add ESG targets to executive bonuses`
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
                                     )
                                   )
                                 ),
@@ -2698,7 +2655,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:working-from-home;storyGroup:xlarge","data-trackable-context-storygroup-size":"xlarge","data-trackable-context-storygroup-title":"working-from-home","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"1","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:poland;storyGroup:xlarge","data-trackable-context-storygroup-size":"xlarge","data-trackable-context-storygroup-title":"poland","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"1","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"spotlight-story"},
                             _.div(
@@ -2714,40 +2671,37 @@ export default () => _.html(
                                       _.div(
                                         {"class":"story-group__title"},
                                         _.a(
-                                          {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/12e3551a-c48c-4c52-a4b8-31482818c9df","class":"link","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/c62c1d5e-8e17-480f-8a60-4ed712669112","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Working from home`
+`Poland`
                                           )
                                         )
                                       ),
                                       _.div(
-                                        {"class":"headline js-teaser-headline headline--scale-5","data-content-id":"538f3649-8a30-4b35-a2ee-bd1392180b25"},
+                                        {"class":"headline js-teaser-headline headline--scale-5","data-content-id":"949b4fd2-90cd-44e1-a3b0-1d61a4aacc9e"},
                                         _.a(
-                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/538f3649-8a30-4b35-a2ee-bd1392180b25","class":"link","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/949b4fd2-90cd-44e1-a3b0-1d61a4aacc9e","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                             _.span(
-                                              {"class":"icon icon--opinion icon--scale-5"},
-                                              _.span(
-                                                {"class":"o-normalise-visually-hidden"},
-`opinion content.`
-                                              )
+                                              {"class":"text text--color-black text-display--scale-5 text--weight-600","id":""},
+`The Big Read.`
                                             )
                                           ),
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-5 text--weight-400","id":""},
-`Hybrid working enters a third dimension`
+`Can the EU and Poland step back from the brink?`
                                           )
                                         )
                                       ),
                                       _.p(
                                         {"class":"standfirst"},
                                         _.a(
-                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/538f3649-8a30-4b35-a2ee-bd1392180b25","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/949b4fd2-90cd-44e1-a3b0-1d61a4aacc9e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Bored with WFH? Try the ‘third space’: not the office, not the home but somewhere in-between`
+`The dangerous confrontation between Brussels and Warsaw over rule of law could deepen after a European court ruling last week`
                                           )
                                         )
                                       )
@@ -2755,20 +2709,12 @@ export default () => _.html(
                                     _.div(
                                       {"class":"grid-item grid-item--span-3 grid-item--align-self-end"},
                                       _.div(
-                                        {"class":"metadata metadata__opinion"},
-                                        _.picture(
-                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FJanina-Conboye-da211de0-1209-4013-813f-1a8487b793b7.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
-                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FJanina-Conboye-da211de0-1209-4013-813f-1a8487b793b7.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FJanina-Conboye-da211de0-1209-4013-813f-1a8487b793b7.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Janina Conboye","class":"image image--width-40"})
-                                        ),
+                                        {"class":"metadata metadata__timestamp"},
                                         _.div(
-                                          {"class":"author-opinion-details"},
-                                          _.a(
-                                            {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/janina-conboye","class":"link","target":"_self","aria-describedby":""},
-                                            _.span(
-                                              {"class":"text text--color-black text-sans--scale-0","id":""},
-`Janina Conboye`
-                                            )
+                                          {"class":"timestamp"},
+                                          _.time(
+                                            {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
                                           )
                                         )
                                       )
@@ -2777,11 +2723,11 @@ export default () => _.html(
                                   _.div(
                                     {"class":"spotlight-story__image"},
                                     _.a(
-                                      {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/538f3649-8a30-4b35-a2ee-bd1392180b25","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                      {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/949b4fd2-90cd-44e1-a3b0-1d61a4aacc9e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                       _.picture(
-                                        _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9fbf5578-3146-4e38-9590-249846c737bf.jpg?source=next-home-page&dpr=2&width=580&height=435&fit=cover&gravity=poi"}),
-                                        _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9fbf5578-3146-4e38-9590-249846c737bf.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                        _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9fbf5578-3146-4e38-9590-249846c737bf.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Hybrid working enters a third dimension","class":"image image--width-580"})
+                                        _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0143683b-1016-4e30-8452-b00f4bc10cbf.jpg?source=next-home-page&dpr=2&width=580&height=435&fit=cover&gravity=poi"}),
+                                        _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0143683b-1016-4e30-8452-b00f4bc10cbf.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                        _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0143683b-1016-4e30-8452-b00f4bc10cbf.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Can the EU and Poland step back from the brink?","class":"image image--width-580"})
                                       )
                                     )
                                   )
@@ -2799,11 +2745,11 @@ export default () => _.html(
                                       _.div(
                                         {"class":"primary-story__image primary-story__image--1-cols"},
                                         _.a(
-                                          {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/b0b90040-f7d1-400c-8c8d-4f5fc2515d4b","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/9463ed05-c847-425d-9051-482bd3a1e4b1","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                           _.picture(
-                                            _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F18aa04c9-833c-47ea-a634-961b20927aef.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                            _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F18aa04c9-833c-47ea-a634-961b20927aef.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                            _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F18aa04c9-833c-47ea-a634-961b20927aef.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Pushing boundaries: the rise of German business schools","class":"image image--width-280"})
+                                            _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff68a3b23-b531-498a-bb0f-371116a373f4.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                            _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff68a3b23-b531-498a-bb0f-371116a373f4.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                            _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff68a3b23-b531-498a-bb0f-371116a373f4.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Metaverse vs employment law: the reality of the virtual workplace","class":"image image--width-280"})
                                           )
                                         )
                                       ),
@@ -2812,30 +2758,30 @@ export default () => _.html(
                                         _.div(
                                           {"class":"story-group__title"},
                                           _.a(
-                                            {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/bschool","class":"link","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/reports/ft-general-counsel","class":"link","target":"_self","aria-describedby":""},
                                             _.span(
                                               {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Business school`
+`Law`
                                             )
                                           )
                                         ),
                                         _.div(
-                                          {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"b0b90040-f7d1-400c-8c8d-4f5fc2515d4b"},
+                                          {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"9463ed05-c847-425d-9051-482bd3a1e4b1"},
                                           _.a(
-                                            {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/b0b90040-f7d1-400c-8c8d-4f5fc2515d4b","class":"link","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/9463ed05-c847-425d-9051-482bd3a1e4b1","class":"link","target":"_self","aria-describedby":""},
                                             _.span(
                                               {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Pushing boundaries: the rise of German business schools`
+`Metaverse vs employment law: the reality of the virtual workplace`
                                             )
                                           )
                                         ),
                                         _.p(
                                           {"class":"standfirst"},
                                           _.a(
-                                            {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/b0b90040-f7d1-400c-8c8d-4f5fc2515d4b","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/9463ed05-c847-425d-9051-482bd3a1e4b1","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.span(
                                               {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`The country had no tradition of teaching management but its elite schools are now booming`
+`It is unclear how employee protections apply in the universal digital realm. What counts as harassment? And can an avatar be discriminated against?`
                                             )
                                           )
                                         )
@@ -2847,8 +2793,8 @@ export default () => _.html(
                                           _.div(
                                             {"class":"timestamp"},
                                             _.time(
-                                              {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-20T15:00:24+0000","title":"February 20 2022 7:00 am","data-o-date-js":""},
-`an hour ago`
+                                              {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T04:00:46+0000","title":"February 20 2022 8:00 pm","data-o-date-js":""},
+`2 hours ago`
                                             )
                                           )
                                         )
@@ -2889,98 +2835,122 @@ export default () => _.html(
               )
             ),
             _.div(
-              {"data-trackable":"list:top-stories;listTitle:best-of-weekend-ft","data-trackable-context-list-type":"top-stories","data-trackable-context-list-position":"7","data-trackable-context-list-siblings":"19","class":"story-group-slice"},
+              {"data-trackable":"list:top-stories;listTitle:news","data-trackable-context-list-type":"top-stories","data-trackable-context-list-position":"7","data-trackable-context-list-siblings":"19","class":"story-group-slice"},
               _.section(
                 {"class":"slice"},
                 _.div(
                   {"class":"slice__content"},
                   _.div({"class":"separator--dotted"}),
                   _.header(
-                    {"id":"best-of-weekend-ft","class":"slice-heading"},
+                    {"id":"news","class":"slice-heading"},
                     _.h2(
                       {"class":"slice-heading__title"},
                       _.span(
                         {"class":"text text--color-black-80 text-sans--scale-0","id":""},
-`Best of Weekend FT`
+`News`
                       )
                     )
                   ),
                   _.div(
                     {"class":"layout-desktop__grid-container"},
                     _.div(
-                      {"class":"layout-desktop__grid layout-desktop__grid--span6 layout-desktop__grid--column-start-1 layout-desktop__grid--row-start-1 layout-desktop__grid--with-border"},
+                      {"class":"layout-desktop__grid layout-desktop__grid--span3 layout-desktop__grid--column-start-1 layout-desktop__grid--row-start-1 layout-desktop__grid--with-border"},
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:travel;storyGroup:medium","data-trackable-context-storygroup-size":"medium","data-trackable-context-storygroup-title":"travel","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"3","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:markets;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"markets","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
-                            {"class":"story-group story-group--featured"},
+                            {"class":"story-group"},
                             _.div(
-                              {"class":"grid grid--2-columns grid--fullHeight","style":"grid-template-rows:min-content;-ms-grid-rows:min-content"},
+                              {"class":"grid grid--1-columns grid--fullHeight","style":"grid-template-rows:min-content;-ms-grid-rows:min-content"},
                               _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-1 story-group--column-start-1 story-group--full-width-2 story-group--end-of-row"},
+                                {"class":"story-group__article-wrapper story-group--row-start-1 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
                                 _.div(
                                   {"class":"story-group__article story-group__article--lead"},
                                   _.div(
-                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"5","class":"grid grid--2-columns grid--s4-spacing grid--fullHeight"},
+                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"1","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
                                     _.div(
-                                      {"class":"grid-item grid-item--span-1"},
+                                      {"class":"grid-item grid-item--span-3"},
                                       _.div(
                                         {"class":"grid grid--1-columns grid--s3-spacing"},
+                                        _.div(
+                                          {"class":"primary-story__image primary-story__image--1-cols"},
+                                          _.a(
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/71982abb-a79d-4fb6-8f62-49ec5e9679c5","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            _.picture(
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fb8a813d9-4dcd-4e8d-9295-1d55e5cb7933.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fb8a813d9-4dcd-4e8d-9295-1d55e5cb7933.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fb8a813d9-4dcd-4e8d-9295-1d55e5cb7933.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"There is more to market volatility than Ukraine","class":"image image--width-280"})
+                                            )
+                                          )
+                                        ),
                                         _.div(
                                           {"class":"primary-story__teaser"},
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/travel","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/markets","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Travel`
+`Markets`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"37839ee5-e3b6-48bf-adcc-87f6b02c792a"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"71982abb-a79d-4fb6-8f62-49ec5e9679c5"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/37839ee5-e3b6-48bf-adcc-87f6b02c792a","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/71982abb-a79d-4fb6-8f62-49ec5e9679c5","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                                 _.span(
-                                                  {"class":"text text--color-black text-display--scale-4 text--weight-600","id":""},
-`Travelista.`
+                                                  {"class":"icon icon--opinion icon--scale-3"},
+                                                  _.span(
+                                                    {"class":"o-normalise-visually-hidden"},
+`opinion content.`
+                                                  )
+                                                ),
+                                                _.span(
+                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
+`Markets Insight.`
                                                 )
                                               ),
                                               _.span(
-                                                {"class":"text text--color-black text-display--scale-4 text--weight-400","id":""},
-`Five chic city stays for £200 or less`
+                                                {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
+`There is more to market volatility than Ukraine`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/37839ee5-e3b6-48bf-adcc-87f6b02c792a","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/71982abb-a79d-4fb6-8f62-49ec5e9679c5","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Smart escapes that won’t break the bank, from Paris to Kyoto`
+`Investors need strong stomachs to deal with large swings in asset prices`
                                               )
                                             )
                                           )
                                         ),
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div({"class":"metadata metadata__timestamp"})
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"primary-story__image primary-story__image--2-cols"},
-                                      _.a(
-                                        {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/37839ee5-e3b6-48bf-adcc-87f6b02c792a","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
-                                        _.picture(
-                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5b5fbaa1-ce02-427e-8004-10af207bfe99.jpg?source=next-home-page&dpr=2&width=280&height=280&fit=cover&gravity=poi"}),
-                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5b5fbaa1-ce02-427e-8004-10af207bfe99.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5b5fbaa1-ce02-427e-8004-10af207bfe99.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Five chic city stays for £200 or less","class":"image image--width-280"})
+                                          _.div(
+                                            {"class":"metadata metadata__opinion"},
+                                            _.picture(
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FMohamed-El-Erian-3ae1a64f-e035-4ac7-86ae-fe4a2df0213d.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FMohamed-El-Erian-3ae1a64f-e035-4ac7-86ae-fe4a2df0213d.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FMohamed-El-Erian-3ae1a64f-e035-4ac7-86ae-fe4a2df0213d.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Mohamed El-Erian","class":"image image--width-40"})
+                                            ),
+                                            _.div(
+                                              {"class":"author-opinion-details"},
+                                              _.a(
+                                                {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/mohamed-el-erian","class":"link","target":"_self","aria-describedby":""},
+                                                _.span(
+                                                  {"class":"text text--color-black text-sans--scale-0","id":""},
+`Mohamed El-Erian`
+                                                )
+                                              )
+                                            )
+                                          )
                                         )
                                       )
                                     )
@@ -2990,155 +2960,112 @@ export default () => _.html(
                                   {"class":"story-group__separator story-group__separator--hidden"},
                                   _.div({"class":"separator--solid"})
                                 )
-                              ),
+                              )
+                            )
+                          )
+                        )
+                      )
+                    ),
+                    _.div(
+                      {"class":"layout-desktop__grid layout-desktop__grid--span3 layout-desktop__grid--column-start-4 layout-desktop__grid--row-start-1 layout-desktop__grid--with-border"},
+                      _.div(
+                        {"class":"layout__grid-content"},
+                        _.div(
+                          {"data-trackable":"storyGroupTitle:hong-kong;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"hong-kong","data-trackable-context-storygroup-position":"1","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          _.div(
+                            {"class":"story-group"},
+                            _.div(
+                              {"class":"grid grid--1-columns grid--fullHeight","style":"grid-template-rows:min-content;-ms-grid-rows:min-content"},
                               _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-1"},
+                                {"class":"story-group__article-wrapper story-group--row-start-1 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
                                 _.div(
-                                  {"class":"story-group__article story-group__article--secondary"},
+                                  {"class":"story-group__article story-group__article--lead"},
                                   _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"5","class":"grid grid--1-columns grid--s3-spacing"},
+                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"1","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
                                     _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"b3693cfe-ad2a-44d5-a447-46fc4edf6937"},
-                                      _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/b3693cfe-ad2a-44d5-a447-46fc4edf6937","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                          _.span(
-                                            {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`FT Magazine.`
-                                          )
-                                        ),
-                                        _.span(
-                                          {"class":"text text--color-black text-display--scale-2 text--weight-400","id":""},
-`Inside Peloton’s epic run of bungled calls and bad luck`
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"story-group__separator"},
-                                  _.div({"class":"separator--solid"})
-                                )
-                              ),
-                              _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2 story-group--end-of-row"},
-                                _.div(
-                                  {"class":"story-group__article story-group__article--secondary"},
-                                  _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"5","class":"grid grid--1-columns grid--s3-spacing"},
-                                    _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"ff0ad2f8-1627-4083-a0c7-2dece470b795"},
-                                      _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/ff0ad2f8-1627-4083-a0c7-2dece470b795","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                          _.span(
-                                            {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`FT Magazine.`
-                                          )
-                                        ),
-                                        _.span(
-                                          {"class":"text text--color-black text-display--scale-2 text--weight-400","id":""},
-`Is the age of ambition over?`
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"story-group__separator"},
-                                  _.div({"class":"separator--solid"})
-                                )
-                              ),
-                              _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
-                                _.div(
-                                  {"class":"story-group__article story-group__article--secondary"},
-                                  _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"5","class":"grid grid--1-columns grid--s3-spacing"},
-                                    _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"38ce2381-b130-42e0-ad32-e4f1373333e6"},
-                                      _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/38ce2381-b130-42e0-ad32-e4f1373333e6","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                          _.span(
-                                            {"class":"icon icon--opinion icon--scale-2"},
-                                            _.span(
-                                              {"class":"o-normalise-visually-hidden"},
-`opinion content.`
+                                      {"class":"grid-item grid-item--span-3"},
+                                      _.div(
+                                        {"class":"grid grid--1-columns grid--s3-spacing"},
+                                        _.div(
+                                          {"class":"primary-story__image primary-story__image--1-cols"},
+                                          _.a(
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/901e32d9-2d42-4f72-874a-a0268f865acc","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            _.picture(
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F695bafec-590e-4682-a8a5-290f82429231.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F695bafec-590e-4682-a8a5-290f82429231.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F695bafec-590e-4682-a8a5-290f82429231.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Beijing grows frustrated at Hong Kong’s handling of pandemic","class":"image image--width-280"})
                                             )
                                           )
-                                        ),
-                                        _.span(
-                                          {"class":"text text--color-black text-display--scale-2 text--weight-400","id":""},
-`Naomi Campbell’s baby and the myths of the older parent`
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div(
-                                        {"class":"metadata metadata__opinion"},
-                                        _.picture(
-                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jo-ellison-ca2e6ed6-95f0-42dc-b49a-e8946302e1fa.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
-                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jo-ellison-ca2e6ed6-95f0-42dc-b49a-e8946302e1fa.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jo-ellison-ca2e6ed6-95f0-42dc-b49a-e8946302e1fa.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Jo Ellison","class":"image image--width-40"})
                                         ),
                                         _.div(
-                                          {"class":"author-opinion-details"},
-                                          _.a(
-                                            {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/jo-ellison","class":"link","target":"_self","aria-describedby":""},
-                                            _.span(
-                                              {"class":"text text--color-black text-sans--scale-0","id":""},
-`Jo Ellison`
+                                          {"class":"primary-story__teaser"},
+                                          _.div(
+                                            {"class":"story-group__title"},
+                                            _.a(
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/topics/places/Hong_Kong","class":"link","target":"_self","aria-describedby":""},
+                                              _.span(
+                                                {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
+`Hong Kong`
+                                              )
+                                            )
+                                          ),
+                                          _.div(
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"901e32d9-2d42-4f72-874a-a0268f865acc"},
+                                            _.a(
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/901e32d9-2d42-4f72-874a-a0268f865acc","class":"link","target":"_self","aria-describedby":""},
+                                              _.span(
+                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                                _.span(
+                                                  {"class":"icon icon--opinion icon--scale-3"},
+                                                  _.span(
+                                                    {"class":"o-normalise-visually-hidden"},
+`opinion content.`
+                                                  )
+                                                ),
+                                                _.span(
+                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
+`Global Insight.`
+                                                )
+                                              ),
+                                              _.span(
+                                                {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
+`Beijing grows frustrated at Hong Kong’s handling of pandemic`
+                                              )
+                                            )
+                                          ),
+                                          _.p(
+                                            {"class":"standfirst"},
+                                            _.a(
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/901e32d9-2d42-4f72-874a-a0268f865acc","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              _.span(
+                                                {"class":"text text--color-black-60 text-sans--scale-0","id":""},
+`City is more lenient than the mainland towards officials breaching pandemic restrictions`
+                                              )
+                                            )
+                                          )
+                                        ),
+                                        _.div(
+                                          {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                          _.div(
+                                            {"class":"metadata metadata__opinion"},
+                                            _.picture(
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FPrimrose-Riordan-2caf4f22-b571-4aa8-839d-335aa1f23797.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FPrimrose-Riordan-2caf4f22-b571-4aa8-839d-335aa1f23797.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FPrimrose-Riordan-2caf4f22-b571-4aa8-839d-335aa1f23797.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Primrose Riordan","class":"image image--width-40"})
+                                            ),
+                                            _.div(
+                                              {"class":"author-opinion-details"},
+                                              _.a(
+                                                {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/primrose-riordan","class":"link","target":"_self","aria-describedby":""},
+                                                _.span(
+                                                  {"class":"text text--color-black text-sans--scale-0","id":""},
+`Primrose Riordan`
+                                                )
+                                              )
                                             )
                                           )
                                         )
                                       )
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"story-group__separator story-group__separator--hidden"},
-                                  _.div({"class":"separator--solid"})
-                                )
-                              ),
-                              _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2 story-group--end-of-row"},
-                                _.div(
-                                  {"class":"story-group__article story-group__article--secondary"},
-                                  _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"5","class":"grid grid--1-columns grid--s3-spacing"},
-                                    _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"a1e3ef0a-cedf-487a-9b66-7474332ca835"},
-                                      _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/a1e3ef0a-cedf-487a-9b66-7474332ca835","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                          _.span(
-                                            {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`The Weekend Essay.`
-                                          )
-                                        ),
-                                        _.span(
-                                          {"class":"text text--color-black text-display--scale-2 text--weight-400","id":""},
-`The Premier League at 30 — an English success story?`
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
                                     )
                                   )
                                 ),
@@ -3157,7 +3084,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:life-and-arts;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"life-and-arts","data-trackable-context-storygroup-position":"1","data-trackable-context-storygroup-siblings":"3","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:technology-sector;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"technology-sector","data-trackable-context-storygroup-position":"2","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
@@ -3167,7 +3094,7 @@ export default () => _.html(
                                 _.div(
                                   {"class":"story-group__article story-group__article--lead"},
                                   _.div(
-                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"2","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
+                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"1","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
                                     _.div(
                                       {"class":"grid-item grid-item--span-3"},
                                       _.div(
@@ -3175,11 +3102,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/d0d78cbd-afb9-49d4-9018-6c974afe8458","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/64e8c789-14ed-40ef-8b44-9998b6e520b8","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9a7a3225-bc64-4797-9127-b429dd8550ce.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9a7a3225-bc64-4797-9127-b429dd8550ce.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9a7a3225-bc64-4797-9127-b429dd8550ce.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"The pleasure principle","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa3d7ee15-7663-4701-8bde-d6019e7d4297.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa3d7ee15-7663-4701-8bde-d6019e7d4297.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa3d7ee15-7663-4701-8bde-d6019e7d4297.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"China’s driverless dreams troubled by US chip dependency","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -3188,93 +3115,39 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/life-arts","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/companies/technology","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Life & Arts`
+`Technology sector`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"d0d78cbd-afb9-49d4-9018-6c974afe8458"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"64e8c789-14ed-40ef-8b44-9998b6e520b8"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/d0d78cbd-afb9-49d4-9018-6c974afe8458","class":"link","target":"_self","aria-describedby":""},
-                                              _.span(
-                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                                _.span(
-                                                  {"class":"icon icon--opinion icon--scale-3"},
-                                                  _.span(
-                                                    {"class":"o-normalise-visually-hidden"},
-`opinion content.`
-                                                  )
-                                                )
-                                              ),
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/64e8c789-14ed-40ef-8b44-9998b6e520b8","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`The pleasure principle`
+`China’s driverless dreams troubled by US chip dependency`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/d0d78cbd-afb9-49d4-9018-6c974afe8458","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/64e8c789-14ed-40ef-8b44-9998b6e520b8","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`As the pandemic rolls on and world tensions escalate, it is more important than ever to find joy in the simple things`
+`The country’s booming autonomous-vehicle industry needs foreign tech`
                                               )
                                             )
                                           )
                                         ),
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div(
-                                            {"class":"metadata metadata__opinion"},
-                                            _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FEnuma-Okoro-e11766ef-1dc2-439e-8971-c154494828bb.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FEnuma-Okoro-e11766ef-1dc2-439e-8971-c154494828bb.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FEnuma-Okoro-e11766ef-1dc2-439e-8971-c154494828bb.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Enuma Okoro","class":"image image--width-40"})
-                                            ),
-                                            _.div(
-                                              {"class":"author-opinion-details"},
-                                              _.a(
-                                                {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/enuma-okoro","class":"link","target":"_self","aria-describedby":""},
-                                                _.span(
-                                                  {"class":"text text--color-black text-sans--scale-0","id":""},
-`Enuma Okoro`
-                                                )
-                                              )
-                                            )
-                                          )
+                                          _.div({"class":"metadata metadata__timestamp"})
                                         )
                                       )
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"story-group__separator"},
-                                  _.div({"class":"separator--solid"})
-                                )
-                              ),
-                              _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
-                                _.div(
-                                  {"class":"story-group__article story-group__article--secondary"},
-                                  _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"2","class":"grid grid--1-columns grid--s3-spacing"},
-                                    _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"a33b9c53-a08b-4a71-9175-f5fe99a5f247"},
-                                      _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/a33b9c53-a08b-4a71-9175-f5fe99a5f247","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Driving Europe’s last steam train`
-                                        )
-                                      )
-                                    ),
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
                                     )
                                   )
                                 ),
@@ -3293,7 +3166,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:most-read;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"most-read","data-trackable-context-storygroup-position":"2","data-trackable-context-storygroup-siblings":"3","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:most-read;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"most-read","data-trackable-context-storygroup-position":"3","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"list"},
                             _.h2(
@@ -3342,7 +3215,7 @@ export default () => _.html(
                                       {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/22996c27-4882-4297-a845-228857bc382e","class":"link","target":"_self","aria-describedby":""},
                                       _.span(
                                         {"class":"text text--color-black text-display--scale-0 text--weight-500","id":""},
-`Belarus says Russian troops to stay in country indefinitely`
+`Biden and Putin agree ‘in principle’ to Ukraine summit`
                                       )
                                     )
                                   )
@@ -3360,12 +3233,12 @@ export default () => _.html(
                                 _.div(
                                   {"class":"list__item-link"},
                                   _.div(
-                                    {"class":"headline js-teaser-headline headline--scale-0","data-content-id":"b23082f5-030d-42df-be8b-3d55ef613b1a"},
+                                    {"class":"headline js-teaser-headline headline--scale-0","data-content-id":"2a2de3d7-0486-4af4-8e45-0afc18b40213"},
                                     _.a(
-                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/b23082f5-030d-42df-be8b-3d55ef613b1a","class":"link","target":"_self","aria-describedby":""},
+                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/2a2de3d7-0486-4af4-8e45-0afc18b40213","class":"link","target":"_self","aria-describedby":""},
                                       _.span(
                                         {"class":"text text--color-black text-display--scale-0 text--weight-500","id":""},
-`Germany fears Russian gas retaliation if war breaks out`
+`On Ukraine’s eastern frontline, ominous signs that a major onslaught is coming`
                                       )
                                     )
                                   )
@@ -3383,12 +3256,12 @@ export default () => _.html(
                                 _.div(
                                   {"class":"list__item-link"},
                                   _.div(
-                                    {"class":"headline js-teaser-headline headline--scale-0","data-content-id":"910849fd-3f45-4b1a-9fa9-fa5bc1bcaa7e"},
+                                    {"class":"headline js-teaser-headline headline--scale-0","data-content-id":"ab9b6235-762e-494e-a698-0ff510d21cbd"},
                                     _.a(
-                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/910849fd-3f45-4b1a-9fa9-fa5bc1bcaa7e","class":"link","target":"_self","aria-describedby":""},
+                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/ab9b6235-762e-494e-a698-0ff510d21cbd","class":"link","target":"_self","aria-describedby":""},
                                       _.span(
                                         {"class":"text text--color-black text-display--scale-0 text--weight-500","id":""},
-`Epstein associate Jean-Luc Brunel found dead in prison cell`
+`Chinese naval vessel aims laser at Australian surveillance plane`
                                       )
                                     )
                                   )
@@ -3406,12 +3279,12 @@ export default () => _.html(
                                 _.div(
                                   {"class":"list__item-link"},
                                   _.div(
-                                    {"class":"headline js-teaser-headline headline--scale-0","data-content-id":"ab9b6235-762e-494e-a698-0ff510d21cbd"},
+                                    {"class":"headline js-teaser-headline headline--scale-0","data-content-id":"37839ee5-e3b6-48bf-adcc-87f6b02c792a"},
                                     _.a(
-                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/ab9b6235-762e-494e-a698-0ff510d21cbd","class":"link","target":"_self","aria-describedby":""},
+                                      {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/37839ee5-e3b6-48bf-adcc-87f6b02c792a","class":"link","target":"_self","aria-describedby":""},
                                       _.span(
                                         {"class":"text text--color-black text-display--scale-0 text--weight-500","id":""},
-`Chinese naval vessel aims laser at Australian surveillance plane`
+`Five chic city stays for £200 or less`
                                       )
                                     )
                                   )
@@ -3427,173 +3300,63 @@ export default () => _.html(
               )
             ),
             _.div(
-              {"data-trackable":"list:top-stories;listTitle:news","data-trackable-context-list-type":"top-stories","data-trackable-context-list-position":"8","data-trackable-context-list-siblings":"19","class":"story-group-slice"},
+              {"data-trackable":"list:top-stories;listTitle:empty","data-trackable-context-list-type":"top-stories","data-trackable-context-list-position":"8","data-trackable-context-list-siblings":"19","class":"story-group-slice"},
               _.section(
-                {"class":"slice"},
+                {"class":"slice slice__no-title"},
                 _.div(
                   {"class":"slice__content"},
-                  _.div({"class":"separator--dotted"}),
-                  _.header(
-                    {"id":"news","class":"slice-heading"},
-                    _.h2(
-                      {"class":"slice-heading__title"},
-                      _.span(
-                        {"class":"text text--color-black-80 text-sans--scale-0","id":""},
-`News`
-                      )
-                    )
-                  ),
+                  _.div({"class":"separator--solid"}),
                   _.div(
                     {"class":"layout-desktop__grid-container"},
                     _.div(
-                      {"class":"layout-desktop__grid layout-desktop__grid--span3 layout-desktop__grid--column-start-1 layout-desktop__grid--row-start-1 layout-desktop__grid--with-border"},
+                      {"class":"layout-desktop__grid layout-desktop__grid--span6 layout-desktop__grid--column-start-1 layout-desktop__grid--row-start-1 layout-desktop__grid--with-border"},
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:leadership;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"leadership","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
-                          _.div(
-                            {"class":"story-group story-group--featured"},
-                            _.div(
-                              {"class":"grid grid--1-columns grid--fullHeight","style":"grid-template-rows:min-content;-ms-grid-rows:min-content"},
-                              _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-1 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
-                                _.div(
-                                  {"class":"story-group__article story-group__article--lead"},
-                                  _.div(
-                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"1","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
-                                    _.div(
-                                      {"class":"grid-item grid-item--span-3"},
-                                      _.div(
-                                        {"class":"grid grid--1-columns grid--s3-spacing"},
-                                        _.div(
-                                          {"class":"primary-story__image primary-story__image--1-cols"},
-                                          _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/20d62cd0-4f69-438e-abb9-9f448209c3c5","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
-                                            _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fe9264940-e019-493a-9308-4a73d38e3f00.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fe9264940-e019-493a-9308-4a73d38e3f00.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fe9264940-e019-493a-9308-4a73d38e3f00.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"‘Paw Patrol’ to the rescue for children’s TV creator Keith Chapman","class":"image image--width-280"})
-                                            )
-                                          )
-                                        ),
-                                        _.div(
-                                          {"class":"primary-story__teaser"},
-                                          _.div(
-                                            {"class":"story-group__title"},
-                                            _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/leadership","class":"link","target":"_self","aria-describedby":""},
-                                              _.span(
-                                                {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Leadership`
-                                              )
-                                            )
-                                          ),
-                                          _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"20d62cd0-4f69-438e-abb9-9f448209c3c5"},
-                                            _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/20d62cd0-4f69-438e-abb9-9f448209c3c5","class":"link","target":"_self","aria-describedby":""},
-                                              _.span(
-                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                                _.span(
-                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
-`How to Lead.`
-                                                )
-                                              ),
-                                              _.span(
-                                                {"class":"text text--color-black text-display--scale-3 text--weight-400","id":""},
-`‘Paw Patrol’ to the rescue for children’s TV creator Keith Chapman`
-                                              )
-                                            )
-                                          ),
-                                          _.p(
-                                            {"class":"standfirst"},
-                                            _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/20d62cd0-4f69-438e-abb9-9f448209c3c5","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
-                                              _.span(
-                                                {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`The 2008 crisis forced the writer to shut down his company, but he bounced back with a multibillion-dollar success`
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        _.div(
-                                          {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div({"class":"metadata metadata__timestamp"})
-                                        )
-                                      )
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"story-group__separator story-group__separator--hidden"},
-                                  _.div({"class":"separator--solid"})
-                                )
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    _.div(
-                      {"class":"layout-desktop__grid layout-desktop__grid--span3 layout-desktop__grid--column-start-4 layout-desktop__grid--row-start-1 layout-desktop__grid--with-border"},
-                      _.div(
-                        {"class":"layout__grid-content"},
-                        _.div(
-                          {"data-trackable":"storyGroupTitle:queen-elizabeth-ii;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"queen-elizabeth-ii","data-trackable-context-storygroup-position":"1","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:oil-and-gas-industry;storyGroup:medium","data-trackable-context-storygroup-size":"medium","data-trackable-context-storygroup-title":"oil-and-gas-industry","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"3","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
-                              {"class":"grid grid--1-columns grid--fullHeight","style":"grid-template-rows:min-content;-ms-grid-rows:min-content"},
+                              {"class":"grid grid--2-columns grid--fullHeight","style":"grid-template-rows:min-content;-ms-grid-rows:min-content"},
                               _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-1 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
+                                {"class":"story-group__article-wrapper story-group--row-start-1 story-group--column-start-1 story-group--full-width-2 story-group--end-of-row"},
                                 _.div(
                                   {"class":"story-group__article story-group__article--lead"},
                                   _.div(
-                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"2","class":"grid grid--3-columns grid--s4-spacing grid--fullHeight"},
+                                    {"data-trackable":"story:lead","data-trackable-context-story-type":"lead","data-trackable-context-story-position":"0","data-trackable-context-story-siblings":"3","class":"grid grid--2-columns grid--s4-spacing grid--fullHeight"},
                                     _.div(
-                                      {"class":"grid-item grid-item--span-3"},
+                                      {"class":"grid-item grid-item--span-1"},
                                       _.div(
                                         {"class":"grid grid--1-columns grid--s3-spacing"},
-                                        _.div(
-                                          {"class":"primary-story__image primary-story__image--1-cols"},
-                                          _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/6f8fd46e-b470-47fa-a29f-40ae3d2fcb5a","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
-                                            _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5ceba4de-63f2-4ea7-9242-a418204ebeb8.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5ceba4de-63f2-4ea7-9242-a418204ebeb8.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5ceba4de-63f2-4ea7-9242-a418204ebeb8.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Queen tests positive for Covid","class":"image image--width-280"})
-                                            )
-                                          )
-                                        ),
                                         _.div(
                                           {"class":"primary-story__teaser"},
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/topics/people/Queen_Elizabeth_II","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/companies/oil-gas","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Queen Elizabeth II`
+`Oil & Gas industry`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"6f8fd46e-b470-47fa-a29f-40ae3d2fcb5a"},
+                                            {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"52a35fe6-83f0-41d3-9fad-fb981e6b7958"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/6f8fd46e-b470-47fa-a29f-40ae3d2fcb5a","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/52a35fe6-83f0-41d3-9fad-fb981e6b7958","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
-                                                {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Queen tests positive for Covid`
+                                                {"class":"text text--color-black text-display--scale-4 text--weight-500","id":""},
+`Environmental rules deal new blow to US natural gas pipelines`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/6f8fd46e-b470-47fa-a29f-40ae3d2fcb5a","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/52a35fe6-83f0-41d3-9fad-fb981e6b7958","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Ninety-five-year-old monarch has ‘mild cold-like symptoms’, says Buckingham Palace`
+`Climate activists cheer tough permit requirements for fossil fuel infrastructure`
                                               )
                                             )
                                           )
@@ -3605,34 +3368,52 @@ export default () => _.html(
                                             _.div(
                                               {"class":"timestamp"},
                                               _.time(
-                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-20T14:27:02+0000","title":"February 20 2022 6:27 am","data-o-date-js":""},
-`2 hours ago`
+                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
                                               )
                                             )
                                           )
+                                        )
+                                      )
+                                    ),
+                                    _.div(
+                                      {"class":"primary-story__image primary-story__image--2-cols"},
+                                      _.a(
+                                        {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/52a35fe6-83f0-41d3-9fad-fb981e6b7958","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                        _.picture(
+                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F80d89a92-1e56-443d-bce9-d31b5f88c166.jpg?source=next-home-page&dpr=2&width=280&height=280&fit=cover&gravity=poi"}),
+                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F80d89a92-1e56-443d-bce9-d31b5f88c166.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F80d89a92-1e56-443d-bce9-d31b5f88c166.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Environmental rules deal new blow to US natural gas pipelines","class":"image image--width-280"})
                                         )
                                       )
                                     )
                                   )
                                 ),
                                 _.div(
-                                  {"class":"story-group__separator"},
+                                  {"class":"story-group__separator story-group__separator--hidden"},
                                   _.div({"class":"separator--solid"})
                                 )
                               ),
                               _.div(
-                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-1 story-group--full-width-1 story-group--end-of-row"},
+                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-1"},
                                 _.div(
                                   {"class":"story-group__article story-group__article--secondary"},
                                   _.div(
-                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"2","class":"grid grid--1-columns grid--s3-spacing"},
+                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"3","class":"grid grid--1-columns grid--s3-spacing"},
                                     _.div(
-                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"14d831c7-bcf4-4c17-b5b0-a11dc522affe"},
+                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"b02ae9da-feae-4120-9db9-fa6341f661ab"},
                                       _.a(
-                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/14d831c7-bcf4-4c17-b5b0-a11dc522affe","class":"link","target":"_self","aria-describedby":""},
+                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/b02ae9da-feae-4120-9db9-fa6341f661ab","class":"link","target":"_self","aria-describedby":""},
+                                        _.span(
+                                          {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                          _.span(
+                                            {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`Climate Capital.`
+                                          )
+                                        ),
                                         _.span(
                                           {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Boris Johnson says England should move away from Covid restrictions`
+`European energy groups seek €4bn damages over fossil fuel projects`
                                         )
                                       )
                                     ),
@@ -3643,11 +3424,38 @@ export default () => _.html(
                                         _.div(
                                           {"class":"timestamp"},
                                           _.time(
-                                            {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-20T13:12:26+0000","title":"February 20 2022 5:12 am","data-o-date-js":""},
-`3 hours ago`
+                                            {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
                                           )
                                         )
                                       )
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"story-group__separator story-group__separator--hidden"},
+                                  _.div({"class":"separator--solid"})
+                                )
+                              ),
+                              _.div(
+                                {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2 story-group--end-of-row"},
+                                _.div(
+                                  {"class":"story-group__article story-group__article--secondary"},
+                                  _.div(
+                                    {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"3","class":"grid grid--1-columns grid--s3-spacing"},
+                                    _.div(
+                                      {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"2852b800-4a03-4cf6-a47f-65c306a22657"},
+                                      _.a(
+                                        {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/2852b800-4a03-4cf6-a47f-65c306a22657","class":"link","target":"_self","aria-describedby":""},
+                                        _.span(
+                                          {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Big Oil on course for near-record $38bn in share buybacks`
+                                        )
+                                      )
+                                    ),
+                                    _.div(
+                                      {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                      _.div({"class":"metadata metadata__timestamp"})
                                     )
                                   )
                                 ),
@@ -3666,9 +3474,9 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:south-africa;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"south-africa","data-trackable-context-storygroup-position":"2","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:management;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"management","data-trackable-context-storygroup-position":"1","data-trackable-context-storygroup-siblings":"3","class":"layout-desktop--full-height"},
                           _.div(
-                            {"class":"story-group"},
+                            {"class":"story-group story-group--featured"},
                             _.div(
                               {"class":"grid grid--1-columns grid--fullHeight","style":"grid-template-rows:min-content;-ms-grid-rows:min-content"},
                               _.div(
@@ -3684,11 +3492,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/69f84a8c-ad42-4b78-b648-7d112139025e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/5e1c34a9-61ba-40f7-a02f-c1063927e7ec","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8c1b8207-c91b-4d00-b209-899af76a63f9.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8c1b8207-c91b-4d00-b209-899af76a63f9.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8c1b8207-c91b-4d00-b209-899af76a63f9.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Cape Town to source its own power as state-owned monopoly Eskom falters","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F1fda9457-7d78-46da-ab0e-b8c0487471ce.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F1fda9457-7d78-46da-ab0e-b8c0487471ce.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F1fda9457-7d78-46da-ab0e-b8c0487471ce.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Hong Kong: a case study of managing in extreme uncertainty  ","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -3697,37 +3505,64 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/21fc64fc-efde-49de-a1c3-2d140463cc8c","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/management","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`South Africa`
+`Management`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"69f84a8c-ad42-4b78-b648-7d112139025e"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"5e1c34a9-61ba-40f7-a02f-c1063927e7ec"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/69f84a8c-ad42-4b78-b648-7d112139025e","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/5e1c34a9-61ba-40f7-a02f-c1063927e7ec","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
-                                                {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Cape Town to source its own power as state-owned monopoly Eskom falters`
+                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                                _.span(
+                                                  {"class":"icon icon--opinion icon--scale-3"},
+                                                  _.span(
+                                                    {"class":"o-normalise-visually-hidden"},
+`opinion content.`
+                                                  )
+                                                )
+                                              ),
+                                              _.span(
+                                                {"class":"text text--color-black text-display--scale-3 text--weight-400","id":""},
+`Hong Kong: a case study of managing in extreme uncertainty`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/69f84a8c-ad42-4b78-b648-7d112139025e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/5e1c34a9-61ba-40f7-a02f-c1063927e7ec","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Frustration over government lack of reform and persistent blackouts push city to look towards independent producers`
+`The Asian financial hub’s business leaders are forced to adapt as there is no hope of a quick return to normality`
                                               )
                                             )
                                           )
                                         ),
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div({"class":"metadata metadata__timestamp"})
+                                          _.div(
+                                            {"class":"metadata metadata__opinion"},
+                                            _.picture(
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_ravi-mattu-3f2d8a2f-014d-463c-b571-ccf3268ac125.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_ravi-mattu-3f2d8a2f-014d-463c-b571-ccf3268ac125.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_ravi-mattu-3f2d8a2f-014d-463c-b571-ccf3268ac125.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Ravi Mattu","class":"image image--width-40"})
+                                            ),
+                                            _.div(
+                                              {"class":"author-opinion-details"},
+                                              _.a(
+                                                {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/ravi-mattu","class":"link","target":"_self","aria-describedby":""},
+                                                _.span(
+                                                  {"class":"text text--color-black text-sans--scale-0","id":""},
+`Ravi Mattu`
+                                                )
+                                              )
+                                            )
+                                          )
                                         )
                                       )
                                     )
@@ -3748,7 +3583,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:european-economy;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"european-economy","data-trackable-context-storygroup-position":"3","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:turkish-economy;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"turkish-economy","data-trackable-context-storygroup-position":"2","data-trackable-context-storygroup-siblings":"3","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
@@ -3766,11 +3601,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/5876fe50-f60a-476b-8921-02c8d03cb4b0","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/09316435-a9a5-4724-9978-65ce9c4a218e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fdf6bbcad-98c8-4c8f-a50d-9d4a110e6b34.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fdf6bbcad-98c8-4c8f-a50d-9d4a110e6b34.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fdf6bbcad-98c8-4c8f-a50d-9d4a110e6b34.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Beijing Winter Olympics close after fortnight of competition and controversy","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fd15a3fe1-2a5a-4030-adc3-729199d8fa26.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fd15a3fe1-2a5a-4030-adc3-729199d8fa26.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fd15a3fe1-2a5a-4030-adc3-729199d8fa26.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"In charts: Erdogan’s gamble on keeping the lira steady","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -3778,28 +3613,38 @@ export default () => _.html(
                                           {"class":"primary-story__teaser"},
                                           _.div(
                                             {"class":"story-group__title"},
-                                            _.span(
-                                              {"class":"text text--color-claret text-sans--scale-0 text--weight-400","id":""},
-`European economy`
+                                            _.a(
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/a54c4ec1-7d7f-4701-ad69-c3363e918c17","class":"link","target":"_self","aria-describedby":""},
+                                              _.span(
+                                                {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
+`Turkish economy`
+                                              )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"5876fe50-f60a-476b-8921-02c8d03cb4b0"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"09316435-a9a5-4724-9978-65ce9c4a218e"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/5876fe50-f60a-476b-8921-02c8d03cb4b0","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/09316435-a9a5-4724-9978-65ce9c4a218e","class":"link","target":"_self","aria-describedby":""},
+                                              _.span(
+                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                                _.span(
+                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
+`Explainer.`
+                                                )
+                                              ),
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Beijing Winter Olympics close after fortnight of competition and controversy`
+`In charts: Erdogan’s gamble on keeping the lira steady`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/5876fe50-f60a-476b-8921-02c8d03cb4b0","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/09316435-a9a5-4724-9978-65ce9c4a218e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Norway tops medal table in ‘safe’ Games but event was tarnished by a Russian doping scandal`
+`The Turkish president is backing unorthodox measures to stabilise the currency but analysts are sceptical`
                                               )
                                             )
                                           )
@@ -3811,7 +3656,7 @@ export default () => _.html(
                                             _.div(
                                               {"class":"timestamp"},
                                               _.time(
-                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-20T14:51:37+0000","title":"February 20 2022 6:51 am","data-o-date-js":""},
+                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
 `an hour ago`
                                               )
                                             )
@@ -3849,7 +3694,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:covid-19-vaccines;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"covid-19-vaccines","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:automobiles;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"automobiles","data-trackable-context-storygroup-position":"0","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
@@ -3867,11 +3712,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/636f289c-97dd-473a-a74a-69d639942558","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/0bdbe049-b674-4873-99d8-8e096f0e2fef","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa746e077-2e21-4cca-82d9-aec68fdf5088.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa746e077-2e21-4cca-82d9-aec68fdf5088.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa746e077-2e21-4cca-82d9-aec68fdf5088.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Novavax bets fears over mRNA will give its Covid jab an edge","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff5db9d12-ce64-44b1-8804-9bb1a25c6fa1.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff5db9d12-ce64-44b1-8804-9bb1a25c6fa1.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff5db9d12-ce64-44b1-8804-9bb1a25c6fa1.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Lotus explores IPO options to fund global expansion","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -3880,44 +3725,46 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/covid-19-vaccines","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/companies/automobiles","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Covid-19 vaccines`
+`Automobiles`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"636f289c-97dd-473a-a74a-69d639942558"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"0bdbe049-b674-4873-99d8-8e096f0e2fef"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/636f289c-97dd-473a-a74a-69d639942558","class":"link","target":"_self","aria-describedby":""},
-                                              _.span(
-                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                                _.span(
-                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
-`Interview.`
-                                                )
-                                              ),
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/0bdbe049-b674-4873-99d8-8e096f0e2fef","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Novavax bets fears over mRNA will give its Covid jab an edge`
+`Lotus explores IPO options to fund global expansion`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/636f289c-97dd-473a-a74a-69d639942558","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/0bdbe049-b674-4873-99d8-8e096f0e2fef","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`US biotech says its shot could alleviate vaccine hesitancy and calls on government to promote it`
+`Sports car brand is targeting 100-fold increase in production in six years with custom-built plant in China`
                                               )
                                             )
                                           )
                                         ),
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div({"class":"metadata metadata__timestamp"})
+                                          _.div(
+                                            {"class":"metadata metadata__timestamp"},
+                                            _.div(
+                                              {"class":"timestamp"},
+                                              _.time(
+                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
+                                              )
+                                            )
+                                          )
                                         )
                                       )
                                     )
@@ -3938,7 +3785,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:agl-energy-ltd;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"agl-energy-ltd","data-trackable-context-storygroup-position":"1","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:shipping;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"shipping","data-trackable-context-storygroup-position":"1","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
@@ -3956,11 +3803,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/48cda373-e508-41ed-92c2-7bbfe56dc8ff","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/dcf96332-b013-46d3-9e19-f9ad1e5adffa","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2665ceee-fdfd-4529-84dc-c01d23a75a78.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2665ceee-fdfd-4529-84dc-c01d23a75a78.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2665ceee-fdfd-4529-84dc-c01d23a75a78.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Brookfield launches bid for Australian utility AGL","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc6d2737f-6bd0-452d-b5d3-1123a1712ad7.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc6d2737f-6bd0-452d-b5d3-1123a1712ad7.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc6d2737f-6bd0-452d-b5d3-1123a1712ad7.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"New chair insists Maersk has learnt from past mistakes","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -3969,37 +3816,53 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/stream/26c2dc7e-3f82-42e5-98bc-80dbf38649be","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/shipping","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`AGL Energy Ltd`
+`Shipping`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"48cda373-e508-41ed-92c2-7bbfe56dc8ff"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"dcf96332-b013-46d3-9e19-f9ad1e5adffa"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/48cda373-e508-41ed-92c2-7bbfe56dc8ff","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/dcf96332-b013-46d3-9e19-f9ad1e5adffa","class":"link","target":"_self","aria-describedby":""},
+                                              _.span(
+                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                                _.span(
+                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
+`News in-depth.`
+                                                )
+                                              ),
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Brookfield launches bid for Australian utility AGL`
+`New chair insists Maersk has learnt from past mistakes`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/48cda373-e508-41ed-92c2-7bbfe56dc8ff","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/dcf96332-b013-46d3-9e19-f9ad1e5adffa","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Coal generators are struggling to compete with rapid rollout of low-cost solar and wind energy`
+`Shipping giant is using bumper profits from high freight rates on a logistics shopping spree`
                                               )
                                             )
                                           )
                                         ),
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div({"class":"metadata metadata__timestamp"})
+                                          _.div(
+                                            {"class":"metadata metadata__timestamp"},
+                                            _.div(
+                                              {"class":"timestamp"},
+                                              _.time(
+                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
+                                              )
+                                            )
+                                          )
                                         )
                                       )
                                     )
@@ -4020,7 +3883,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:abu-dhabi-investment-authority;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"abu-dhabi-investment-authority","data-trackable-context-storygroup-position":"2","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:canada;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"canada","data-trackable-context-storygroup-position":"2","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"class":"story-group"},
                             _.div(
@@ -4038,11 +3901,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/2c3065b6-7caf-4394-afe5-956ec5d4fe2c","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/82080221-f61e-4c48-b502-691989a1fbb2","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc632f0fb-0144-4f82-b022-6929069b1f75.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc632f0fb-0144-4f82-b022-6929069b1f75.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc632f0fb-0144-4f82-b022-6929069b1f75.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Abu Dhabi wealth fund bets on scientific approach using quant experts","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8826e8fe-4cea-40f6-b413-e5b25d638fdc.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8826e8fe-4cea-40f6-b413-e5b25d638fdc.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8826e8fe-4cea-40f6-b413-e5b25d638fdc.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Trudeau ends Canada’s trucker siege but leaves bitter divisions","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -4051,37 +3914,30 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/topics/organisations/Abu_Dhabi_Investment_Authority","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/canada","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`Abu Dhabi Investment Authority`
+`Canada`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"2c3065b6-7caf-4394-afe5-956ec5d4fe2c"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"82080221-f61e-4c48-b502-691989a1fbb2"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/2c3065b6-7caf-4394-afe5-956ec5d4fe2c","class":"link","target":"_self","aria-describedby":""},
-                                              _.span(
-                                                {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                                _.span(
-                                                  {"class":"text text--color-black text-display--scale-3 text--weight-600","id":""},
-`News in-depth.`
-                                                )
-                                              ),
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/82080221-f61e-4c48-b502-691989a1fbb2","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Abu Dhabi wealth fund bets on scientific approach using quant experts`
+`Trudeau ends Canada’s trucker siege but leaves bitter divisions`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/2c3065b6-7caf-4394-afe5-956ec5d4fe2c","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/82080221-f61e-4c48-b502-691989a1fbb2","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Adia has built a 50-strong team of physicists, academics and data specialists to identify and take advantage of market anomalies`
+`Critics question use of tough emergency powers as political polarisation has worsened`
                                               )
                                             )
                                           )
@@ -4109,7 +3965,7 @@ export default () => _.html(
                       _.div(
                         {"class":"layout__grid-content"},
                         _.div(
-                          {"data-trackable":"storyGroupTitle:african-economy;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"african-economy","data-trackable-context-storygroup-position":"3","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
+                          {"data-trackable":"storyGroupTitle:uk-politics-and-policy;storyGroup:small","data-trackable-context-storygroup-size":"small","data-trackable-context-storygroup-title":"uk-politics-and-policy","data-trackable-context-storygroup-position":"3","data-trackable-context-storygroup-siblings":"4","class":"layout-desktop--full-height"},
                           _.div(
                             {"id":"native-ads-placeholder","class":"story-group"},
                             _.div(
@@ -4127,11 +3983,11 @@ export default () => _.html(
                                         _.div(
                                           {"class":"primary-story__image primary-story__image--1-cols"},
                                           _.a(
-                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/e5f3ab13-1796-471e-8438-a7c14c89fdcf","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/14d831c7-bcf4-4c17-b5b0-a11dc522affe","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                             _.picture(
-                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3a7a8f29-5ed2-4e69-9a64-55cc65869119.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
-                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3a7a8f29-5ed2-4e69-9a64-55cc65869119.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3a7a8f29-5ed2-4e69-9a64-55cc65869119.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Ethiopia’s Blue Nile mega-dam starts generating electricity","class":"image image--width-280"})
+                                              _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fb600e647-10cc-4624-b5c9-ed698cac62ab.jpg?source=next-home-page&dpr=2&width=280&fit=scale-down"}),
+                                              _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fb600e647-10cc-4624-b5c9-ed698cac62ab.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                              _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fb600e647-10cc-4624-b5c9-ed698cac62ab.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Boris Johnson to ease Covid restrictions and roll back testing in new plan ","class":"image image--width-280"})
                                             )
                                           )
                                         ),
@@ -4140,46 +3996,37 @@ export default () => _.html(
                                           _.div(
                                             {"class":"story-group__title"},
                                             _.a(
-                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/africa-economy","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"story-group-title-link","data-trackable-context-story-link":"story-group-title-link","href":"https://www.ft.com/world/uk/politics","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-claret text-sans--scale-0 text--weight-600","id":""},
-`African economy`
+`UK politics & policy`
                                               )
                                             )
                                           ),
                                           _.div(
-                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"e5f3ab13-1796-471e-8438-a7c14c89fdcf"},
+                                            {"class":"headline js-teaser-headline headline--scale-3","data-content-id":"14d831c7-bcf4-4c17-b5b0-a11dc522affe"},
                                             _.a(
-                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/e5f3ab13-1796-471e-8438-a7c14c89fdcf","class":"link","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/14d831c7-bcf4-4c17-b5b0-a11dc522affe","class":"link","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black text-display--scale-3 text--weight-500","id":""},
-`Ethiopia’s Blue Nile mega-dam starts generating electricity`
+`Boris Johnson to ease Covid restrictions and roll back testing in new plan`
                                               )
                                             )
                                           ),
                                           _.p(
                                             {"class":"standfirst"},
                                             _.a(
-                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/e5f3ab13-1796-471e-8438-a7c14c89fdcf","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                              {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/14d831c7-bcf4-4c17-b5b0-a11dc522affe","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                               _.span(
                                                 {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Abiy Ahmed moves to assure Egypt and Sudan that water flows downstream will not be affected`
+`UK PM to outline England’s strategy as coronavirus rates decline`
                                               )
                                             )
                                           )
                                         ),
                                         _.div(
                                           {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                          _.div(
-                                            {"class":"metadata metadata__timestamp"},
-                                            _.div(
-                                              {"class":"timestamp"},
-                                              _.time(
-                                                {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-20T13:08:13+0000","title":"February 20 2022 5:08 am","data-o-date-js":""},
-`3 hours ago`
-                                              )
-                                            )
-                                          )
+                                          _.div({"class":"metadata metadata__timestamp"})
                                         )
                                       )
                                     )
@@ -4262,9 +4109,9 @@ export default () => _.html(
                                     _.div(
                                       {"class":"primary-story__teaser"},
                                       _.div(
-                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"4082fc8e-68fe-4fe4-858e-edcaa6d79e37"},
+                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"f6d53cd7-e384-457e-8b6d-fc7a815dda1c"},
                                         _.a(
-                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/4082fc8e-68fe-4fe4-858e-edcaa6d79e37","class":"link","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/f6d53cd7-e384-457e-8b6d-fc7a815dda1c","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                             _.span(
@@ -4277,17 +4124,17 @@ export default () => _.html(
                                           ),
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-4 text--weight-500","id":""},
-`Fishing for Brexit opportunities will end with an unsatisfactory haul`
+`It’s not just the economy, stupid`
                                           )
                                         )
                                       ),
                                       _.p(
                                         {"class":"standfirst"},
                                         _.a(
-                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/4082fc8e-68fe-4fe4-858e-edcaa6d79e37","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/f6d53cd7-e384-457e-8b6d-fc7a815dda1c","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`The promised regulatory divergence from the EU is far from an easy win`
+`Politics will play a bigger role in a world where regionalisation, not globalisation, is the future`
                                           )
                                         )
                                       )
@@ -4297,17 +4144,17 @@ export default () => _.html(
                                       _.div(
                                         {"class":"metadata metadata__opinion"},
                                         _.picture(
-                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3Ab6bdf60a-4752-11ea-aee2-9ddbdc86190d?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
-                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3Ab6bdf60a-4752-11ea-aee2-9ddbdc86190d?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3Ab6bdf60a-4752-11ea-aee2-9ddbdc86190d?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Martin Wolf","class":"image image--width-40"})
+                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_rana-foroohar-79fabd93-f797-473b-ad4c-a2b83d03c249.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
+                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_rana-foroohar-79fabd93-f797-473b-ad4c-a2b83d03c249.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_rana-foroohar-79fabd93-f797-473b-ad4c-a2b83d03c249.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Rana Foroohar","class":"image image--width-40"})
                                         ),
                                         _.div(
                                           {"class":"author-opinion-details"},
                                           _.a(
-                                            {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/martin-wolf","class":"link","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/rana-foroohar","class":"link","target":"_self","aria-describedby":""},
                                             _.span(
                                               {"class":"text text--color-black text-sans--scale-0","id":""},
-`Martin Wolf`
+`Rana Foroohar`
                                             )
                                           )
                                         )
@@ -4318,11 +4165,11 @@ export default () => _.html(
                                 _.div(
                                   {"class":"primary-story__image primary-story__image--3-cols"},
                                   _.a(
-                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/4082fc8e-68fe-4fe4-858e-edcaa6d79e37","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/f6d53cd7-e384-457e-8b6d-fc7a815dda1c","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                     _.picture(
-                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F05b8fabe-f416-4666-b863-c0150c471543.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F05b8fabe-f416-4666-b863-c0150c471543.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F05b8fabe-f416-4666-b863-c0150c471543.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Fishing for Brexit opportunities will end with an unsatisfactory haul","class":"image image--width-580"})
+                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fd3c430b4-045a-4b5f-8729-9d66713229df.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fd3c430b4-045a-4b5f-8729-9d66713229df.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fd3c430b4-045a-4b5f-8729-9d66713229df.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"It’s not just the economy, stupid","class":"image image--width-580"})
                                     )
                                   )
                                 )
@@ -4339,6 +4186,60 @@ export default () => _.html(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"4082fc8e-68fe-4fe4-858e-edcaa6d79e37"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/4082fc8e-68fe-4fe4-858e-edcaa6d79e37","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"icon icon--opinion icon--scale-2"},
+                                        _.span(
+                                          {"class":"o-normalise-visually-hidden"},
+`opinion content.`
+                                        )
+                                      )
+                                    ),
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Fishing for Brexit opportunities will end with an unsatisfactory haul`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div(
+                                    {"class":"metadata metadata__opinion"},
+                                    _.picture(
+                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3Ab6bdf60a-4752-11ea-aee2-9ddbdc86190d?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
+                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3Ab6bdf60a-4752-11ea-aee2-9ddbdc86190d?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3Ab6bdf60a-4752-11ea-aee2-9ddbdc86190d?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Martin Wolf","class":"image image--width-40"})
+                                    ),
+                                    _.div(
+                                      {"class":"author-opinion-details"},
+                                      _.a(
+                                        {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/martin-wolf","class":"link","target":"_self","aria-describedby":""},
+                                        _.span(
+                                          {"class":"text text--color-black text-sans--scale-0","id":""},
+`Martin Wolf`
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"5de69931-7a51-4d84-96b1-83a68ce06af1"},
                                   _.a(
@@ -4380,11 +4281,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"3f1ebb1d-971c-4fd0-954d-da802d6604a3"},
                                   _.a(
@@ -4434,45 +4335,111 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"79ee35c6-df1b-4836-9c07-ae58f878e286"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/79ee35c6-df1b-4836-9c07-ae58f878e286","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                      _.span(
-                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Obituary.`
-                                      )
-                                    ),
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`PJ O’Rourke, satirist and journalist, 1947-2022`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
                             {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"e5084635-9fdc-40d9-8d9e-d886c336d4a5"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/e5084635-9fdc-40d9-8d9e-d886c336d4a5","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"icon icon--opinion icon--scale-2"},
+                                        _.span(
+                                          {"class":"o-normalise-visually-hidden"},
+`opinion content.`
+                                        )
+                                      ),
+                                      _.span(
+                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`The FT View.`
+                                      )
+                                    ),
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Crypto’s rise requires a global response`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div(
+                                    {"class":"metadata"},
+                                    _.a(
+                                      {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/ft-view","class":"link","target":"_self","aria-describedby":""},
+                                      _.span(
+                                        {"class":"text text--color-black text-sans--scale-0","id":""},
+`The editorial board`
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator story-group__separator--hidden"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"c91957fd-81f8-454b-8832-86b980b3bf46"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/c91957fd-81f8-454b-8832-86b980b3bf46","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"icon icon--opinion icon--scale-2"},
+                                        _.span(
+                                          {"class":"o-normalise-visually-hidden"},
+`opinion content.`
+                                        )
+                                      ),
+                                      _.span(
+                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`The FT View.`
+                                      )
+                                    ),
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Olympic ideals are on thin ice`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div(
+                                    {"class":"metadata"},
+                                    _.a(
+                                      {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/ft-view","class":"link","target":"_self","aria-describedby":""},
+                                      _.span(
+                                        {"class":"text text--color-black text-sans--scale-0","id":""},
+`The editorial board`
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator story-group__separator--hidden"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-3 story-group--end-of-row"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"89b66c3e-20a5-490b-8a0d-4da03a777860"},
                                   _.a(
@@ -4513,81 +4480,6 @@ export default () => _.html(
                                       )
                                     )
                                   )
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator story-group__separator--hidden"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"3843827d-759f-42f6-bc6f-72b108d11a54"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/3843827d-759f-42f6-bc6f-72b108d11a54","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                      _.span(
-                                        {"class":"icon icon--opinion icon--scale-2"},
-                                        _.span(
-                                          {"class":"o-normalise-visually-hidden"},
-`opinion content.`
-                                        )
-                                      ),
-                                      _.span(
-                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Lex.`
-                                      )
-                                    ),
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Life expectancy: healthy living helps beat the odds`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator story-group__separator--hidden"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-3 story-group--end-of-row"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"9850ece6-a3b2-40c4-9342-645d4a4378b9"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/9850ece6-a3b2-40c4-9342-645d4a4378b9","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                      _.span(
-                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Person in the News.`
-                                      )
-                                    ),
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Jeremy King, the gentleman restaurateur locked in a boardroom battle`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
                                 )
                               )
                             ),
@@ -4748,22 +4640,22 @@ export default () => _.html(
                                     _.div(
                                       {"class":"primary-story__teaser"},
                                       _.div(
-                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"541c3fb4-9808-45ad-9917-33fea6f7f30b"},
+                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"86102111-3361-43e6-8e86-3dc6dfe7bb6f"},
                                         _.a(
-                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/541c3fb4-9808-45ad-9917-33fea6f7f30b","class":"link","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/86102111-3361-43e6-8e86-3dc6dfe7bb6f","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-4 text--weight-500","id":""},
-`Two Fed officials back steady rise in interest rates starting in March`
+`US companies add ESG targets to executive bonuses`
                                           )
                                         )
                                       ),
                                       _.p(
                                         {"class":"standfirst"},
                                         _.a(
-                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/541c3fb4-9808-45ad-9917-33fea6f7f30b","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/86102111-3361-43e6-8e86-3dc6dfe7bb6f","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Lael Brainard and John Williams weigh in on debate as US central bank plots policy course`
+`Starbucks’ chief Kevin Johnson earned some of his $20mn award by reducing the number of plastic straws`
                                           )
                                         )
                                       )
@@ -4777,11 +4669,11 @@ export default () => _.html(
                                 _.div(
                                   {"class":"primary-story__image primary-story__image--3-cols"},
                                   _.a(
-                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/541c3fb4-9808-45ad-9917-33fea6f7f30b","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/86102111-3361-43e6-8e86-3dc6dfe7bb6f","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                     _.picture(
-                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5ad7b78f-3fc5-4c97-8d2b-0b7af61a46bb.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5ad7b78f-3fc5-4c97-8d2b-0b7af61a46bb.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5ad7b78f-3fc5-4c97-8d2b-0b7af61a46bb.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Two Fed officials back steady rise in interest rates starting in March","class":"image image--width-580"})
+                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fecd6424d-7a86-445e-8c15-8cc45280cff2.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fecd6424d-7a86-445e-8c15-8cc45280cff2.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fecd6424d-7a86-445e-8c15-8cc45280cff2.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"US companies add ESG targets to executive bonuses","class":"image image--width-580"})
                                     )
                                   )
                                 )
@@ -4798,6 +4690,33 @@ export default () => _.html(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"541c3fb4-9808-45ad-9917-33fea6f7f30b"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/541c3fb4-9808-45ad-9917-33fea6f7f30b","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Two Fed officials back steady rise in interest rates starting in March`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div({"class":"metadata metadata__timestamp"})
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"af3d85a8-c10a-46da-a217-328c80e74116"},
                                   _.a(
@@ -4827,11 +4746,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"7169d255-1774-416f-aaf3-1066091f179a"},
                                   _.a(
@@ -4854,11 +4773,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"3d76ec1c-8745-4aab-a44a-8f3c33be2b85"},
                                   _.a(
@@ -4876,16 +4795,16 @@ export default () => _.html(
                               )
                             ),
                             _.div(
-                              {"class":"story-group__separator"},
+                              {"class":"story-group__separator story-group__separator--hidden"},
                               _.div({"class":"separator--solid"})
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"0f5d1ece-11af-4ada-a8b3-5d8d499be09a"},
                                   _.a(
@@ -4908,11 +4827,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-3 story-group--end-of-row"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"72f23e8d-307d-489b-90e1-93537c666592"},
                                   _.a(
@@ -4920,33 +4839,6 @@ export default () => _.html(
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
 `Apple shareholders urged to vote against Tim Cook’s $99mn pay package`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator story-group__separator--hidden"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-3 story-group--end-of-row"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"37411f82-862f-4a70-a7e6-9d9f599e8ca2"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/37411f82-862f-4a70-a7e6-9d9f599e8ca2","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`House panel seeks to rescind Trump lease on Washington hotel`
                                     )
                                   )
                                 ),
@@ -5118,47 +5010,56 @@ export default () => _.html(
                                     _.div(
                                       {"class":"primary-story__teaser"},
                                       _.div(
-                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"95d06e48-6bae-4452-914a-9e639b6784f0"},
+                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"613f604e-7b22-43d3-9cfe-d7d10869d335"},
                                         _.a(
-                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/95d06e48-6bae-4452-914a-9e639b6784f0","class":"link","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/613f604e-7b22-43d3-9cfe-d7d10869d335","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                             _.span(
                                               {"class":"text text--color-black text-display--scale-4 text--weight-600","id":""},
-`FT Magazine.`
+`FT Globetrotter.`
                                             )
                                           ),
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-4 text--weight-500","id":""},
-`In the presence of absence: inside Candida Höfer’s unpeopled public buildings`
+`Pride and property: a very literary stay in central London`
                                           )
                                         )
                                       ),
                                       _.p(
                                         {"class":"standfirst"},
                                         _.a(
-                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/95d06e48-6bae-4452-914a-9e639b6784f0","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/613f604e-7b22-43d3-9cfe-d7d10869d335","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`The German artist’s photographs have acquired a haunting resonance during the pandemic`
+`A truth universally acknowledged: the Marylebone townhouse of Jane Austen’s brother Henry — restored to its Regency glamour and discreetly cushioned with 21st-century comforts — makes for an exquisite getaway`
                                           )
                                         )
                                       )
                                     ),
                                     _.div(
                                       {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
+                                      _.div(
+                                        {"class":"metadata metadata__timestamp"},
+                                        _.div(
+                                          {"class":"timestamp"},
+                                          _.time(
+                                            {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
+                                          )
+                                        )
+                                      )
                                     )
                                   )
                                 ),
                                 _.div(
                                   {"class":"primary-story__image primary-story__image--3-cols"},
                                   _.a(
-                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/95d06e48-6bae-4452-914a-9e639b6784f0","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/613f604e-7b22-43d3-9cfe-d7d10869d335","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                     _.picture(
-                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa5ab6bc6-4dda-4321-ac98-36701bba9db2.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa5ab6bc6-4dda-4321-ac98-36701bba9db2.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa5ab6bc6-4dda-4321-ac98-36701bba9db2.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"In the presence of absence: inside Candida Höfer’s unpeopled public buildings","class":"image image--width-580"})
+                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F14ea21db-3d12-4085-bbf6-168cd64be005.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F14ea21db-3d12-4085-bbf6-168cd64be005.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F14ea21db-3d12-4085-bbf6-168cd64be005.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Pride and property: a very literary stay in central London ","class":"image image--width-580"})
                                     )
                                   )
                                 )
@@ -5176,18 +5077,34 @@ export default () => _.html(
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"619c8283-712a-455a-b421-0043b9ced1c1"},
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"0f01787f-c7bc-4762-ba23-0efb54e3d6a4"},
                                   _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/619c8283-712a-455a-b421-0043b9ced1c1","class":"link","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/0f01787f-c7bc-4762-ba23-0efb54e3d6a4","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`How To Spend It.`
+                                      )
+                                    ),
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Inventing Anna and ‘fake it till you make it’ fashion`
+`Why the food at Carsten Höller’s new restaurant tastes Brutal`
                                     )
                                   )
                                 ),
                                 _.div(
                                   {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
+                                  _.div(
+                                    {"class":"metadata metadata__timestamp"},
+                                    _.div(
+                                      {"class":"timestamp"},
+                                      _.time(
+                                        {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T04:55:46+0000","title":"February 20 2022 8:55 pm","data-o-date-js":""},
+`an hour ago`
+                                      )
+                                    )
+                                  )
                                 )
                               )
                             ),
@@ -5203,46 +5120,31 @@ export default () => _.html(
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"80d4bb59-1dfc-41a4-8feb-a1aaf4e8bba9"},
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"5ebf7c48-b0d8-4302-aca0-c899f5586abe"},
                                   _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/80d4bb59-1dfc-41a4-8feb-a1aaf4e8bba9","class":"link","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/5ebf7c48-b0d8-4302-aca0-c899f5586abe","class":"link","target":"_self","aria-describedby":""},
                                     _.span(
                                       {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                       _.span(
-                                        {"class":"icon icon--opinion icon--scale-2"},
-                                        _.span(
-                                          {"class":"o-normalise-visually-hidden"},
-`opinion content.`
-                                        )
-                                      ),
-                                      _.span(
                                         {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`FT Magazine.`
+`Review.`
                                       )
                                     ),
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Jancis Robinson on the appeal of online wine courses and TV`
+`Run Rose Run by Dolly Parton and James Patterson — a diverting duet`
                                     )
                                   )
                                 ),
                                 _.div(
                                   {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
                                   _.div(
-                                    {"class":"metadata metadata__opinion"},
-                                    _.picture(
-                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jancis-robinson-dd6fdb68-595f-4255-84f0-a15c49965c48.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
-                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jancis-robinson-dd6fdb68-595f-4255-84f0-a15c49965c48.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jancis-robinson-dd6fdb68-595f-4255-84f0-a15c49965c48.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Jancis Robinson","class":"image image--width-40"})
-                                    ),
+                                    {"class":"metadata metadata__timestamp"},
                                     _.div(
-                                      {"class":"author-opinion-details"},
-                                      _.a(
-                                        {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/life-arts/jancis-robinson","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"class":"text text--color-black text-sans--scale-0","id":""},
-`Jancis Robinson`
-                                        )
+                                      {"class":"timestamp"},
+                                      _.time(
+                                        {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
                                       )
                                     )
                                   )
@@ -5261,25 +5163,34 @@ export default () => _.html(
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"35965a7f-ffec-46db-bacd-f428cfd70e88"},
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"f9435de0-ef84-4684-9bb4-ee7d206a8229"},
                                   _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/35965a7f-ffec-46db-bacd-f428cfd70e88","class":"link","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/f9435de0-ef84-4684-9bb4-ee7d206a8229","class":"link","target":"_self","aria-describedby":""},
                                     _.span(
                                       {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                       _.span(
                                         {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Interview.`
+`Review.`
                                       )
                                     ),
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Painter Michael Armitage: ‘Goya is a haunting presence’`
+`Isla Fisher and Josh Gad star in strange romance Wolf Like Me`
                                     )
                                   )
                                 ),
                                 _.div(
                                   {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
+                                  _.div(
+                                    {"class":"metadata metadata__timestamp"},
+                                    _.div(
+                                      {"class":"timestamp"},
+                                      _.time(
+                                        {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
+                                      )
+                                    )
+                                  )
                                 )
                               )
                             ),
@@ -5295,18 +5206,34 @@ export default () => _.html(
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"85f1ea81-278c-476d-bfb1-e8bc4b8fdf76"},
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"88296372-392b-432d-9ef8-4f36729c7526"},
                                   _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/85f1ea81-278c-476d-bfb1-e8bc4b8fdf76","class":"link","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/88296372-392b-432d-9ef8-4f36729c7526","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`Review.`
+                                      )
+                                    ),
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Diving in paradise: Fiji comes back to life`
+`Podcast Seventeen offers poignant blend of memoir and analysis`
                                     )
                                   )
                                 ),
                                 _.div(
                                   {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
+                                  _.div(
+                                    {"class":"metadata metadata__timestamp"},
+                                    _.div(
+                                      {"class":"timestamp"},
+                                      _.time(
+                                        {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:46+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
+                                      )
+                                    )
+                                  )
                                 )
                               )
                             ),
@@ -5322,19 +5249,19 @@ export default () => _.html(
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"19b2cbcf-4db2-4f7c-ba36-94270de66989"},
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"95d06e48-6bae-4452-914a-9e639b6784f0"},
                                   _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/19b2cbcf-4db2-4f7c-ba36-94270de66989","class":"link","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/95d06e48-6bae-4452-914a-9e639b6784f0","class":"link","target":"_self","aria-describedby":""},
                                     _.span(
                                       {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                       _.span(
                                         {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Review.`
+`FT Magazine.`
                                       )
                                     ),
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`The best books of the week`
+`In the presence of absence: inside Candida Höfer’s unpeopled public buildings`
                                     )
                                   )
                                 ),
@@ -5356,12 +5283,12 @@ export default () => _.html(
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"fc530a7f-9127-4f08-9299-a9017015670f"},
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"619c8283-712a-455a-b421-0043b9ced1c1"},
                                   _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/fc530a7f-9127-4f08-9299-a9017015670f","class":"link","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/619c8283-712a-455a-b421-0043b9ced1c1","class":"link","target":"_self","aria-describedby":""},
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Homespun to high-end: the evolution of the humble quilt`
+`Inventing Anna and ‘fake it till you make it’ fashion`
                                     )
                                   )
                                 ),
@@ -5572,9 +5499,9 @@ export default () => _.html(
                                     _.div(
                                       {"class":"primary-story__teaser"},
                                       _.div(
-                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"eaaf1f1b-d6dd-4a7a-949f-0678bd838712"},
+                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"19119485-a1ee-48f2-a8ca-8424ab07812e"},
                                         _.a(
-                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/eaaf1f1b-d6dd-4a7a-949f-0678bd838712","class":"link","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/19119485-a1ee-48f2-a8ca-8424ab07812e","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                             _.span(
@@ -5586,40 +5513,49 @@ export default () => _.html(
                                             ),
                                             _.span(
                                               {"class":"text text--color-black text-display--scale-4 text--weight-600","id":""},
-`FT Weekend podcast.`
+`FT News Briefing.`
                                             )
                                           ),
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-4 text--weight-500","id":""},
-`Lea Ypi talks capitalism and freedom`
+`Is corporate America becoming more inclusive?`
                                           )
                                         )
                                       ),
                                       _.p(
                                         {"class":"standfirst"},
                                         _.a(
-                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/eaaf1f1b-d6dd-4a7a-949f-0678bd838712","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/19119485-a1ee-48f2-a8ca-8424ab07812e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Alec Russell talks to Lea Ypi about capitalism in eastern Europe, and whether any political system can set us free. Then, Madhumita Murgia discusses sci-fi across different cultures`
+`A UN-backed ETF designed to fight climate change was launched as part of COP26. Now it’s about to fail`
                                           )
                                         )
                                       )
                                     ),
                                     _.div(
                                       {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                      _.div({"class":"metadata metadata__timestamp"})
+                                      _.div(
+                                        {"class":"metadata metadata__timestamp"},
+                                        _.div(
+                                          {"class":"timestamp"},
+                                          _.time(
+                                            {"class":"timestamp-date o-date","data-o-component":"o-date","data-o-date-format":"time-ago-limit-4-hours","datetime":"2022-02-21T05:00:00+0000","title":"February 20 2022 9:00 pm","data-o-date-js":""},
+`an hour ago`
+                                          )
+                                        )
+                                      )
                                     )
                                   )
                                 ),
                                 _.div(
                                   {"class":"primary-story__image primary-story__image--3-cols"},
                                   _.a(
-                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/eaaf1f1b-d6dd-4a7a-949f-0678bd838712","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/19119485-a1ee-48f2-a8ca-8424ab07812e","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                     _.picture(
-                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2F4437890-BRAND-FT-Weekend-Podcast_Logo_1920x1080-2052ca3e-292a-4800-87e8-cf83a1dd9c42.jpeg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2F4437890-BRAND-FT-Weekend-Podcast_Logo_1920x1080-2052ca3e-292a-4800-87e8-cf83a1dd9c42.jpeg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2F4437890-BRAND-FT-Weekend-Podcast_Logo_1920x1080-2052ca3e-292a-4800-87e8-cf83a1dd9c42.jpeg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Lea Ypi talks capitalism and freedom","class":"image image--width-580"})
+                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Fft-news-briefing-2e004171-2412-45a7-969b-31ddb3890ac8.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Fft-news-briefing-2e004171-2412-45a7-969b-31ddb3890ac8.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Fft-news-briefing-2e004171-2412-45a7-969b-31ddb3890ac8.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Is corporate America becoming more inclusive?","class":"image image--width-580"})
                                     )
                                   )
                                 )
@@ -5636,6 +5572,47 @@ export default () => _.html(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"4","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"eaaf1f1b-d6dd-4a7a-949f-0678bd838712"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/eaaf1f1b-d6dd-4a7a-949f-0678bd838712","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"icon icon--audio icon--scale-2"},
+                                        _.span(
+                                          {"class":"o-normalise-visually-hidden"},
+`audio content.`
+                                        )
+                                      ),
+                                      _.span(
+                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`FT Weekend podcast.`
+                                      )
+                                    ),
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Lea Ypi talks capitalism and freedom`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div({"class":"metadata metadata__timestamp"})
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator story-group__separator--hidden"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"4","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"f8647cd2-66d7-4096-a513-4ab1a88484a1"},
                                   _.a(
@@ -5672,11 +5649,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"4","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"4","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"373fc38a-712f-4af7-9bce-5fd2127c94a3"},
                                   _.a(
@@ -5698,47 +5675,6 @@ export default () => _.html(
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
 `How Russia’s Ukraine threat galvanised western alliances`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator story-group__separator--hidden"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"4","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"bf01b9a8-b840-4e1e-845a-1f601b28b986"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/bf01b9a8-b840-4e1e-845a-1f601b28b986","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                      _.span(
-                                        {"class":"icon icon--audio icon--scale-2"},
-                                        _.span(
-                                          {"class":"o-normalise-visually-hidden"},
-`audio content.`
-                                        )
-                                      ),
-                                      _.span(
-                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Working It.`
-                                      )
-                                    ),
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Are companies walking their diversity talk?`
                                     )
                                   )
                                 ),
@@ -6276,29 +6212,22 @@ export default () => _.html(
                                     _.div(
                                       {"class":"primary-story__teaser"},
                                       _.div(
-                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"3fa6ddf8-aa08-46ca-b78b-71c73fe2c7e5"},
+                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"b0b90040-f7d1-400c-8c8d-4f5fc2515d4b"},
                                         _.a(
-                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/3fa6ddf8-aa08-46ca-b78b-71c73fe2c7e5","class":"link","target":"_self","aria-describedby":""},
-                                          _.span(
-                                            {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                            _.span(
-                                              {"class":"text text--color-black text-display--scale-4 text--weight-600","id":""},
-`Scoreboard.`
-                                            )
-                                          ),
+                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/b0b90040-f7d1-400c-8c8d-4f5fc2515d4b","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-4 text--weight-500","id":""},
-`Why football is failing black coaches`
+`Pushing boundaries: the rise of German business schools`
                                           )
                                         )
                                       ),
                                       _.p(
                                         {"class":"standfirst"},
                                         _.a(
-                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/3fa6ddf8-aa08-46ca-b78b-71c73fe2c7e5","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/b0b90040-f7d1-400c-8c8d-4f5fc2515d4b","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Plus, the unknowns of Olympic investment, Silver Lake’s big bet on rugby and more`
+`The country had no tradition of teaching management but its elite schools are now booming`
                                           )
                                         )
                                       )
@@ -6312,11 +6241,11 @@ export default () => _.html(
                                 _.div(
                                   {"class":"primary-story__image primary-story__image--3-cols"},
                                   _.a(
-                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/3fa6ddf8-aa08-46ca-b78b-71c73fe2c7e5","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/b0b90040-f7d1-400c-8c8d-4f5fc2515d4b","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                     _.picture(
-                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F84d1b144-06a5-4a2d-a1f3-caf357239a96.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F84d1b144-06a5-4a2d-a1f3-caf357239a96.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F84d1b144-06a5-4a2d-a1f3-caf357239a96.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Why football is failing black coaches","class":"image image--width-580"})
+                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F18aa04c9-833c-47ea-a634-961b20927aef.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F18aa04c9-833c-47ea-a634-961b20927aef.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F18aa04c9-833c-47ea-a634-961b20927aef.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Pushing boundaries: the rise of German business schools","class":"image image--width-580"})
                                     )
                                   )
                                 )
@@ -6333,6 +6262,67 @@ export default () => _.html(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"e5f3ab13-1796-471e-8438-a7c14c89fdcf"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/e5f3ab13-1796-471e-8438-a7c14c89fdcf","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Ethiopia’s Blue Nile mega-dam starts generating electricity`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div({"class":"metadata metadata__timestamp"})
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"3fa6ddf8-aa08-46ca-b78b-71c73fe2c7e5"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/3fa6ddf8-aa08-46ca-b78b-71c73fe2c7e5","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`Scoreboard.`
+                                      )
+                                    ),
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Why football is failing black coaches`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div({"class":"metadata metadata__timestamp"})
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"6f25bff0-1165-43a5-b905-e216905c4a10"},
                                   _.a(
@@ -6362,11 +6352,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"1b85bb76-f142-42e6-b480-e28f20e62892"},
                                   _.a(
@@ -6384,16 +6374,16 @@ export default () => _.html(
                               )
                             ),
                             _.div(
-                              {"class":"story-group__separator"},
+                              {"class":"story-group__separator story-group__separator--hidden"},
                               _.div({"class":"separator--solid"})
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"781dc1b4-68b7-49d3-9cc4-bdbbd035838e"},
                                   _.a(
@@ -6418,16 +6408,16 @@ export default () => _.html(
                               )
                             ),
                             _.div(
-                              {"class":"story-group__separator"},
+                              {"class":"story-group__separator story-group__separator--hidden"},
                               _.div({"class":"separator--solid"})
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-3 story-group--end-of-row"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"c0e167e5-8276-437e-a346-7547ce83a836"},
                                   _.a(
@@ -6442,98 +6432,6 @@ export default () => _.html(
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
 `Women MBAs still lag behind men in salary and career progression`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator story-group__separator--hidden"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"d8c4b5f1-7cef-485d-affd-1ae6b683d86d"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/d8c4b5f1-7cef-485d-affd-1ae6b683d86d","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                      _.span(
-                                        {"class":"icon icon--opinion icon--scale-2"},
-                                        _.span(
-                                          {"class":"o-normalise-visually-hidden"},
-`opinion content.`
-                                        )
-                                      ),
-                                      _.span(
-                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Dear Jonathan.`
-                                      )
-                                    ),
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`With financial tech and AI ethics expertise — what do I do next?`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div(
-                                    {"class":"metadata metadata__opinion"},
-                                    _.picture(
-                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jonathan-black-1c44e50f-27a3-4b5c-b2d9-52d88883cce1.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
-                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jonathan-black-1c44e50f-27a3-4b5c-b2d9-52d88883cce1.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jonathan-black-1c44e50f-27a3-4b5c-b2d9-52d88883cce1.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Jonathan Black","class":"image image--width-40"})
-                                    ),
-                                    _.div(
-                                      {"class":"author-opinion-details"},
-                                      _.a(
-                                        {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/stream/bfe9ec23-d4d5-43c2-9f77-a710da004fc8","class":"link","target":"_self","aria-describedby":""},
-                                        _.span(
-                                          {"class":"text text--color-black text-sans--scale-0","id":""},
-`Jonathan Black`
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator story-group__separator--hidden"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-3 story-group--end-of-row"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"ec447c39-2c6b-440a-a620-6de65f6fe491"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/ec447c39-2c6b-440a-a620-6de65f6fe491","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                      _.span(
-                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`News in-depth.`
-                                      )
-                                    ),
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`New York crypto couple implicated in ‘heist of the century’`
                                     )
                                   )
                                 ),
@@ -6763,6 +6661,40 @@ export default () => _.html(
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"ae78c05a-0481-4774-8f9b-d3f02e4f2c6f"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/ae78c05a-0481-4774-8f9b-d3f02e4f2c6f","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`The Big Read.`
+                                      )
+                                    ),
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Green investing: the risk of a new mis-selling scandal`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div({"class":"metadata metadata__timestamp"})
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"b00dc2fb-f8ec-4003-89fa-245bb915efb9"},
                                   _.a(
                                     {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/b00dc2fb-f8ec-4003-89fa-245bb915efb9","class":"link","target":"_self","aria-describedby":""},
@@ -6784,11 +6716,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"615e858d-ce1a-4402-b7f0-4a59f8b3ddb1"},
                                   _.a(
@@ -6811,11 +6743,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"329efe8b-22cd-49ee-a7f7-48dcfd214b57"},
                                   _.a(
@@ -6823,47 +6755,6 @@ export default () => _.html(
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
 `European corporate debt shows cracks under tougher market conditions`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"50ce3f10-d911-461d-9dac-12ffb94f203e"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/50ce3f10-d911-461d-9dac-12ffb94f203e","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
-                                      _.span(
-                                        {"class":"icon icon--markets icon--scale-2"},
-                                        _.span(
-                                          {"class":"o-normalise-visually-hidden"},
-`markets content.`
-                                        )
-                                      ),
-                                      _.span(
-                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
-`Markets Briefing.`
-                                      )
-                                    ),
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`US stocks fall as traders assess Russia-Ukraine tensions`
                                     )
                                   )
                                 ),
@@ -7123,9 +7014,9 @@ export default () => _.html(
                                     _.div(
                                       {"class":"primary-story__teaser"},
                                       _.div(
-                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"d4f7c647-c9e1-4cf5-816a-9a7aea950cae"},
+                                        {"class":"headline js-teaser-headline headline--scale-4","data-content-id":"d8c4b5f1-7cef-485d-affd-1ae6b683d86d"},
                                         _.a(
-                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/d4f7c647-c9e1-4cf5-816a-9a7aea950cae","class":"link","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/d8c4b5f1-7cef-485d-affd-1ae6b683d86d","class":"link","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"placeholder":"headlineIndicator","class":"headline-indicator"},
                                             _.span(
@@ -7137,22 +7028,22 @@ export default () => _.html(
                                             ),
                                             _.span(
                                               {"class":"text text--color-black text-display--scale-4 text--weight-600","id":""},
-`On Wall Street.`
+`Dear Jonathan.`
                                             )
                                           ),
                                           _.span(
                                             {"class":"text text--color-black text-display--scale-4 text--weight-500","id":""},
-`Crypto ‘communities’ need to be more neighbourly`
+`With financial tech and AI ethics expertise — what do I do next?`
                                           )
                                         )
                                       ),
                                       _.p(
                                         {"class":"standfirst"},
                                         _.a(
-                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/d4f7c647-c9e1-4cf5-816a-9a7aea950cae","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                          {"data-trackable":"standfirst-link","data-trackable-context-story-link":"standfirst-link","href":"https://www.ft.com/content/d8c4b5f1-7cef-485d-affd-1ae6b683d86d","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                           _.span(
                                             {"class":"text text--color-black-60 text-sans--scale-0","id":""},
-`Software developers behind privacy coins threaten to undermine anti-money laundering laws`
+`Your question for our expert — and readers’ advice`
                                           )
                                         )
                                       )
@@ -7162,17 +7053,17 @@ export default () => _.html(
                                       _.div(
                                         {"class":"metadata metadata__opinion"},
                                         _.picture(
-                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FGARY-SILVERMAN-f7887b9d-2af1-4edc-b222-5e12cd4a0704.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
-                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FGARY-SILVERMAN-f7887b9d-2af1-4edc-b222-5e12cd4a0704.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FGARY-SILVERMAN-f7887b9d-2af1-4edc-b222-5e12cd4a0704.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Gary Silverman","class":"image image--width-40"})
+                                          _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jonathan-black-1c44e50f-27a3-4b5c-b2d9-52d88883cce1.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
+                                          _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jonathan-black-1c44e50f-27a3-4b5c-b2d9-52d88883cce1.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                          _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_jonathan-black-1c44e50f-27a3-4b5c-b2d9-52d88883cce1.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Jonathan Black","class":"image image--width-40"})
                                         ),
                                         _.div(
                                           {"class":"author-opinion-details"},
                                           _.a(
-                                            {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/gary-silverman","class":"link","target":"_self","aria-describedby":""},
+                                            {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/stream/bfe9ec23-d4d5-43c2-9f77-a710da004fc8","class":"link","target":"_self","aria-describedby":""},
                                             _.span(
                                               {"class":"text text--color-black text-sans--scale-0","id":""},
-`Gary Silverman`
+`Jonathan Black`
                                             )
                                           )
                                         )
@@ -7183,11 +7074,11 @@ export default () => _.html(
                                 _.div(
                                   {"class":"primary-story__image primary-story__image--3-cols"},
                                   _.a(
-                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/d4f7c647-c9e1-4cf5-816a-9a7aea950cae","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
+                                    {"data-trackable":"image-link","data-trackable-context-story-link":"image-link","href":"https://www.ft.com/content/d8c4b5f1-7cef-485d-affd-1ae6b683d86d","class":"link link--style--no-active-state","target":"_self","aria-describedby":""},
                                     _.picture(
-                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8cd9be4d-85c4-4ef6-b5ea-eea48568912b.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8cd9be4d-85c4-4ef6-b5ea-eea48568912b.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
-                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8cd9be4d-85c4-4ef6-b5ea-eea48568912b.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Crypto ‘communities’ need to be more neighbourly","class":"image image--width-580"})
+                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6ecdfc03-b30e-4f64-af8f-19fae938a68c.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6ecdfc03-b30e-4f64-af8f-19fae938a68c.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6ecdfc03-b30e-4f64-af8f-19fae938a68c.jpg?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"With financial tech and AI ethics expertise — what do I do next?","class":"image image--width-580"})
                                     )
                                   )
                                 )
@@ -7204,6 +7095,64 @@ export default () => _.html(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
                                 {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"1","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                _.div(
+                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"d4f7c647-c9e1-4cf5-816a-9a7aea950cae"},
+                                  _.a(
+                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/d4f7c647-c9e1-4cf5-816a-9a7aea950cae","class":"link","target":"_self","aria-describedby":""},
+                                    _.span(
+                                      {"placeholder":"headlineIndicator","class":"headline-indicator"},
+                                      _.span(
+                                        {"class":"icon icon--opinion icon--scale-2"},
+                                        _.span(
+                                          {"class":"o-normalise-visually-hidden"},
+`opinion content.`
+                                        )
+                                      ),
+                                      _.span(
+                                        {"class":"text text--color-black text-display--scale-2 text--weight-600","id":""},
+`On Wall Street.`
+                                      )
+                                    ),
+                                    _.span(
+                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
+`Crypto ‘communities’ need to be more neighbourly`
+                                    )
+                                  )
+                                ),
+                                _.div(
+                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
+                                  _.div(
+                                    {"class":"metadata metadata__opinion"},
+                                    _.picture(
+                                      _.source({"media":"(min-width: 1024px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FGARY-SILVERMAN-f7887b9d-2af1-4edc-b222-5e12cd4a0704.png?source=next-home-page&dpr=2&width=40&height=40&fit=cover&gravity=poi"}),
+                                      _.source({"media":"(max-width: 580px)","srcset":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FGARY-SILVERMAN-f7887b9d-2af1-4edc-b222-5e12cd4a0704.png?source=next-home-page&dpr=2&width=580&fit=scale-down"}),
+                                      _.img({"src":"https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2FGARY-SILVERMAN-f7887b9d-2af1-4edc-b222-5e12cd4a0704.png?source=next-home-page&dpr=2&width=1024&fit=scale-down","alt":"Gary Silverman","class":"image image--width-40"})
+                                    ),
+                                    _.div(
+                                      {"class":"author-opinion-details"},
+                                      _.a(
+                                        {"data-trackable":"author-link","data-trackable-context-story-link":"author-link","href":"https://www.ft.com/gary-silverman","class":"link","target":"_self","aria-describedby":""},
+                                        _.span(
+                                          {"class":"text text--color-black text-sans--scale-0","id":""},
+`Gary Silverman`
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            ),
+                            _.div(
+                              {"class":"story-group__separator"},
+                              _.div({"class":"separator--solid"})
+                            )
+                          ),
+                          _.div(
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            _.div(
+                              {"class":"story-group__article story-group__article--secondary"},
+                              _.div(
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"cc38a9d8-86e3-41e0-8900-7c6235a9e184"},
                                   _.a(
@@ -7253,11 +7202,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-2"},
+                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"2","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"4fd12e9b-6037-4f4d-8b3a-63cce4a57350"},
                                   _.a(
@@ -7287,11 +7236,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-2 story-group--column-start-3 story-group--end-of-row"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"3","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"61b3372b-b164-4a16-b9c8-93b9ee626fee"},
                                   _.a(
@@ -7309,16 +7258,16 @@ export default () => _.html(
                               )
                             ),
                             _.div(
-                              {"class":"story-group__separator"},
+                              {"class":"story-group__separator story-group__separator--hidden"},
                               _.div({"class":"separator--solid"})
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-1"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"4","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"dde5770a-a38f-415c-a84b-bf5a3c9f8347"},
                                   _.a(
@@ -7348,11 +7297,11 @@ export default () => _.html(
                             )
                           ),
                           _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-2"},
+                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-3 story-group--end-of-row"},
                             _.div(
                               {"class":"story-group__article story-group__article--secondary"},
                               _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"5","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
+                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
                                 _.div(
                                   {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"d08f7480-5d19-497b-ac8b-bb68d780eae4"},
                                   _.a(
@@ -7360,33 +7309,6 @@ export default () => _.html(
                                     _.span(
                                       {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
 `EU accuses China of ‘power grab’ over smartphone tech licensing`
-                                    )
-                                  )
-                                ),
-                                _.div(
-                                  {"class":"grid-item grid-item--span-1 grid-item--align-self-end"},
-                                  _.div({"class":"metadata metadata__timestamp"})
-                                )
-                              )
-                            ),
-                            _.div(
-                              {"class":"story-group__separator story-group__separator--hidden"},
-                              _.div({"class":"separator--solid"})
-                            )
-                          ),
-                          _.div(
-                            {"class":"story-group__article-wrapper story-group--row-start-3 story-group--column-start-3 story-group--end-of-row"},
-                            _.div(
-                              {"class":"story-group__article story-group__article--secondary"},
-                              _.div(
-                                {"data-trackable":"story:secondary","data-trackable-context-story-type":"secondary","data-trackable-context-story-position":"6","data-trackable-context-story-siblings":"7","class":"grid grid--1-columns grid--s3-spacing grid--fullHeight"},
-                                _.div(
-                                  {"class":"headline js-teaser-headline headline--scale-2","data-content-id":"e546ee1c-0fc3-4c5c-9932-5c4d85a8303f"},
-                                  _.a(
-                                    {"data-trackable":"heading-link","data-trackable-context-story-link":"heading-link","href":"https://www.ft.com/content/e546ee1c-0fc3-4c5c-9932-5c4d85a8303f","class":"link","target":"_self","aria-describedby":""},
-                                    _.span(
-                                      {"class":"text text--color-black text-display--scale-2 text--weight-500","id":""},
-`Chinese tech group Meituan sheds $26bn after latest regulatory setback`
                                     )
                                   )
                                 ),
@@ -8992,16 +8914,16 @@ export default () => _.html(
     ),
     _.script(
       {"type":"application/json","id":"page-kit-app-context"},
-`{"appName":"home-page","product":"next","edition":"international","appVersion":"48561d78f8e2de513a99a202789de0aa73a1d1d5","abTestState":"messageSlotTop:digitalMarketingNewWorld,messageSlotBottom:cookieConsentC,borByTimezone:variant,WeekendPodcastSendTime:variant3,DailyBriefingSendTime:variant","isProduction":true,"isUserLoggedIn":false,"pageKitVersion":"4.1.0"}`
+`{"appName":"home-page","product":"next","edition":"international","appVersion":"48561d78f8e2de513a99a202789de0aa73a1d1d5","abTestState":"messageSlotTop:digitalMarketingNewWorld,messageSlotBottom:cookieConsentC,borByTimezone:variant,WeekendPodcastSendTime:variant2,DailyBriefingSendTime:variant","isProduction":true,"isUserLoggedIn":false,"pageKitVersion":"4.1.0"}`
     ),
     _.script(
       {"type":"application/json","id":"page-kit-flags-embed"},
-`{"articleRelatedContent":true,"ads":true,"javascript":true,"oTracking":true,"articleComments":true,"myFtApi":true,"articleShareButtons":true,"myFtApiWrite":true,"adTargetingUserApi":true,"videoPlayerAdvertising":true,"streamMostRead":true,"serviceWorker":true,"openGraph":true,"googleConsumerSurvey":true,"nativeAds":true,"myFtDigestPromo":true,"regionalNews":true,"syndication":true,"myFTEmailDisableABAlloc":true,"streamRecommendedStoriesList":true,"swAssetCaching":true,"refererCohort":true,"newsletterSignupOnArticle":true,"myFTInstantNotifications":true,"myftPrioritiseTopics":true,"messageSlotTop":"digitalMarketingNewWorld","myftIndustryRecs":true,"qualtrics":true,"showEventPromo":true,"myftConsentSwitch":true,"moatAdsTraffic":true,"manageCookiesWhiteLabel":true,"myftIndustryRecsFeed":true,"myftArticleInstantAlertsCta":true,"AdsPermutive":true,"syndication_promo":true,"topicTracker":true,"messageSlotBottom":"cookieConsentC","enableGTM":true,"myftNewNewLabel":true,"myftBoldNewArticles":true,"myftPageAppNotificationsToggle":true,"realUserMonitoringForPerformance":true,"textCopyTracking":true,"enableIHSindexBasedTargetingScript":true,"enableBrandmetricsSurveyScript":true,"managePremiumCancellationJourney":true,"articleInstantAlertsPromo":true,"manageStepUpCancellationJourney":true,"manageStandardCancellationJourney":true,"coronavirusStats":true,"manageStepUpTransitionJourney":true,"manageDirectCancellationJourney":true,"privShowCCPALinkOnFooter":true,"customerCareLiveChat":true,"optimizely":true,"accountSettingsBillingDetailsPaypal":true,"graphicSyndication":true,"showApplePay":true,"adsNativeLazyload":true,"adsMoatTimeout":true,"enableRavelinOnProd":true,"enableMarketingAnalyticsTags":true,"adsFullBleedImages":true,"advancedSharing":true,"enableNonUKPrintOnProd":true,"standardLite":true,"streamPageGraphicsList":true,"forumAndBdpPromosOnArticle":true,"useFlourish":true,"showPremiumCovidCohortSecondOffer":true,"adsHighImpact":true,"monthlyTermForPremiumCovidCohort":true,"showConsentPageForGoogleExtendedMeter":true,"enableNonUKDeliveryAddress":true,"homePageHeaderMarketsData":true,"useGaaGoogleSignInButtonForExtendedMeter":true,"enableGoogleExtendedMeter":true,"communityLandingPage":true,"flourishOnLiveBlogs":true,"inArticleContentSignUp":true,"frontPageCommunitySection":true,"newBuyFlow":true,"bizzaboRegistrationEnabled":true,"partnerContentNativeTemplateHTSI":true,"inArticleContentSignUpAndNewsletters":true,"newsletterAutoEnrolment":true,"eventsInMyFtPage":true,"eventsInDigestEmails":true,"eventsInStreamPage":true,"borByTimezone":"variant","enterpriseActivationPage":true,"enterpriseArticleAnnotations":true,"WeekendPodcastSendTime":"variant3","DailyBriefingSendTime":"variant","ftGlobetrotterBanner":true,"scrollytellingImages":true,"useMyFtUiJSX":true}`
+`{"articleRelatedContent":true,"ads":true,"javascript":true,"oTracking":true,"articleComments":true,"myFtApi":true,"articleShareButtons":true,"myFtApiWrite":true,"adTargetingUserApi":true,"videoPlayerAdvertising":true,"streamMostRead":true,"serviceWorker":true,"openGraph":true,"googleConsumerSurvey":true,"nativeAds":true,"myFtDigestPromo":true,"regionalNews":true,"syndication":true,"myFTEmailDisableABAlloc":true,"streamRecommendedStoriesList":true,"swAssetCaching":true,"refererCohort":true,"newsletterSignupOnArticle":true,"myFTInstantNotifications":true,"myftPrioritiseTopics":true,"messageSlotTop":"digitalMarketingNewWorld","myftIndustryRecs":true,"qualtrics":true,"showEventPromo":true,"myftConsentSwitch":true,"moatAdsTraffic":true,"manageCookiesWhiteLabel":true,"myftIndustryRecsFeed":true,"myftArticleInstantAlertsCta":true,"AdsPermutive":true,"syndication_promo":true,"topicTracker":true,"messageSlotBottom":"cookieConsentC","enableGTM":true,"myftNewNewLabel":true,"myftBoldNewArticles":true,"myftPageAppNotificationsToggle":true,"realUserMonitoringForPerformance":true,"textCopyTracking":true,"enableIHSindexBasedTargetingScript":true,"enableBrandmetricsSurveyScript":true,"managePremiumCancellationJourney":true,"articleInstantAlertsPromo":true,"manageStepUpCancellationJourney":true,"manageStandardCancellationJourney":true,"coronavirusStats":true,"manageStepUpTransitionJourney":true,"manageDirectCancellationJourney":true,"privShowCCPALinkOnFooter":true,"customerCareLiveChat":true,"optimizely":true,"accountSettingsBillingDetailsPaypal":true,"graphicSyndication":true,"showApplePay":true,"adsNativeLazyload":true,"adsMoatTimeout":true,"enableRavelinOnProd":true,"enableMarketingAnalyticsTags":true,"adsFullBleedImages":true,"advancedSharing":true,"enableNonUKPrintOnProd":true,"standardLite":true,"streamPageGraphicsList":true,"forumAndBdpPromosOnArticle":true,"useFlourish":true,"showPremiumCovidCohortSecondOffer":true,"adsHighImpact":true,"monthlyTermForPremiumCovidCohort":true,"showConsentPageForGoogleExtendedMeter":true,"enableNonUKDeliveryAddress":true,"homePageHeaderMarketsData":true,"useGaaGoogleSignInButtonForExtendedMeter":true,"enableGoogleExtendedMeter":true,"communityLandingPage":true,"flourishOnLiveBlogs":true,"inArticleContentSignUp":true,"frontPageCommunitySection":true,"newBuyFlow":true,"bizzaboRegistrationEnabled":true,"partnerContentNativeTemplateHTSI":true,"inArticleContentSignUpAndNewsletters":true,"newsletterAutoEnrolment":true,"eventsInMyFtPage":true,"eventsInDigestEmails":true,"eventsInStreamPage":true,"borByTimezone":"variant","enterpriseActivationPage":true,"enterpriseArticleAnnotations":true,"WeekendPodcastSendTime":"variant2","DailyBriefingSendTime":"variant","ftGlobetrotterBanner":true,"scrollytellingImages":true,"useMyFtUiJSX":true}`
     ),
-    _.script({"type":"text/javascript","src":"https://mb.moatads.com/yi/v2?ol=0&qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo81C%24k%25zrI81V5.NO)Wxa%3CY%24%3D!IvFQWimPe31k5X%5BG%5E%5B)%2C2iVSX%3C_Y%7B!7IQ3HbmUZzCFm%5Du!x2l.uBlTVU%2F.%3Dh%3Ft%40yUtKC&tf=1_nMzjG---CSa7H-nHVQZC-bW7qhB-LRwqH-nMzjG-&vi=111111&rc=0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2C%2C&rb=1-aHRASXsclVCQ5ev8VFriEAgWW0x56keByTY%3D&rs=1-8c1uNxErYklCYg%3D%3D&sc=1&os=1-zw%3D%3D&qp=00000&is=BBBBB2BBEYBvGl2BBCkqtUTE1RmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBBBj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BwCBQmIoRBBCzBz1BBCTClBBrbGBC4ehueB57NG9aJfR0BqEKiuwBBBB&iv=8&qt=0&gz=0&hh=0&hn=0&tw=&qc=0&qd=0&qf=800&qe=600&qh=800&qg=17841&qm=480&qa=1440&qb=900&qi=1440&qj=900&to=000&po=1-0020002000002120&vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&qr=0&url=https%3A%2F%2Fwww.ft.com%2F&pcode=financialtimesprebidheader859796398452&rx=660310715217&callback=MoatNadoAllJsonpRequest_69174318"}),
-    _.script({"type":"text/javascript","src":"https://geo.moatads.com/n.js?e=35&ol=0&qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo81C%24k%25zrI81V5.NO)Wxa%3CY%24%3D!IvFQWimPe31k5X%5BG%5E%5B)%2C2iVSX%3C_Y%7B!7IQ3HbmUZzCFm%5Du!x2l.uBlTVU%2F.%3Dh%3Ft%40yUtKC&tf=1_nMzjG---CSa7H-nHVQZC-bW7qhB-LRwqH-nMzjG-&vi=111111&rc=0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2C%2C&rb=1-aHRASXsclVCQ5ev8VFriEAgWW0x56keByTY%3D&rs=1-8c1uNxErYklCYg%3D%3D&sc=1&os=1-zw%3D%3D&qp=00000&is=BBBBB2BBEYBvGl2BBCkqtUTE1RmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBBBj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BwCBQmIoRBBCzBz1BBCTClBBrbGBC4ehueB57NG9aJfR0BqEKiuwBBBB&iv=8&qt=0&gz=0&hh=0&hn=0&tw=&qc=0&qd=0&qf=800&qe=600&qh=800&qg=17841&qm=480&qa=1440&qb=900&qi=1440&qj=900&to=000&po=1-0020002000002120&vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&qr=0&ql=&qo=0&i=FINANCIALTIMESDFP_PREBID_HEADER1&hp=1&wf=1&pxm=3&sgs=3&vb=-1&kq=1&hq=0&hs=0&hu=0&hr=0&ht=0&dnt=0&bq=11&f=0&j=&t=1645373286859&de=209178969410&rx=660310715217&m=0&ar=944fd8091a1-clean&iw=06cb694&q=1&cb=0&cu=1645373286859&ll=2&lm=0&ln=0&em=0&en=0&d=undefined%3Aundefined%3Aundefined%3Aundefined&zGSRS=1&zGSRC=1&gu=https%3A%2F%2Fwww.ft.com%2F&id=1&ii=4&bo=undefined&bd=undefined&zMoatOrigSlicer1=undefined&zMoatOrigSlicer2=undefined&dfp=true&la=undefined&gw=financialtimesprebidheader859796398452&fd=1&ac=1&it=500&pe=1%3A874%3A874%3A0%3A987&jk=-1&jm=-1&fs=196859&na=703887418&cs=0&ord=1645373286859&jv=165613641&callback=DOMlessLLDcallback_69174318"}),
-    _.script({"type":"text/javascript","src":"https://geo.moatads.com/n.js?e=35&ol=0&qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo81C%24k%25zrI81V5.NO)Wxa%3CY%24%3D!IvFQWimPe31k5X%5BG%5E%5B)%2C2iVSX%3C_Y%7B!7IQ3HbmUZzCFm%5Du!x2l.uBlTVU%2F.%3Dh%3Ft%40yUtKC&tf=1_nMzjG---CSa7H-nHVQZC-bW7qhB-LRwqH-nMzjG-&vi=111111&rc=0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2C%2C&rb=1-aHRASXsclVCQ5ev8VFriEAgWW0x56keByTY%3D&rs=1-8c1uNxErYklCYg%3D%3D&sc=1&os=1-zw%3D%3D&qp=00000&is=BBBBB2BBEYBvGl2BBCkqtUTE1RmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBBBj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BwCBQmIoRBBCzBz1BBCTClBBrbGBC4ehueB57NG9aJfR0BqEKiuwBBBB&iv=8&qt=0&gz=0&hh=0&hn=0&tw=&qc=0&qd=0&qf=800&qe=600&qh=800&qg=17841&qm=480&qa=1440&qb=900&qi=1440&qj=900&to=000&po=1-0020002000002120&vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&qr=0&ql=&qo=0&i=FINANCIALTIMESDFP_PREBID_HEADER1&hp=1&wf=1&pxm=3&sgs=3&vb=-1&kq=1&hq=0&hs=0&hu=0&hr=0&ht=0&dnt=0&bq=11&f=0&j=&t=1645373286859&de=209178969410&rx=660310715217&m=0&ar=944fd8091a1-clean&iw=06cb694&q=2&cb=0&cu=1645373286859&ll=2&lm=0&ln=0&em=0&en=0&d=undefined%3Aundefined%3Aundefined%3Aundefined&zGSRS=1&zGSRC=1&gu=https%3A%2F%2Fwww.ft.com%2F&id=1&ii=4&bo=undefined&bd=undefined&zMoatOrigSlicer1=undefined&zMoatOrigSlicer2=undefined&dfp=true&la=undefined&gw=financialtimesprebidheader859796398452&fd=1&ac=1&it=500&pe=1%3A874%3A874%3A0%3A987&jk=-1&jm=-1&fs=196859&na=373439931&cs=0&callback=MoatDataJsonpRequest_69174318"}),
+    _.script({"type":"text/javascript","src":"https://mb.moatads.com/yi/v2?ol=0&qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo81C%24k%25zrI81V5.NO)Wxa%3CY%24%3D!IvFQWimPe31k5X%5BG%5E%5B)%2C2iVSX%3C_Y%7B!7IQ3HbmUZzCFm%5Du!x2l.uBlTVU%2F.%3Dh%3Ft%40yUtKC&tf=1_nMzjG---CSa7H-nHVQZC-bW7qhB-LRwqH-nMzjG-&vi=111111&rc=0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2C%2C&rb=1-nmXr9bOK%2BwAZCdsqw61t0N99GXPeVquAU2s%3D&rs=1-rghCXLleOfQ59g%3D%3D&sc=1&os=1-sg%3D%3D&qp=00000&is=BBBBB2BBEYBvGl2BBCkqtUTE1RmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBBBj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BwCBQmIoRBBCzBz1BBCTClBBrbGBC4ehueB57NG9aJfR0BqEKiuwBBBB&iv=8&qt=0&gz=0&hh=0&hn=0&tw=&qc=0&qd=0&qf=800&qe=600&qh=800&qg=17961&qm=480&qa=1440&qb=900&qi=1440&qj=900&to=000&po=1-0020002000002120&vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&qr=0&url=https%3A%2F%2Fwww.ft.com%2F&pcode=financialtimesprebidheader859796398452&rx=753179224708&callback=MoatNadoAllJsonpRequest_69398029"}),
+    _.script({"type":"text/javascript","src":"https://geo.moatads.com/n.js?e=35&ol=0&qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo81C%24k%25zrI81V5.NO)Wxa%3CY%24%3D!IvFQWimPe31k5X%5BG%5E%5B)%2C2iVSX%3C_Y%7B!7IQ3HbmUZzCFm%5Du!x2l.uBlTVU%2F.%3Dh%3Ft%40yUtKC&tf=1_nMzjG---CSa7H-nHVQZC-bW7qhB-LRwqH-nMzjG-&vi=111111&rc=0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2C%2C&rb=1-nmXr9bOK%2BwAZCdsqw61t0N99GXPeVquAU2s%3D&rs=1-rghCXLleOfQ59g%3D%3D&sc=1&os=1-sg%3D%3D&qp=00000&is=BBBBB2BBEYBvGl2BBCkqtUTE1RmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBBBj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BwCBQmIoRBBCzBz1BBCTClBBrbGBC4ehueB57NG9aJfR0BqEKiuwBBBB&iv=8&qt=0&gz=0&hh=0&hn=0&tw=&qc=0&qd=0&qf=800&qe=600&qh=800&qg=17961&qm=480&qa=1440&qb=900&qi=1440&qj=900&to=000&po=1-0020002000002120&vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&qr=0&ql=&qo=0&i=FINANCIALTIMESDFP_PREBID_HEADER1&hp=1&wf=1&pxm=3&sgs=3&vb=-1&kq=1&hq=0&hs=0&hu=0&hr=0&ht=0&dnt=0&bq=11&f=0&j=&t=1645424474773&de=247201989583&rx=753179224708&m=0&ar=944fd8091a1-clean&iw=06cb694&q=1&cb=0&cu=1645424474773&ll=2&lm=0&ln=0&em=0&en=0&d=undefined%3Aundefined%3Aundefined%3Aundefined&zGSRS=1&zGSRC=1&gu=https%3A%2F%2Fwww.ft.com%2F&id=1&ii=4&bo=undefined&bd=undefined&zMoatOrigSlicer1=undefined&zMoatOrigSlicer2=undefined&dfp=true&la=undefined&gw=financialtimesprebidheader859796398452&fd=1&ac=1&it=500&pe=1%3A794%3A794%3A0%3A909&jk=-1&jm=-1&fs=196859&na=1757547448&cs=0&ord=1645424474773&jv=1691282394&callback=DOMlessLLDcallback_69398029"}),
+    _.script({"type":"text/javascript","src":"https://geo.moatads.com/n.js?e=35&ol=0&qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo81C%24k%25zrI81V5.NO)Wxa%3CY%24%3D!IvFQWimPe31k5X%5BG%5E%5B)%2C2iVSX%3C_Y%7B!7IQ3HbmUZzCFm%5Du!x2l.uBlTVU%2F.%3Dh%3Ft%40yUtKC&tf=1_nMzjG---CSa7H-nHVQZC-bW7qhB-LRwqH-nMzjG-&vi=111111&rc=0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2C%2C&rb=1-nmXr9bOK%2BwAZCdsqw61t0N99GXPeVquAU2s%3D&rs=1-rghCXLleOfQ59g%3D%3D&sc=1&os=1-sg%3D%3D&qp=00000&is=BBBBB2BBEYBvGl2BBCkqtUTE1RmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBBBj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BwCBQmIoRBBCzBz1BBCTClBBrbGBC4ehueB57NG9aJfR0BqEKiuwBBBB&iv=8&qt=0&gz=0&hh=0&hn=0&tw=&qc=0&qd=0&qf=800&qe=600&qh=800&qg=17961&qm=480&qa=1440&qb=900&qi=1440&qj=900&to=000&po=1-0020002000002120&vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&qr=0&ql=&qo=0&i=FINANCIALTIMESDFP_PREBID_HEADER1&hp=1&wf=1&pxm=3&sgs=3&vb=-1&kq=1&hq=0&hs=0&hu=0&hr=0&ht=0&dnt=0&bq=11&f=0&j=&t=1645424474773&de=247201989583&rx=753179224708&m=0&ar=944fd8091a1-clean&iw=06cb694&q=2&cb=0&cu=1645424474773&ll=2&lm=0&ln=0&em=0&en=0&d=undefined%3Aundefined%3Aundefined%3Aundefined&zGSRS=1&zGSRC=1&gu=https%3A%2F%2Fwww.ft.com%2F&id=1&ii=4&bo=undefined&bd=undefined&zMoatOrigSlicer1=undefined&zMoatOrigSlicer2=undefined&dfp=true&la=undefined&gw=financialtimesprebidheader859796398452&fd=1&ac=1&it=500&pe=1%3A794%3A794%3A0%3A909&jk=-1&jm=-1&fs=196859&na=1427099961&cs=0&callback=MoatDataJsonpRequest_69398029"}),
     _.script({"type":"text/javascript","id":"","src":"https://ad.wsod.com/pub/d270ad52d0e8a39449c32782950c8cc9/0.0.async/"}),
-    _.script({"type":"text/javascript","src":"https://ad.wsod.com/pub/d270ad52d0e8a39449c32782950c8cc9/1.0.async/1645373286;0,0,0;1440x900x1;https%3A_@2F_@2Fwww.ft.com_@2F;;;","async":"async"})
+    _.script({"type":"text/javascript","src":"https://ad.wsod.com/pub/d270ad52d0e8a39449c32782950c8cc9/1.0.async/1645424474;0,0,0;1440x900x1;https%3A_@2F_@2Fwww.ft.com_@2F;;;","async":"async"})
   )
 )
