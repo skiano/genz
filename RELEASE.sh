@@ -27,8 +27,12 @@ git checkout main
 git branch -D temp-deploy
 git status
 
-
-
 # echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
-# npm version $1
-# git push origin --tags
+npm version $1
+git push origin --tags
+
+rm README.md;
+
+npm publish;
+
+git reset;
