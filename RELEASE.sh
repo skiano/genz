@@ -8,7 +8,7 @@ echo -e "1. TESTING\n"
 node test/_.mjs;
 
 echo -e "2. BUILDING PROD FILE"
-node_modules/.bin/rollup src/genz.mjs --plugin terser --file genz.build.mjs
+node_modules/.bin/rollup src/genz.mjs --file genz.build.mjs
 
 echo -e "\n2. BUILDING PLAYGROUND\n"
 BASE=/genz/ node_modules/.bin/vite build playground --config playground/vite.config.js
@@ -31,10 +31,5 @@ echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
 npm version $1
 git push origin --tags
 
-# Remove cruft for smaller unpacked size
-rm README.md;
-
 echo -e "\n2. PUBLISHING\n"
 npm publish;
-
-git reset --hard;
