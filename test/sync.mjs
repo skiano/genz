@@ -17,7 +17,7 @@ export default [
   function TEST_BASIC () {
     const tag = _.div('hello', _.p({ class: 'world' }));
     const txt = syncStringify(traverse(tag));
-    assert.equal(txt, '<div>hello<p class="world"></p></div>')
+    assert.equal(txt, '<div>hello<p class="world"></p></div>');
   },
 
   function TEST_OMISSION () {
