@@ -18,7 +18,7 @@ git checkout -b temp-deploy
 git add playground/dist -f;
 git commit -am "temporarily adding playground"
 git branch -D gh-pages
-git branch push :gh-pages
+git push origin :gh-pages
 git subtree push --prefix playground/dist origin gh-pages --squash
 rm -rf playground/dist
 git checkout main
