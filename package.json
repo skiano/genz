@@ -5,10 +5,12 @@
   "type": "module",
   "version": "0.3.1",
   "description": "Streaming-first SSR for Node Apps",
-  "main": "src/genz.mjs",
+  "main": "genz.build.mjs",
   "scripts": {
     "test": "node test/_.mjs",
-    "dev": "nodemon example/app.mjs"
+    "dev": "nodemon example/app.mjs",
+    "build": "rollup src/genz.mjs --plugin terser --file genz.build.mjs",
+    "release:patch": "npm run build && npm version patch && git push origin --tags && npm publish"
   },
   "devDependencies": {
     "@vue/compiler-ssr": "^3.2.31",
@@ -17,6 +19,8 @@
     "nodemon": "^2.0.15",
     "puppeteer": "^13.3.2",
     "regexparam": "^2.0.0",
+    "rollup": "^2.67.3",
+    "rollup-plugin-terser": "^7.0.2",
     "vue": "^3.2.31"
   },
   "repository": {
