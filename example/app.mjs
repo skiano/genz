@@ -1,6 +1,6 @@
 import express from 'express';
 import { parse as parseRoute } from 'regexparam';
-import { _, toStream } from '../../genz.mjs';
+import { _, toStream } from '../genz.mjs';
 
 //////////////
 // SERVICES //
@@ -36,6 +36,49 @@ const fetchArticleList = () => Promise.resolve(
 // COMPONENTS //
 ////////////////
 
+const MainNav = _.nav({ class: 'navbar navbar-default' },
+  _.div({ class: 'container-fluid' },
+
+    // Brand and toggle get grouped for better mobile display
+    _.div({ class: 'navbar-header' },
+      _.button({
+        type: 'button',
+        class: 'navbar-toggle collapsed',
+        'data-toggle': 'collapse',
+        'data-target': '#bs-example-navbar-collapse-1',
+        'aria-expanded': "false"
+      }, [
+        _.span({ class: 'sr-only' }, 'Toggle navigation'),
+        _.span({ class: 'icon-bar' }),
+        _.span({ class: 'icon-bar' }),
+        _.span({ class: 'icon-bar' })
+      ]),
+      _.a({ class: 'navbar-brand', href: '/' }, 'Home'),
+    ),
+
+    // Collect the nav links, forms, and other content for toggling
+    _.div({ class: 'collapse navbar-collapse', id: 'bs-example-navbar-collapse-1' },
+      _.ul({ class: 'nav navbar-nav navbar-right'},
+        _.li({ class: 'dropdown' },
+          _.a({
+            href: '#',
+            class: 'dropdown-toggle',
+            'data-toggle': 'dropdown',
+            'role': 'button',
+            'aria-haspopup': 'true',
+            'aria-expanded': 'false'
+          }, 'Profile ', _.span({ class: 'caret' })),
+          _.ul({ class: 'dropdown-menu' }, [
+            _.li((ctx) => _.a({ href: '#' }, ctx.user.email)),
+            _.li({ class: 'divider', role: 'separator' }),
+            _.li(_.a({ href: '#' }, 'other link'))
+          ]),
+        )
+      )
+    )
+  )
+);
+
 const Page = ({ title }, content) => {
   return _.html(
     _.head(
@@ -51,10 +94,19 @@ const Page = ({ title }, content) => {
       _.link({
         rel: 'stylesheet',
         href: 'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css',
-      })
+      }),
     ),
     _.body(
-      _.main({ class: 'container' }, content)
+      MainNav,
+      _.main({ class: 'container' }, content),
+      _.script({
+        type: 'text/javascript',
+        src: 'https://code.jquery.com/jquery-1.12.4.min.js',
+      }),
+      _.script({
+        type: 'text/javascript',
+        src: 'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js',
+      })
     )
   )
 };
@@ -82,7 +134,6 @@ const ArticlePage = async (ctx) => {
   return Page({
     title: 'My Article Page',
   }, [
-    _.a({ href: '/'}, 'home'),
     _.h1(article.title),
     ArticleBody(article.body)
   ]);
@@ -102,6 +153,7 @@ const routes = [
 
 // The page request handler
 app.get('*', (req, res, next) => {
+  const start = Date.now();
 
   // 1. Search for a matching route
   let r;
@@ -137,6 +189,10 @@ app.get('*', (req, res, next) => {
   res.setHeader('Content-Type', 'text/html');
   res.setHeader('Transfer-Encoding', 'chunked');
   toStream(res, route.component, ctx);
+
+  res.on('close', () => {
+    console.log(`[get] ${req.url} ${Date.now() - start}ms`);
+  });
 });
 
 const PORT = process.env.PORT || 3000;
