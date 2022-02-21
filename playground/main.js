@@ -1,7 +1,10 @@
 import './style.css';
 
+// THE UNUSED IMPORTS MAY BE USED BY eval()
+import { _, css, traverse, mediaQuery, dedupe, toStream } from '../src/genz.mjs';
+// SO DO NOT REMOVE THEM...
+
 import dedent from 'ts-dedent';
-import { _, css, traverse, toStream } from '../src/genz.mjs';
 import { EditorState, EditorView, basicSetup } from "@codemirror/basic-setup"
 import { ViewPlugin } from '@codemirror/view';
 import { javascript } from "@codemirror/lang-javascript"
@@ -15,7 +18,7 @@ _.html(
   _.head(
     _.title('Basic Example'),
     _.style(css('body', {
-      backgroundColor: 'yellow'
+      backgroundColor: 'limegreen'
     }))
   ),
   _.body(

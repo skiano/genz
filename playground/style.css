@@ -19,13 +19,28 @@ body {
 
 header {
   background: #111;
+  color: gainsboro;
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 16px 13px;
+  box-sizing: border-box;
+  align-items: baseline;
+  gap: 12px;
 }
 
 h1 {
-  font-size: 24px;
-  padding: 12px;
-  color: gainsboro;
-  margin: 0 auto;
+  font-size: 22px;
+  margin: 0;
+  color: limegreen;
+  font-weight: normal;
+}
+
+header a {
+  font-size: 12px;
+  color: #eee;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
 }
 
 main {
