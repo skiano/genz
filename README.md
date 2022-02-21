@@ -1,6 +1,6 @@
 # Gen Z
 
-Revisiting Server-first app development
+Your unversal-isomorphic-supersonic-tooled-out app is so-five-minutes-ago...
 
 _NOTE: this is VERY exprimental and not ready for use and may turn out, unsurprisingly, to be a colossal failure_
 
