@@ -13,6 +13,7 @@ node_modules/.bin/rollup src/genz.mjs --plugin terser --file genz.build.mjs
 echo -e "\n2. BUILDING PLAYGROUND\n"
 BASE=/genz/ node_modules/.bin/vite build playground --config playground/vite.config.js
 
+# TODO: this is super hacky and creates downtime for the playground...
 echo -e "\n2. DEPLOYING PLAYGROUND TO GITHUB PAGES \n"
 git checkout -b temp-deploy
 git add playground/dist -f;
