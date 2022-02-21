@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
   if (req.url !== '/') return res.end();
 
   res.setHeader('Content-Type', 'text/html');
-  res.setHeader('Transfer-Encoding', 'Transfer-Encoding:');
+  res.setHeader('Transfer-Encoding', 'chunked');
   res.statusCode = 200;
 
   const before = Date.now();

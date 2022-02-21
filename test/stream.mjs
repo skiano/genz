@@ -46,6 +46,8 @@ export default [
         resolve();
       });
 
+      // Some Example "components"
+
       const fetchArticle = (id) => {
         return Promise.resolve({
           123: {
@@ -56,8 +58,6 @@ export default [
           },
         }[id]);
       };
-
-      // Some Example "components"
 
       const Profile = _.section((ctx) => {
         return _.p(`hello ${ctx.username}`)
@@ -90,6 +90,7 @@ export default [
         _.head(),
         _.body(
           Page(
+            Profile,
             ArticlePage
           )
         )
