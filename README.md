@@ -4,7 +4,7 @@ Your unversal-isomorphic-supersonic-tooled-out app is so-five-minutes-ago...
 
 ⚠️ WARNING: This is VERY exprimental and may, likely, turn out to be a colossal failure.
 
-👀 [LIVE DEMO](https://skiano.github.io/genz/)
+👀 [View a Live demo.](https://skiano.github.io/genz/)
 
 ## Why
 
