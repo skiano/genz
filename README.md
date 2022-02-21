@@ -57,3 +57,11 @@ http.createServer((req, res) => {
 
 For a more complex example checkout [this example](example/app.mjs).
 
+To view the example, clone this repo and run:
+
+```bash
+$ cd path/to/cloned/repo
+$ npm i
+$ npm run dev
+```
+
