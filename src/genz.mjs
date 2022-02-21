@@ -5,32 +5,42 @@ const KEBAB_REGEX = /[A-Z\u00C0-\u00D6\u00D8-\u00DE]/g;
 const replacer = match => '-' + match.toLowerCase();
 const kebabCase = str => str.replace(KEBAB_REGEX, replacer);
 
-export function createTag (name, isVoid) {
+export function createTag (name, isVoid, opener) {
+  opener = name === 'html' ? '<!DOCTYPE html><html': `<${name}`;
+
   return function tag (a0) {
+    arguments.__IS_ARGUMENTS__ = true;
+
     // 1. If attibutes are passed
-    let a;
-    let attr;
     if (
       a0 &&
+      !a0.__IS_ARGUMENTS__ &&
       typeof a0 === 'object' &&
-      typeof a0.then !== 'function' && 
+      typeof a0.then !== 'function' &&
       !Array.isArray(a0)
     ) {
-      for (a in a0) {
-        if (!attr) attr = [];
-        attr.push(` ${a}="${a0[a]}"`);
+      a0.__IS_ATTRIBUTES__ = true;
+
+      if (isVoid) {
+        arguments[-1] = opener;
+      } else {
+        arguments[-1] = opener;
+        arguments[arguments.length] = `</${name}>`;
+        arguments.length += 1;
       }
-      attr.push('>');
-      arguments[0] = attr;
-      return isVoid
-        ? [`<${name}`, attr]
-        : [name === 'html' ? '<!DOCTYPE html><html' : `<${name}`, arguments, `</${name}>`];
+
+      return arguments;
     }
 
-    // 2. If attributes are omitted
-    return isVoid
-      ? `<${name}>`
-      : [name === 'html' ? '<!DOCTYPE html><html>' : `<${name}>`, arguments, `</${name}>`];
+    // 1. If no attibutes are passed
+    if (isVoid) {
+      return `<${name}>`;
+    } else {
+      arguments[-1] = opener + '>';
+      arguments[arguments.length] = `</${name}>`;
+      arguments.length += 1;
+      return arguments;
+    }
   };
 }
 
@@ -61,14 +71,14 @@ export function traverse (arr, ctx = {}) {
 
     if (typeof value === 'object' && typeof value.length !== 'undefined') {
       // skip if we dedupe
-      if (value._DEDUPE_) {
-        if (dedupes[value._DEDUPE_]) return next();
-        dedupes[value._DEDUPE_] = true;
+      if (value.__DEDUPE__) {
+        if (dedupes[value.__DEDUPE__]) return next();
+        dedupes[value.__DEDUPE__] = true;
       }
       
       // Move deeper
       queue_a.unshift(value);
-      queue_i.unshift(0);
+      queue_i.unshift(value.__IS_ARGUMENTS__ ? -1 : 0);
       return next();
     } else {
       if (value !== false) {
@@ -78,7 +88,22 @@ export function traverse (arr, ctx = {}) {
         if (value.then) return value;
 
         // return a child string
-        return typeof value === 'string' ? value : String(value);
+        if (typeof value === 'string') {
+          return value;
+        } else if (value.__IS_ATTRIBUTES__) {
+          let a;
+          let str = '';
+          for (a in value) {
+            if (a === '__IS_ATTRIBUTES__') continue;
+            // not supporting kebab case because i dont thing the ergonomics are worth it
+            // could be talked out of that...
+            str += ` ${a}="${value[a]}"`;
+          }
+          str += '>';
+          return str;
+        } else {
+          return String(value);
+        }
 
       } else if (queue_i[0] >= queue_a[0].length) {
 
@@ -137,7 +162,7 @@ export function toStream (res, arr, ctx) {
 ////////////
 
 export function dedupe(v, id) {
-  v._DEDUPE_ = id;
+  v.__DEDUPE__ = id;
   return v;
 };
 
