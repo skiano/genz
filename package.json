@@ -9,14 +9,10 @@
   "scripts": {
     "test": "node test/_.mjs",
     "dev": "nodemon example/app.mjs",
-    "build": "rollup src/genz.mjs --plugin terser --file genz.build.mjs",
-    "playground:dev": "vite serve playground --config playground/vite.config.js",
-    "playground:build": "BASE=/genz/ vite build playground --config playground/vite.config.js",
-    "deploy:playground": "git subtree push --prefix playground/dist origin gh-pages",
-    "release:patch": "npm test && npm run build && npm version patch && git push origin --tags && npm publish",
-    "release:minor": "npm test && npm run build && npm version minor && git push origin --tags && npm publish",
-    "release:major": "npm test && npm run build && npm version major && git push origin --tags && npm publish",
-    "release": "./RELEASE.sh minor"
+    "dev:playground": "vite serve playground --config playground/vite.config.js",
+    "release:patch": "./RELEASE.sh patch",
+    "release:minor": "./RELEASE.sh minor",
+    "release:major": "./RELEASE.sh major"
   },
   "devDependencies": {
     "@vue/compiler-ssr": "^3.2.31",
