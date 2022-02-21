@@ -66,6 +66,7 @@ const updatePreview = async (txt) => {
     preview.src = `data:text/html;charset=utf-8,${window.escape(html)}`;
     window.location.hash = btoa(txt);
   } catch (e) {
+    window.location.hash = '';
     errors.classList.add('show');
     errors.innerText = e.message;
   }
