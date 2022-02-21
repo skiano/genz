@@ -19,7 +19,6 @@ git add playground/dist -f;
 git commit -am "temporarily adding playground"
 git subtree push --prefix playground/dist origin gh-pages
 # Reset the head...
-git reset HEAD~
 rm -rf playground/dist
 git status
 
