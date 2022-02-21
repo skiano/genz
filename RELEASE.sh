@@ -14,13 +14,14 @@ echo -e "\n2. BUILDING PLAYGROUND\n"
 BASE=/genz/ node_modules/.bin/vite build playground --config playground/vite.config.js
 
 echo -e "\n2. DEPLOYING PLAYGROUND TO GITHUB PAGES \n"
+git checkout -b temp-deploy
 git add playground/dist -f;
-# the head...
 git commit -am "temporarily adding playground"
-git subtree push --prefix playground/dist origin gh-pages
+git subtree push --prefix playground/dist temp-deploy gh-pages
 # Reset the head...
 rm -rf playground/dist
-git commit -am "removing playground files"
+git checkout main
+git branch -D temp-deploy
 git status
 
 # echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
