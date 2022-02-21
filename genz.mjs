@@ -100,10 +100,10 @@ export function traverse (arr, ctx = {}) {
   }
 }
 
-export function toStream (arr, res) {
+export function toStream (res, arr, ctx) {
   // TODO: handle weird events (like aborts) in req or res
   // TODO: decide what if anything to do with this max sync...
-  const next = traverse(arr);
+  const next = traverse(arr, ctx);
 
   async function loop () {
     let frag = next();
