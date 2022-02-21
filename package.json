@@ -15,7 +15,8 @@
     "deploy:playground": "git subtree push --prefix playground/dist origin gh-pages",
     "release:patch": "npm test && npm run build && npm version patch && git push origin --tags && npm publish",
     "release:minor": "npm test && npm run build && npm version minor && git push origin --tags && npm publish",
-    "release:major": "npm test && npm run build && npm version major && git push origin --tags && npm publish"
+    "release:major": "npm test && npm run build && npm version major && git push origin --tags && npm publish",
+    "release": "./RELEASE.sh minor"
   },
   "devDependencies": {
     "@vue/compiler-ssr": "^3.2.31",
