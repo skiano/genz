@@ -1,6 +1,6 @@
 # Gen Z
 
-Revisiting Server-first app development
+Your unversal-isomorphic-supersonic-tooled-out app is so-five-minutes-ago...
 
 _NOTE: this is VERY exprimental and not ready for use and may turn out, unsurprisingly, to be a colossal failure_
 
@@ -11,6 +11,7 @@ It’s true, many websites can be and perhaps should be client-side or universal
 My thinking so far:
 
 - Avoid tooling (and not just for little examples)
+- Avoid dependencies (0 would be ideal)
 - Streaming by default (avoid blocking as much as possible)
 - Start sending content, while allowing parts of the render to be async
 - Extremely minimal (prioritize simplicity over safety)
@@ -52,5 +53,7 @@ http.createServer((req, res) => {
 }).listen(3000, () => {
   console.log('http://localhost:3000');
 });
-``
+```
+
+For a more complex example checkout [this example](example/app.mjs).
 
