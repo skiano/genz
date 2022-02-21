@@ -27,7 +27,7 @@ _.html(
   _.head(
     _.title('Basic Example'),
     _.style(css('body', {
-      backgroundColor: 'limegreen'
+      backgroundColor: 'salmon'
     }))
   ),
   _.body(
