@@ -42,7 +42,7 @@ export default [
       const res = new ResponseLike();
       res.on('error', reject);
       res.on('close', () => {
-        console.log(res.arr.join('\n'));
+        assert.equal(res.arr.join(''), '<!DOCTYPE html><html><head></head><body><main class="page__wrap"><section><p>hello Greg</p></section><section class="page"><section class="article"><h2 class="article__title">Cool Article</h2><div class="article__body"><p>Wow! a paragraph</p></div></section></section></main></body></html>');
         resolve();
       });
 

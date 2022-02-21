@@ -1,6 +1,6 @@
 import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
-export function createTag (name) {
+export function createTag (name, isVoid) {
   return function tag (a0) {
     // 1. If attibutes are passed
     let a;
@@ -17,20 +17,20 @@ export function createTag (name) {
       }
       attr.push('>');
       arguments[0] = attr;
-      return VOID_ELEMENTS[name]
+      return isVoid
         ? [`<${name}`, attr]
         : [name === 'html' ? '<!DOCTYPE html><html' : `<${name}`, arguments, `</${name}>`];
     }
 
     // 2. If attributes are omitted
-    return VOID_ELEMENTS[name]
+    return isVoid
       ? `<${name}>`
       : [name === 'html' ? '<!DOCTYPE html><html>' : `<${name}>`, arguments, `</${name}>`];
   };
 }
 
 export const _ = TAG_NAMES.reduce((o, name) => {
-  o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
+  o[name] = createTag(name, VOID_ELEMENTS[name]);
   return o;
 }, Object.create({}));
 
@@ -136,6 +136,18 @@ export const dedupe = (v, id) => {
   return v;
 };
 
-export const css = (selectors, declarations) => {
-  // Array.isArray()
+export function css (chunks, a, arg, d) {
+  chunks = [];
+  for (a = 0; a < arguments.length; a++) {
+    arg = arguments[a];
+    if (a === 0) {
+      chunks.push(`${Array.isArray(arg) ? arg.join(',') : arg}{`);
+    } else {
+      for (d in arg) {
+        chunks.push(`${d}:${arg[d]};`);
+      }
+    }
+  };
+  chunks.push('}');
+  return chunks;
 };

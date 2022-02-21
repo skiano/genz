@@ -1,5 +1,5 @@
-import { _, traverse, dedupe } from '../src/genz.mjs';
 import assert from 'assert';
+import { _, traverse, dedupe, css } from '../src/genz.mjs';
 
 const syncStringify = (it) => {
   let o;
@@ -75,5 +75,33 @@ export default [
 
     assert.equal(txt, '<div><p>lazy greg</p></div>');
   },
+
+  function TEST_CSS_SINGLE_SELECTOR () {
+    const style = css('.foo', {
+      background: 'red',
+      color: 'blue',
+    });
+    const txt = syncStringify(traverse(style));
+    assert.equal(txt, '.foo{background:red;color:blue;}');
+  },
+
+  function TEST_CSS_MULTI_SELECTOR () {
+    const style = css(['.foo', '#bar'], {
+      background: 'red',
+      color: 'blue',
+    });
+    const txt = syncStringify(traverse(style));
+    assert.equal(txt, '.foo,#bar{background:red;color:blue;}');
+  },
+
+  function TEST_CSS_MERGE_DECLARATIONS () {
+    const style = css('p', {
+      background: 'red',
+    }, {
+      color: 'blue',
+    });
+    const txt = syncStringify(traverse(style));
+    assert.equal(txt, 'p{background:red;color:blue;}');
+  }
 
 ];
