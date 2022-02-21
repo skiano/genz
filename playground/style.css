@@ -1,0 +1,91 @@
+html {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #222;
+  background: gainsboro;
+  background: linear-gradient(#333, #666);
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+header {
+  background: #111;
+}
+
+h1 {
+  font-size: 24px;
+  padding: 12px;
+  color: gainsboro;
+  margin: 0 auto;
+}
+
+main {
+  flex-grow: 1;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+section {
+  flex-basis: 0;
+  flex-grow: 1;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#editor {
+  background: #fff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-weight: normal;
+  margin: 12px 0;
+  padding: 0;
+}
+
+.cm-editor {
+  /* padding: 120px; */
+  /* height: 200px; */
+  flex-grow: 1;
+  /* flex-shrink: 1; */
+  min-height: 0;
+  outline: 1px solid #aaa;
+}
+
+#preview {
+  border: none;
+  outline: 1px solid #aaa;
+  flex-grow: 1;
+}
+
+#errors {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgb(231, 192, 192);
+  box-sizing: border-box;
+  outline: 1px solid red;
+  padding: 12px;
+  display: none;
+}
+
+#errors.show {
+  display: block;
+}
