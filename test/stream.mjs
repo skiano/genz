@@ -52,18 +52,32 @@ export default [
 
       const fetchArticle = (id) => {
         return Promise.resolve({
-          123: { title: 'Cool Article' },
+          123: {
+            title: 'Cool Article',
+            content: [
+              { elm: 'p', value: 'Wow! a paragraph' },
+            ],
+          },
         }[id]);
       };
 
+      const Profile = _.section((ctx) => {
+        return _.p(`hello ${ctx.username}`)
+      });
+
+      const Article = (article) => ([
+        _.h2(article.title),
+        article.content.map((i) => (
+          _[i.elm](i.value)
+        )),
+      ]);
+
       const Page = ({ title }) => ([
         _.h1(title),
-        _.section((ctx) => {
-          return _.p(`hello ${ctx.username}`)
-        }),
+        Profile,
         _.section(async (ctx) => {
           const article = await fetchArticle(ctx.articleId);
-          return _.h2(article.title);
+          return Article(article);
         }),
       ]);
 
