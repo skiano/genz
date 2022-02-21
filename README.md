@@ -33,7 +33,10 @@ http.createServer((req, res) => {
 
   const content = _.html(
     _.head(
-      _.title('Basic Example')
+      _.title('Basic Example'),
+      _.style(css('body', {
+        backgroundColor: 'yellow'
+      }))
     ),
     _.body(
       _.h1('Hello World'),
