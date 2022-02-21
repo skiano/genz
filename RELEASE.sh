@@ -17,12 +17,11 @@ echo -e "\n2. DEPLOYING PLAYGROUND TO GITHUB PAGES \n"
 git checkout -b temp-deploy
 git add playground/dist -f;
 git commit -am "temporarily adding playground"
-git push origin temp-deploy
+git branch -D gh-pages
+git branch push :gh-pages
 git subtree push --prefix playground/dist origin gh-pages --squash
-# Reset the head...
 rm -rf playground/dist
 git checkout main
-git branch -D temp-deploy
 git status
 
 # echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
