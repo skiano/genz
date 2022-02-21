@@ -1,5 +1,10 @@
 import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
+// from https://www.npmjs.com/package/kebab-case
+const KEBAB_REGEX = /[A-Z\u00C0-\u00D6\u00D8-\u00DE]/g;
+const replacer = match => '-' + match.toLowerCase();
+const kebabCase = str => str.replace(KEBAB_REGEX, replacer);
+
 export function createTag (name, isVoid) {
   return function tag (a0) {
     // 1. If attibutes are passed
@@ -144,7 +149,7 @@ export function css(chunks, a, arg, d) {
       chunks.push(`${Array.isArray(arg) ? arg.join(',') : arg}{`);
     } else {
       for (d in arg) {
-        chunks.push(`${d}:${arg[d]};`);
+        chunks.push(`${kebabCase(d)}:${arg[d]};`);
       }
     }
   };

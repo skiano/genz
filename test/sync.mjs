@@ -105,7 +105,6 @@ export default [
   },
 
   function TEST_MEDIA_QUERY () {
-
     const style = mediaQuery('screen and (min-width: 480px)', [
       css('a', {
         background: 'red',
@@ -117,6 +116,12 @@ export default [
 
     const txt = syncStringify(traverse(style));
     assert.equal(txt, '@media screen and (min-width: 480px) {a{background:red;}p{font-size:red;}}');
+  },
+
+  function TEST_ALLOW_CAMEL_CASE_KEYS () {
+    const style = css('p', { backgroundColor: 'red', fontSize: 'red' });
+    const txt = syncStringify(traverse(style));
+    assert.equal(txt, 'p{background-color:red;font-size:red;}');
   },
 
 ];
