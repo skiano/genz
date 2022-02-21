@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "version": "0.3.0",
-  "description": "Streaming HTML",
+  "description": "Streaming-first SSR for Node Apps",
   "main": "src/genz.mjs",
   "scripts": {
     "test": "node test/_.mjs",
@@ -21,10 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skiano/edison.git"
+    "url": "git+https://github.com/skiano/genz.git"
   },
   "bugs": {
-    "url": "https://github.com/skiano/edison/issues"
+    "url": "https://github.com/skiano/genz/issues"
   },
-  "homepage": "https://github.com/skiano/edison#readme"
+  "homepage": "https://github.com/skiano/genz#readme"
 }
