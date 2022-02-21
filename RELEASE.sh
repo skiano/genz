@@ -20,6 +20,7 @@ git commit -am "temporarily adding playground"
 git subtree push --prefix playground/dist origin gh-pages
 # Reset the head...
 rm -rf playground/dist
+git commit -am "removing playground files"
 git status
 
 # echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
