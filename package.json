@@ -11,7 +11,7 @@
     "dev": "nodemon example/app.mjs",
     "build": "rollup src/genz.mjs --plugin terser --file genz.build.mjs",
     "playground:dev": "vite serve playground --config playground/vite.config.js",
-    "playground:build": "BASE=/genz/ vite build playground --config vite.config.j",
+    "playground:build": "BASE=/genz/ vite build playground --config playground/vite.config.js",
     "deploy:playground": "git subtree push --prefix playground/dist origin gh-pages",
     "release:patch": "npm test && npm run build && npm version patch && git push origin --tags && npm publish",
     "release:minor": "npm test && npm run build && npm version minor && git push origin --tags && npm publish",
