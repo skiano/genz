@@ -1,10 +1,11 @@
 # the final file...
 genz.build.mjs
 
+# note: for now im just allowing dist for the playground
+# if i have any other dist folders, ill just update the vite config
+
 #standard
 node_modules
-dist
-dist-ssr
 *.local
 
 # Logs
