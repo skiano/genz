@@ -29,7 +29,7 @@ git status
 
 echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
 npm version $1
-git push origin --tags
+git push origin main --tags
 
 echo -e "\n2. PUBLISHING\n"
 npm publish
