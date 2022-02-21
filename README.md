@@ -4,6 +4,8 @@ Your unversal-isomorphic-supersonic-tooled-out app is so-five-minutes-ago...
 
 ⚠️ WARNING: This is VERY exprimental and may, likely, turn out to be a colossal failure.
 
+👀 View a [Live demo.](https://skiano.github.io/genz/)
+
 ## Why
 
 It’s true, many websites can be and perhaps should be client-side or universal. However, some websites have large pages with mostly static content and the kind of dependencies and tooling required to have all the bells and whistles, just so you can manage the creating and loading of the requisite javascript—well, that is getting to be a drag. This is an experiment to see what can be done by starting by assuming server-side rendering should really be separate some cases.
