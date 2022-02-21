@@ -8,12 +8,14 @@
     "@vue/compiler-ssr": "^3.2.31",
     "chalk": "^5.0.0",
     "express": "^4.17.3",
+    "nodemon": "^2.0.15",
     "puppeteer": "^13.3.2",
     "regexparam": "^2.0.0",
     "vue": "^3.2.31"
   },
   "scripts": {
-    "test": "node test/_.mjs"
+    "test": "node test/_.mjs",
+    "dev": "nodemon example/app.mjs"
   },
   "repository": {
     "type": "git",
