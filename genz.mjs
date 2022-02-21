@@ -32,7 +32,7 @@ export function createTag (name) {
 export const _ = TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, { isVoid: VOID_ELEMENTS[name] });
   return o;
-}, {});
+}, Object.create({}));
 
 export function traverse (arr, ctx = {}) {
   arr = Array.isArray(arr) ? arr : [arr]; // test this..., and, is it necessary?
@@ -41,7 +41,7 @@ export function traverse (arr, ctx = {}) {
   let value;
   let queue_a = [arr];
   let queue_i = [0];
-  let dedupes = {};
+  let dedupes = Object.create(null);
 
   return function next(replaceValue) {
     if (arguments.length) {
