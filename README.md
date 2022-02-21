@@ -52,5 +52,7 @@ http.createServer((req, res) => {
 }).listen(3000, () => {
   console.log('http://localhost:3000');
 });
-``
+```
+
+For a more complex example checkout [this example](example/app.mjs).
 
