@@ -13,6 +13,19 @@ const syncStringify = (it) => {
 }
 
 export default [
+
+  function TEST_BASIC () {
+    const tag = _.div('hello', _.p({ class: 'world' }));
+    const txt = syncStringify(traverse(tag));
+    assert.equal(txt, '<div>hello<p class="world"></p></div>')
+  },
+
+  function TEST_OMISSION () {
+    const tag = _.div('hello', null, [false, [undefined]], 0);
+    const txt = syncStringify(traverse(tag));
+    assert.equal(txt, '<div>hello0</div>')
+  },
+
   function TEST_NESTED_EXAMPLE () {
     
     const content = _.html(
