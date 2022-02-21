@@ -32,4 +32,4 @@ npm version $1
 git push origin --tags
 
 echo -e "\n2. PUBLISHING\n"
-npm publish;
+npm publish
