@@ -19,7 +19,11 @@ export function createTag (name, isVoid, opener) {
       typeof a0.then !== 'function' &&
       !Array.isArray(a0)
     ) {
-      a0.__IS_ATTRIBUTES__ = true;
+      let a;
+      let str = '';
+      for (a in a0) str += ` ${a}="${a0[a]}"`;
+      str += '>';
+      arguments[0] = str;
 
       if (isVoid) {
         arguments[-1] = opener;
@@ -88,23 +92,9 @@ export function traverse (arr, ctx = {}) {
         if (value.then) return value;
 
         // return a child string
-        if (typeof value === 'string') {
-          return value;
-        } else if (value.__IS_ATTRIBUTES__) {
-          let a;
-          let str = '';
-          for (a in value) {
-            if (a === '__IS_ATTRIBUTES__') continue;
-            // not supporting kebab case because i dont thing the ergonomics are worth it
-            // could be talked out of that...
-            str += ` ${a}="${value[a]}"`;
-          }
-          str += '>';
-          return str;
-        } else {
-          return String(value);
-        }
-
+        return typeof value === 'string'
+          ? value
+          : String(value);
       } else if (queue_i[0] >= queue_a[0].length) {
 
         // Move shallower
