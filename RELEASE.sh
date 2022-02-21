@@ -22,8 +22,12 @@ git branch -D gh-pages
 git push origin :gh-pages
 git subtree push --prefix playground/dist origin gh-pages --squash
 rm -rf playground/dist
+git commit -am "temporarily removing playground"
 git checkout main
+git branch -D temp-deploy
 git status
+
+
 
 # echo -e "\n2. BUMPING VERSION & PUSHING TAG\n"
 # npm version $1
