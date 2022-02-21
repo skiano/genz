@@ -1,12 +1,15 @@
 import http from 'http';
-import { _, toStream } from '../src/genz.mjs';
+import { _, css, toStream } from '../src/genz.mjs';
 
 http.createServer((req, res) => {
   if (req.url !== '/') return res.end();
 
   const content = _.html(
     _.head(
-      _.title('Basic Example')
+      _.title('Basic Example'),
+      _.style(css('body', {
+        color: 'red'
+      }))
     ),
     _.body(
       _.h1('Hello World'),

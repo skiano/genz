@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { _, traverse, dedupe, css } from '../src/genz.mjs';
+import { _, traverse, dedupe, css, mediaQuery } from '../src/genz.mjs';
 
 const syncStringify = (it) => {
   let o;
@@ -102,6 +102,21 @@ export default [
     });
     const txt = syncStringify(traverse(style));
     assert.equal(txt, 'p{background:red;color:blue;}');
-  }
+  },
+
+  function TEST_MEDIA_QUERY () {
+
+    const style = mediaQuery('screen and (min-width: 480px)', [
+      css('a', {
+        background: 'red',
+      }),
+      css('p', {
+        'font-size': 'red',
+      }),
+    ]);
+
+    const txt = syncStringify(traverse(style));
+    assert.equal(txt, '@media screen and (min-width: 480px) {a{background:red;}p{font-size:red;}}');
+  },
 
 ];

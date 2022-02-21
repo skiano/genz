@@ -131,12 +131,12 @@ export function toStream (res, arr, ctx) {
 // EXTRAS //
 ////////////
 
-export const dedupe = (v, id) => {
+export function dedupe(v, id) {
   v._DEDUPE_ = id;
   return v;
 };
 
-export function css (chunks, a, arg, d) {
+export function css(chunks, a, arg, d) {
   chunks = [];
   for (a = 0; a < arguments.length; a++) {
     arg = arguments[a];
@@ -151,3 +151,17 @@ export function css (chunks, a, arg, d) {
   chunks.push('}');
   return chunks;
 };
+
+export function mediaQuery(chunks, a, arg) {
+  chunks = [];
+  for (a = 0; a < arguments.length; a++) {
+    arg = arguments[a];
+    if (a === 0) {
+      chunks.push(`@media ${arg} {`);
+    } else {
+      chunks.push(arg);
+    }
+  };
+  chunks.push('}');
+  return chunks;
+}
