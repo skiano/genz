@@ -11,6 +11,7 @@ It’s true, many websites can be and perhaps should be client-side or universal
 My thinking so far:
 
 - Avoid tooling (and not just for little examples)
+- Avoid dependencies (0 would be ideal)
 - Streaming by default (avoid blocking as much as possible)
 - Start sending content, while allowing parts of the render to be async
 - Extremely minimal (prioritize simplicity over safety)
