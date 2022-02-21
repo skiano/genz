@@ -15,7 +15,14 @@ const editor = document.getElementById('editor');
 const errors = document.getElementById('errors');
 const preview = document.getElementById('preview');
 
-const initial = dedent(`
+let initial;
+try {
+  if (window.location.hash.length > 1) {
+    initial = window.atob(window.location.hash.slice(1));
+  }
+} catch (e) {}
+
+initial = initial || dedent(`
 _.html(
   _.head(
     _.title('Basic Example'),
@@ -57,6 +64,7 @@ const updatePreview = async (txt) => {
     });
 
     preview.src = `data:text/html;charset=utf-8,${window.escape(html)}`;
+    window.location.hash = btoa(txt);
   } catch (e) {
     errors.classList.add('show');
     errors.innerText = e.message;
