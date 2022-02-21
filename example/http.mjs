@@ -6,11 +6,12 @@ const server = http.createServer((req, res) => {
   if (req.url !== '/') return res.end();
 
   res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Transfer-Encoding', 'Transfer-Encoding:');
   res.statusCode = 200;
 
   const before = Date.now();
 
-  toStream(fixture(), res);
+  toStream(res, fixture());
 
   res.on('close', () => {
     console.log(`-> ${Date.now() - before}ms`);

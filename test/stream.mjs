@@ -39,16 +39,12 @@ export default [
   async function TEST_ASYNC_DATA_FETCHING_FROM_CTX () {
 
     await new Promise((resolve, reject) => {
-      const highWaterMark = 6;
-      const res = new ResponseLike({ highWaterMark });
-
+      const res = new ResponseLike();
+      res.on('error', reject);
       res.on('close', () => {
         console.log(res.arr.join('\n'));
-        // assert.equal(res.arr.join(' '), '<div> <section> DRAIN section! DRAIN </section> DRAIN <p> hello </p> </div> DRAIN');
         resolve();
       });
-
-      res.on('error', reject);
 
       const fetchArticle = (id) => {
         return Promise.resolve({
@@ -61,41 +57,52 @@ export default [
         }[id]);
       };
 
+      // Some Example "components"
+
       const Profile = _.section((ctx) => {
         return _.p(`hello ${ctx.username}`)
       });
 
-      const Article = (article) => ([
-        _.h2(article.title),
-        article.content.map((i) => (
-          _[i.elm](i.value)
-        )),
-      ]);
+      const Article = (article) => {
+        return _.section({ class: 'article' }, 
+          _.h2({ class: 'article__title' }, article.title),
+          _.div({ class: 'article__body' },
+            article.content.map(({ elm, value }) => {
+              return _[elm](value)
+            })
+          )
+        );
+      };
 
-      const Page = ({ title }) => ([
-        _.h1(title),
-        Profile,
-        _.section(async (ctx) => {
-          const article = await fetchArticle(ctx.articleId);
-          return Article(article);
-        }),
-      ]);
+      const ArticlePage = _.section({ class: 'page' }, async (ctx) => {
+        const article = await fetchArticle(ctx.articleId);
+        return Article(article);
+      });
 
-      const App = () => {
-        return _.html(
-          _.head(),
-          _.body(
-            _.main(
-              Page('My Page')
-            )
+      const Page = (...content) => {
+        return _.main(
+          { class: 'page__wrap' },
+          ...content
+        );
+      };
+
+      const App = _.html(
+        _.head(),
+        _.body(
+          Page(
+            ArticlePage
           )
         )
-      }
+      );
 
-      toStream(res, App, {
+      // Rendering the components with a "context"
+
+      const ctx =  {
         username: 'Greg',
         articleId: 123,
-      });
+      };
+
+      toStream(res, App, ctx);
     });
   },
 
