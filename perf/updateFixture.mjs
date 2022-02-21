@@ -88,7 +88,7 @@ const SAMPLE = process.env.URL || 'https://www.ft.com/';
     return toGenzCode(tree);
   });
 
-  fs.writeFileSync('example/fixture.mjs', `import { _ } from '../genz.mjs'\n\nexport default () => ${codeVersion}`);
+  fs.writeFileSync('perf/fixture.mjs', `import { _ } from '../genz.mjs'\n\nexport default () => ${codeVersion}`);
   console.log('created file');
 
   await browser.close();
