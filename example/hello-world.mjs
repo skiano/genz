@@ -8,7 +8,7 @@ http.createServer((req, res) => {
     _.head(
       _.title('Basic Example'),
       _.style(css('body', {
-        color: 'red'
+        backgroundColor: 'yellow'
       }))
     ),
     _.body(
