@@ -5,8 +5,10 @@
   "description": "Streaming HTML",
   "main": "genz.mjs",
   "devDependencies": {
+    "@vue/compiler-ssr": "^3.2.31",
     "chalk": "^5.0.0",
-    "puppeteer": "^13.3.2"
+    "puppeteer": "^13.3.2",
+    "vue": "^3.2.31"
   },
   "scripts": {
     "test": "node test/_.mjs"
