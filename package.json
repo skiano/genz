@@ -10,6 +10,7 @@
     "test": "node test/_.mjs",
     "dev": "nodemon example/app.mjs",
     "build": "rollup src/genz.mjs --plugin terser --file genz.build.mjs",
+    "deploy:playground": "git subtree push --prefix playground/dist origin gh-pages",
     "release:patch": "npm test && npm run build && npm version patch && git push origin --tags && npm publish",
     "release:minor": "npm test && npm run build && npm version minor && git push origin --tags && npm publish",
     "release:major": "npm test && npm run build && npm version major && git push origin --tags && npm publish"

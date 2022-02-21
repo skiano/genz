@@ -1,7 +1,9 @@
 import './style.css';
 
 // THE UNUSED IMPORTS MAY BE USED BY eval()
-import { _, css, traverse, mediaQuery, dedupe, toStream } from '../src/genz.mjs';
+import * as genz from '../src/genz.mjs';
+const { _, css, traverse, mediaQuery, dedupe, toStream } = genz;
+console.log({ _, css, traverse, mediaQuery, dedupe, toStream });
 // SO DO NOT REMOVE THEM...
 
 import dedent from 'ts-dedent';
