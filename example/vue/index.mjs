@@ -1,32 +1,41 @@
-// this runs in Node.js on the server.
+import fs from 'fs';
+import path from 'path';
+import { compile } from '@vue/compiler-ssr';
 import { createSSRApp } from 'vue'
-
-// Vue's server-rendering API is exposed under `vue/server-renderer`.
+import { fileURLToPath } from 'url';
 import { renderToNodeStream } from 'vue/server-renderer'
-import compiled from './template.mjs';
 
-// import { compile } from '@vue/compiler-ssr';
+(async () => {
+  const out = compile(`
+    <html>
+    <head>
+      <title>{{ v2 }}</title>
+    </head>
+    <body>
+      <p :class="v3">{{ v1 }}</p>
+      <svg>holla!</svg>
+    </body>
+    </html>
+  `, {
+    mode: 'module',
+  });
 
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const FIXTURE_FILE = path.resolve(__dirname, 'fixture.mjs');
 
-// const out = compile(`
-// <html>
-//   <head>
-//     <title>{{ v2 }}</title>
-//   </head>
-//   <body>
-//     <p :class="v3">{{ v1 }}</p>
-//   </body>
-//   </html>
-// `);
+  await fs.promises.writeFile(FIXTURE_FILE, out.code);
+  const { ssrRender } = await import(FIXTURE_FILE);
 
+  const App = {
+    ssrRender,
+    data: () => ({
+      v1: 'v 1',
+      v2: 'v 2',
+      v3: 'v 3',
+    }),
+  };
 
-// console.log(out.code);
-
-
-
-
-const app = createSSRApp(compiled)
-
-const str = renderToNodeStream(app);
-
-str.pipe(process.stdout);
+  const app = createSSRApp(App);
+  const stream = renderToNodeStream(app);
+  stream.pipe(process.stdout);
+})();
