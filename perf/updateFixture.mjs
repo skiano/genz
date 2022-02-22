@@ -4,18 +4,34 @@ import puppeteer from 'puppeteer';
 
 const SAMPLE = process.env.URL || 'https://www.ft.com/';
 
+console.log(`Attemptiong ${SAMPLE}`);
+
 (async () => {
   const browser = await puppeteer.launch();
+
+  console.log(`- Puppeteer is launched`);
+
   const page = await browser.newPage();
+
+  console.log(`- Browser page created`);
+
   await page.goto(SAMPLE);
 
-  page.on('console', (msg) => console.log('PAGE LOG:', msg.text()));
+  page.on('console', (msg) => console.log('  >', msg.text()));
+
+  console.log(`- Navigated to page`);
 
   const codeVersion = await page.evaluate(() => {
     // traversal Inspired by
     // https://javascript.plainenglish.io/walking-the-dom-7a1123fb67da
 
-    const tree = (function visit_nodes_recursive(node = document.documentElement, parent) {
+    let totalNodes = 0;
+    let maxDepth = 0;
+
+    const tree = (function visit_nodes_recursive(node = document.documentElement, parent, depth = 0) {
+      totalNodes++;
+      if (depth > maxDepth) maxDepth = depth;
+
       let vn;
       const tagName = node.tagName;
 
@@ -48,14 +64,17 @@ const SAMPLE = process.env.URL || 'https://www.ft.com/';
         if (tagName.toLocaleLowerCase() === 'svg') {
           vn.children.push(node.innerHTML);
         } else {
-          visit_nodes_recursive(node.firstChild, vn);
+          visit_nodes_recursive(node.firstChild, vn, depth + 1);
         }
       }
 
-      if (node.nextSibling) visit_nodes_recursive(node.nextSibling, parent);
+      if (node.nextSibling) visit_nodes_recursive(node.nextSibling, parent, depth + 1);
       if (vn && parent) parent.children.unshift(vn);
       return vn;
     })();
+
+    console.log(`TOTAL NODES: ${totalNodes}`);
+    console.log(`MAX DEPTH: ${maxDepth}`);
 
     function toGenzCode (n, d = 0) {
       const TAB = '  ';
@@ -88,8 +107,11 @@ const SAMPLE = process.env.URL || 'https://www.ft.com/';
     return toGenzCode(tree);
   });
 
+  console.log(`- Generated genz code`);
+
   fs.writeFileSync('perf/fixture.mjs', `import { _ } from '../src/genz.mjs'\n\nexport default () => ${codeVersion}`);
-  console.log('created file');
+  
+  console.log('- Wrote fixture');
 
   await browser.close();
 })();
