@@ -201,6 +201,7 @@ export function toStream (res, arr, ctx, errorRender) {
 
   loop(); // start the loop
   res.on('drain', loop);
+  res.on('end', () => { arr = null; });
 }
 
 ////////////
