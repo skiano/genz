@@ -1,37 +1,33 @@
 import http from 'http';
 import { _, toStream } from '../src/genz.mjs';
 
-const busted = () => _.div(
-  'hello',
-  () => { throw new Error('oh no...') }
-);
-
 const server = http.createServer((req, res) => {
+  // go ahead and write the head
   res.writeHead(200, {
     'Content-Type': 'text/html',
     'Transfer-Encoding': 'chunked'
   });
 
-  // TODO: explore request hanging up...
+  // listen for errors
+  res.on('error', (e) => {
+    console.log(`ERROR`, e)
+  });
 
-  res.on('error', (e) => { console.log(`ERROR`, e) });
-  toStream(res, busted, {});
+  // this page will throw 100ms in
+  const bustedPage = () => _.html(
+    _.head(
+      _.title('Busted Page'),
+    ),
+    _.body(
+      _.h1('Example of failing midstream'),
+      new Promise((resolve, reject) => {
+        setTimeout(reject, 100, new Error('Crap!'));
+      })
+    )
+  );
 
+  // the browser inspector should show that this page fails
+  toStream(res, bustedPage, {});
 }).listen(3000, () => {
-  console.log(`listening :3000`)
+  console.log(`serving at http://localhost:3000/`);
 });
-
-// var req = http.get("http://localhost:3000", res => {
-//     console.log("Status code:", res.statusCode);
-
-//     res.on("data", data => {
-//       console.log("Received chunk:", data.toString());
-//     });
-
-//     res.on("end", () => console.log("Ended"));
-//     res.on('close', () => { console.log('Closed') })
-// });
-
-// req.on("error", error => {
-//   console.log("Request error:", error);
-// });
