@@ -63,7 +63,7 @@ export function traverse (arr, ctx = {}) {
   let dedupes = Object.create(null);
 
   return function next(replaceValue) {
-    if (arguments.length) {
+    if (typeof replaceValue !== 'undefined') {
       value = replaceValue;
     } else {
       i = queue_i[0];
