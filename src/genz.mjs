@@ -48,8 +48,6 @@ export function createTag (name, isVoid, opener) {
   };
 }
 
-// make each tag into a property tp
-// avoid excessive imports
 export const _ = TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, VOID_ELEMENTS[name]);
   return o;
