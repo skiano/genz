@@ -176,4 +176,5 @@ export default [
       toStream(res, content, ctx, errorRender);
     });
   },
+
 ];
