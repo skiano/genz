@@ -130,13 +130,18 @@ export function traverse (arr, ctx = {}) {
   }
 }
 
-export function toString (arr, ctx) {
+export function toString (arr, ctx, onError) {
   const next = traverse(arr, ctx);
   let o;
   let frags = [];
   do {
     o = next();
-    frags.push(o);
+    if (o instanceof Error) {
+      if (typeof onError === 'function') onError(o);
+      frags.push(`<!-- ERROR -->`);
+    } else {
+      frags.push(o);
+    }
   } while (o);
   return frags.join('');
 }
