@@ -113,6 +113,11 @@ export function traverse (arr, ctx = {}) {
 
         // End the traversal
         if (!(queue_a && queue_a.length)) {
+          arr = null;
+          value = null;
+          queue_a = null;
+          queue_i = null;
+          dedupes = null;
           return;
         }
 
@@ -197,6 +202,10 @@ export function toStream (res, arr, ctx, errorRender) {
   loop(); // start the loop
   res.on('drain', loop);
 }
+
+////////////
+// EXTRAS //
+////////////
 
 export function dedupe(v, id) {
   v.__DEDUPE__ = id;
