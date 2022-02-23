@@ -1,17 +1,9 @@
 import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
-/////////////
-// HELPERS //
-/////////////
-
 // from https://www.npmjs.com/package/kebab-case
 const KEBAB_REGEX = /[A-Z\u00C0-\u00D6\u00D8-\u00DE]/g;
 const replacer = match => '-' + match.toLowerCase();
 const kebabCase = str => str.replace(KEBAB_REGEX, replacer);
-
-///////////////////////////
-// CREATE HTML FUNCTIONS //
-///////////////////////////
 
 export function createTag (name, isVoid, opener) {
   opener = name === 'html' ? '<!DOCTYPE html><html': `<${name}`;
@@ -61,11 +53,7 @@ export function createTag (name, isVoid, opener) {
 export const _ = TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, VOID_ELEMENTS[name]);
   return o;
-}, Object.create({}));
-
-////////////
-// OUTPUT //
-////////////
+}, Object.create(null));
 
 export function traverse (arr, ctx = {}) {
   arr = Array.isArray(arr) ? arr : [arr]; // test this..., and, is it necessary?
@@ -139,10 +127,6 @@ export function traverse (arr, ctx = {}) {
   }
 }
 
-////////////
-// OUTPUT //
-////////////
-
 export function toString (arr, ctx) {
   const next = traverse(arr, ctx);
   let o;
@@ -158,8 +142,9 @@ export function toStream (res, arr, ctx, errorRender) {
   const next = traverse(arr, ctx);
 
   function handleError(error) {
-    res.off('drain', loop);
     error.requestContext = ctx; // expose the request context for any error handler    
+
+    res.off('drain', loop);
     res.emit('error', error);
 
     const errorHtml = toString(errorRender || _.div(
@@ -208,17 +193,12 @@ export function toStream (res, arr, ctx, errorRender) {
       }
     }
 
-    // send the closing chunk
     return res.end();
   }
 
   loop(); // start the loop
-  res.on('drain', loop); // restart the loop
+  res.on('drain', loop);
 }
-
-////////////
-// EXTRAS //
-////////////
 
 export function dedupe(v, id) {
   v.__DEDUPE__ = id;
