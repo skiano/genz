@@ -17,6 +17,7 @@ export function createTag (name, isVoid, opener) {
       !a0.__IS_ARGUMENTS__ &&
       typeof a0 === 'object' &&
       typeof a0.then !== 'function' &&
+      typeof a0.on !== 'function' &&
       !Array.isArray(a0)
     ) {
       let a;
@@ -93,23 +94,27 @@ export function traverse (arr, ctx = {}) {
         // Pass back any promises
         // with the expectation that the resolved value
         // will be replaced with next
-        if (value.then) return value;
+        if (
+          typeof value === 'string' || // pass back string
+          typeof value.then === 'function' || // pass back promise for async handling
+          typeof value.on === 'function' // pass back readable streams 
+        ) {
+          return value;
+        }
 
-        // return a child string
-        return typeof value === 'string'
-          ? value
-          : String(value);
+        // otherwise attempt to stringify
+        return String(value);
+
       } else if (queue_i[0] >= queue_a[0].length) {
 
         // Move shallower
         queue_a.shift();
         queue_i.shift();
 
-        // End the traversal
-        if (!(queue_a && queue_a.length)) {
-          return;
-        }
+        // End the traversal if we cannot go shallower
+        if (!(queue_a && queue_a.length)) return;
 
+        // return the shallower value
         return next();
       } else {
         // Skip undefined/null
@@ -168,6 +173,10 @@ export function toStream (res, arr, ctx, errorRender) {
 
       while (typeof frag !== 'undefined' && res.writable) {  
         if (frag.then) frag = next(await frag);
+
+        if (frag.on) {
+          throw new Error('TODO: no stream handling yet');
+        }
 
         if (res.write(frag)) {
           frag = next();
