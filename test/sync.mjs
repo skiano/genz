@@ -16,7 +16,6 @@ export default [
   },
 
   function TEST_NESTED_EXAMPLE () {
-    
     const content = _.html(
       _.head(
         _.title('Hello World'),
@@ -36,11 +35,8 @@ export default [
   },
 
   function TEST_ERROR () {
-
     const txt = toString(_.div('hello', () => { throw new Error('crap') }));
-
     assert.equal(txt, '<div>hello<!-- ERROR --></div>');
-
   },
 
   function TEST_ERROR_HANDLER () {
