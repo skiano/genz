@@ -1,9 +1,17 @@
 import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
 
+/////////////
+// HELPERS //
+/////////////
+
 // from https://www.npmjs.com/package/kebab-case
 const KEBAB_REGEX = /[A-Z\u00C0-\u00D6\u00D8-\u00DE]/g;
 const replacer = match => '-' + match.toLowerCase();
 const kebabCase = str => str.replace(KEBAB_REGEX, replacer);
+
+///////////////////////////
+// CREATE HTML FUNCTIONS //
+///////////////////////////
 
 export function createTag (name, isVoid, opener) {
   opener = name === 'html' ? '<!DOCTYPE html><html': `<${name}`;
@@ -48,10 +56,16 @@ export function createTag (name, isVoid, opener) {
   };
 }
 
+// make each tag into a property tp
+// avoid excessive imports
 export const _ = TAG_NAMES.reduce((o, name) => {
   o[name] = createTag(name, VOID_ELEMENTS[name]);
   return o;
 }, Object.create({}));
+
+////////////
+// OUTPUT //
+////////////
 
 export function traverse (arr, ctx = {}) {
   arr = Array.isArray(arr) ? arr : [arr]; // test this..., and, is it necessary?
@@ -67,11 +81,21 @@ export function traverse (arr, ctx = {}) {
       value = replaceValue;
     } else {
       i = queue_i[0];
-      value = queue_a[0][i] ?? false; // make sure that undefined/null => false
+      value = queue_a[0][i];
       queue_i[0] = i + 1;
 
-      if (typeof value === 'function') value = value(ctx); // todo: error handling?
+      // execute function with context
+      if (typeof value === 'function') {
+        try {
+          value = value(ctx);
+        } catch (error) {
+          return error;
+        }
+      }
     }
+
+    // make sure that undefined/null => false
+    value = value ?? false;
 
     if (typeof value === 'object' && typeof value.length !== 'undefined') {
       // skip if we dedupe
@@ -103,11 +127,6 @@ export function traverse (arr, ctx = {}) {
 
         // End the traversal
         if (!(queue_a && queue_a.length)) {
-          arr = null;
-          value = null;
-          queue_a = null;
-          queue_i = null;
-          dedupes = null;
           return;
         }
 
@@ -120,18 +139,68 @@ export function traverse (arr, ctx = {}) {
   }
 }
 
-export function toStream (res, arr, ctx) {
-  // TODO: handle weird events (like aborts) in req or res
-  // TODO: decide what if anything to do with this max sync...
+////////////
+// OUTPUT //
+////////////
+
+export function toString (arr, ctx) {
   const next = traverse(arr, ctx);
+  let o;
+  let frags = [];
+  do {
+    o = next();
+    frags.push(o);
+  } while (o);
+  return frags.join('');
+}
+
+export function toStream (res, arr, ctx, errorRender) {
+  const next = traverse(arr, ctx);
+
+  function handleError(error) {
+    res.off('drain', loop);
+    error.requestContext = ctx; // expose the request context for any error handler    
+    res.emit('error', error);
+
+    const errorHtml = toString(errorRender || _.div(
+      { id: 'genz-error' },
+      _.style(
+        css('#genz-error', {
+          left: '20px',
+          right: '20px',
+          bottom: '20px',
+          padding: '18px',
+          position: 'absolute',
+          background: 'rgba(255, 100, 100, 0.5)',
+          border: '1px solid red',
+        })
+      ),
+      'Oops! Something went very wrong.'
+    ), error);
+
+    if (res.write(errorHtml)) {
+      process.nextTick(() => res.destroy());
+    } else {
+      res.on('drain', () => res.destroy());
+    }
+  }
 
   async function loop () {
     let frag = next();
 
-    while (typeof frag !== 'undefined') {
-      if (frag.then) frag = next(await frag);
-      // is it ok to just bumbard with a bunch of tiny writes?
-      // or should they be ganged up somehow
+    while (typeof frag !== 'undefined' && res.writable) {
+      if (frag instanceof Error) {
+        return handleError(frag);
+      }
+
+      if (frag.then) {
+        try {
+          frag = next(await frag);
+        } catch (e) {
+          return handleError(e);
+        }
+      }
+
       if (res.write(frag)) {
         frag = next();
       } else {
@@ -139,12 +208,12 @@ export function toStream (res, arr, ctx) {
       }
     }
 
+    // send the closing chunk
     return res.end();
   }
 
   loop(); // start the loop
-  res.on('drain', loop);
-  res.on('end', () => { arr = null; });
+  res.on('drain', loop); // restart the loop
 }
 
 ////////////
