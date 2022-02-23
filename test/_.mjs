@@ -20,7 +20,9 @@ import { fileURLToPath } from 'url';
     for (let t = 0; t < m.default.length; t++) {
       const test = m.default[t];
       try {
+        const timer = setTimeout(() => { throw new Error(`Test timed out: ${test.name}`); }, 100);
         await test();
+        clearInterval(timer);
         console.log(chalk.green(`✓ ${test.name}`));
       } catch (err) {
         console.log(chalk.redBright(`✗ ${test.name} failed!\n`));

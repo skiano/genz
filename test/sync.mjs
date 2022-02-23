@@ -1,33 +1,21 @@
 import assert from 'assert';
-import { _, traverse, dedupe, css, mediaQuery } from '../src/genz.mjs';
-
-const syncStringify = (it) => {
-  let o;
-  let frags = [];
-  do {
-    o = it();
-    frags.push(o);
-  } while (o);
-
-  return frags.join('');
-}
+import { _, toString, dedupe, css, mediaQuery } from '../src/genz.mjs';
 
 export default [
 
   function TEST_BASIC () {
     const tag = _.div('hello', _.p({ class: 'world' }));
-    const txt = syncStringify(traverse(tag));
+    const txt = toString(tag);
     assert.equal(txt, '<div>hello<p class="world"></p></div>');
   },
 
   function TEST_OMISSION () {
     const tag = _.div('hello', null, [false, [undefined]], 0);
-    const txt = syncStringify(traverse(tag));
+    const txt = toString(tag);
     assert.equal(txt, '<div>hello0</div>')
   },
 
   function TEST_NESTED_EXAMPLE () {
-    
     const content = _.html(
       _.head(
         _.title('Hello World'),
@@ -38,12 +26,28 @@ export default [
       ),
     );
 
-    const txt = syncStringify(traverse(content));
+    const txt = toString(content);
 
     assert.equal(
       txt,
       '<!DOCTYPE html><html><head><title>Hello World</title></head><body><p>P 1</p><p>P 2</p></body></html>'
     );
+  },
+
+  function TEST_ERROR () {
+    const txt = toString(_.div('hello', () => { throw new Error('crap') }));
+    assert.equal(txt, '<div>hello<!-- ERROR --></div>');
+  },
+
+  function TEST_ERROR_HANDLER () {
+    const errors = [];
+    const failure = new Error('crap');
+    const content = _.div('hello', () => { throw failure; });
+    toString(content, {}, function onError(e) {
+      errors.push(e);
+    });
+
+    assert.equal(errors[0], failure);
   },
 
   function TEST_DEDUPING () {
@@ -59,7 +63,7 @@ export default [
       multi
     );
 
-    const txt = syncStringify(traverse(content));
+    const txt = toString(content);
 
     assert.equal(
       txt,
@@ -73,7 +77,7 @@ export default [
       () => _.p(['lazy', ' day'])
     );
 
-    const txt = syncStringify(traverse(content));
+    const txt = toString(content);
 
     assert.equal(txt, '<div><p>lazy day</p></div>');
   },
@@ -84,7 +88,7 @@ export default [
       (ctx) => _.p(['lazy ', ctx.user])
     );
 
-    const txt = syncStringify(traverse(content, { user: 'greg' }));
+    const txt = toString(content, { user: 'greg' });
 
     assert.equal(txt, '<div><p>lazy greg</p></div>');
   },
@@ -94,7 +98,7 @@ export default [
       background: 'red',
       color: 'blue',
     });
-    const txt = syncStringify(traverse(style));
+    const txt = toString(style);
     assert.equal(txt, '.foo{background:red;color:blue;}');
   },
 
@@ -103,7 +107,7 @@ export default [
       background: 'red',
       color: 'blue',
     });
-    const txt = syncStringify(traverse(style));
+    const txt = toString(style);
     assert.equal(txt, '.foo,#bar{background:red;color:blue;}');
   },
 
@@ -113,7 +117,7 @@ export default [
     }, {
       color: 'blue',
     });
-    const txt = syncStringify(traverse(style));
+    const txt = toString(style);
     assert.equal(txt, 'p{background:red;color:blue;}');
   },
 
@@ -127,13 +131,13 @@ export default [
       }),
     ]);
 
-    const txt = syncStringify(traverse(style));
+    const txt = toString(style);
     assert.equal(txt, '@media screen and (min-width: 480px) {a{background:red;}p{font-size:red;}}');
   },
 
   function TEST_ALLOW_CAMEL_CASE_KEYS () {
     const style = css('p', { backgroundColor: 'red', fontSize: 'red' });
-    const txt = syncStringify(traverse(style));
+    const txt = toString(style);
     assert.equal(txt, 'p{background-color:red;font-size:red;}');
   },
 

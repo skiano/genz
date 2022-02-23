@@ -12,6 +12,10 @@ class ResponseLike extends Writable {
     this.arr.push(chunk.toString());
     next();
   }
+
+  _destroy(err, cb) {
+    cb();
+  }
 }
 
 export default [
@@ -107,4 +111,69 @@ export default [
     });
   },
 
+  async function TEST_ERROR_WHILE_CAN_WRITE () {
+    await new Promise((resolve, reject) => {
+      const failure = new Error('busted');
+      const res = new ResponseLike();
+  
+      let handled = [];
+      res.on('error', (err) => {
+        handled.push(err);
+      });
+
+      res.on('close', () => {
+        assert.equal(handled[0], failure), 'Should emit error';
+        assert(res.arr.length === 3, 'Should stop pushing after error');
+        assert(res.arr[2].includes('Oops! Something went very wrong.'), 'should have default error message');
+        resolve();
+      });
+
+      toStream(res, _.div('hello', () => Promise.reject(failure)));
+    });
+  },
+
+  async function TEST_ERROR_WHILE_CANNOT_WRITE () {
+    await new Promise((resolve, reject) => {
+      const failure = new Error('busted');
+      const res = new ResponseLike({ highWaterMark: 1 }); // act like it needs draining really early
+  
+      let handled = [];
+      res.on('error', (err) => {
+        handled.push(err);
+      });
+
+      res.on('close', () => {
+        assert.equal(handled[0], failure), 'Should emit error';
+        assert(res.arr.length === 3, 'Should stop pushing after error');
+        assert(res.arr[2].includes('Oops! Something went very wrong.'), 'should have default error message');
+        resolve();
+      });
+
+      toStream(res, _.div('hello world', () => Promise.reject(failure)));
+    });
+  },
+
+  async function TEST_CUSTOM_ERROR_MESSAGE () {
+    await new Promise((resolve, reject) => {
+      const failure = new Error('busted');
+      const res = new ResponseLike({ highWaterMark: 1 }); // act like it needs draining really early
+  
+      let handled = [];
+      res.on('error', (err) => {
+        handled.push(err);
+      });
+
+      res.on('close', () => {
+        assert.equal(handled[0], failure), 'Should emit error';
+        assert(res.arr.length === 3, 'Should stop pushing after error');
+        assert(res.arr[2].includes('this is an <em>error!</em>'), 'should have custom error message');
+        resolve();
+      });
+
+      const ctx = {};
+      const content = _.div('hello world', () => Promise.reject(failure));
+      const errorRender = ['this is an ', _.em('error!')];
+      toStream(res, content, ctx, errorRender);
+    });
+  },
 ];
