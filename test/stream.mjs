@@ -111,6 +111,27 @@ export default [
     });
   },
 
+  async function TEST_SYNC_ERROR () {
+    await new Promise((resolve, reject) => {
+      const failure = new Error('busted');
+      const res = new ResponseLike();
+  
+      let handled = [];
+      res.on('error', (err) => {
+        handled.push(err);
+      });
+
+      res.on('close', () => {
+        assert.equal(handled[0], failure), 'Should emit error';
+        assert(res.arr.length === 3, 'Should stop pushing after error');
+        assert(res.arr[2].includes('Oops! Something went very wrong.'), 'should have default error message');
+        resolve();
+      });
+
+      toStream(res, _.div('hello', () => { throw failure; }));
+    });
+  },
+
   async function TEST_ERROR_WHILE_CAN_WRITE () {
     await new Promise((resolve, reject) => {
       const failure = new Error('busted');

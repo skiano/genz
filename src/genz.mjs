@@ -71,13 +71,7 @@ export function traverse (arr, ctx = {}) {
       queue_i[0] = i + 1;
 
       // execute function with context
-      if (typeof value === 'function') {
-        try {
-          value = value(ctx);
-        } catch (error) {
-          return error;
-        }
-      }
+      if (typeof value === 'function') value = value(ctx);
     }
 
     // make sure that undefined/null => false
@@ -125,18 +119,13 @@ export function traverse (arr, ctx = {}) {
   }
 }
 
-export function toString (arr, ctx, onError) {
+export function toString (arr, ctx) {
   const next = traverse(arr, ctx);
   let o;
   let frags = [];
   do {
     o = next();
-    if (o instanceof Error) {
-      if (typeof onError === 'function') onError(o);
-      frags.push(`<!-- ERROR -->`);
-    } else {
-      frags.push(o);
-    }
+    frags.push(o);
   } while (o);
   return frags.join('');
 }
@@ -174,32 +163,26 @@ export function toStream (res, arr, ctx, errorRender) {
   }
 
   async function loop () {
-    let frag = next();
+    try {
+      let frag = next();
 
-    while (typeof frag !== 'undefined' && res.writable) {
-      if (frag instanceof Error) {
-        return handleError(frag);
-      }
+      while (typeof frag !== 'undefined' && res.writable) {  
+        if (frag.then) frag = next(await frag);
 
-      if (frag.then) {
-        try {
-          frag = next(await frag);
-        } catch (e) {
-          return handleError(e);
+        if (res.write(frag)) {
+          frag = next();
+        } else {
+          return; // break the loop and allow a drain...
         }
       }
-
-      if (res.write(frag)) {
-        frag = next();
-      } else {
-        return; // break the loop and allow a drain...
-      }
+  
+      return res.end(); 
+    } catch (error) {
+      handleError(error); 
     }
-
-    return res.end();
   }
 
-  loop(); // start the loop
+  loop();
   res.on('drain', loop);
 }
 

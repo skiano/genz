@@ -34,22 +34,6 @@ export default [
     );
   },
 
-  function TEST_ERROR () {
-    const txt = toString(_.div('hello', () => { throw new Error('crap') }));
-    assert.equal(txt, '<div>hello<!-- ERROR --></div>');
-  },
-
-  function TEST_ERROR_HANDLER () {
-    const errors = [];
-    const failure = new Error('crap');
-    const content = _.div('hello', () => { throw failure; });
-    toString(content, {}, function onError(e) {
-      errors.push(e);
-    });
-
-    assert.equal(errors[0], failure);
-  },
-
   function TEST_DEDUPING () {
     const once = dedupe(_.style('{{ unique }}'), 'component-style');
     const multi = _.style('{{ repeat }}');
