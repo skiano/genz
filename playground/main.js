@@ -27,7 +27,7 @@ _.html(
   _.head(
     _.title('Basic Example'),
     _.style(css('body', {
-      backgroundColor: 'salmon'
+      backgroundColor: 'limegreen'
     }))
   ),
   _.body(
@@ -49,6 +49,7 @@ const updatePreview = async (txt) => {
     const html = await new Promise((resolve, reject) => {
       const chunks = [];
       const streamish = {
+        writable: true,
         write(c) {
           chunks.push(c)
           return true;

@@ -78,7 +78,7 @@ export function traverse (arr, ctx = {}) {
     // make sure that undefined/null => false
     value = value ?? false;
 
-    if (typeof value === 'object' && typeof value.length !== 'undefined') {
+    if (value.__IS_ARGUMENTS__ || Array.isArray(value)) {
       // skip if we dedupe
       if (value.__DEDUPE__) {
         if (dedupes[value.__DEDUPE__]) return next();
@@ -106,13 +106,14 @@ export function traverse (arr, ctx = {}) {
         return String(value);
 
       } else if (queue_i[0] >= queue_a[0].length) {
-
         // Move shallower
         queue_a.shift();
         queue_i.shift();
 
         // End the traversal if we cannot go shallower
-        if (!(queue_a && queue_a.length)) return;
+        if (!(queue_a && queue_a.length)) {
+          return;
+        }
 
         // return the shallower value
         return next();
