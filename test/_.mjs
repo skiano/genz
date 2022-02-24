@@ -17,7 +17,6 @@ import { fileURLToPath } from 'url';
 
     console.log(chalk.underline(`Running Suite: ${file}\n`));
 
-    
     for (let t = 0; t < m.default.length; t++) {
       const test = m.default[t];
       let timer;
