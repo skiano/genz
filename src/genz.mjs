@@ -156,10 +156,7 @@ export function toStream (res, arr, ctx, errorRender) {
         })
       ),
       'Oops! Something went very wrong.'
-    ), {
-      ...ctx,
-      error,
-    });
+    ), error);
 
     if (res.write(errorHtml)) {
       process.nextTick(() => res.destroy());
