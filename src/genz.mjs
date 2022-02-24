@@ -138,9 +138,7 @@ export function toString (arr, ctx) {
 export function toStream (res, arr, ctx, errorRender) {
   const next = traverse(arr, ctx);
 
-  function handleError(error) {
-    error.requestContext = ctx; // expose the request context for any error handler    
-
+  function handleError (error) {
     res.off('drain', loop);
     res.emit('error', error);
 
@@ -158,7 +156,10 @@ export function toStream (res, arr, ctx, errorRender) {
         })
       ),
       'Oops! Something went very wrong.'
-    ), error);
+    ), {
+      ...ctx,
+      error,
+    });
 
     if (res.write(errorHtml)) {
       process.nextTick(() => res.destroy());
@@ -167,17 +168,27 @@ export function toStream (res, arr, ctx, errorRender) {
     }
   }
 
+  let stream;
+  function readStream () {
+    stream.on('data', (d) => {
+      if (res.write(d)) stream.read();
+      else res.on(drain, readStream);
+    });
+    stream.read();
+  }
+
   async function loop () {
     try {
       let frag = next();
 
       while (typeof frag !== 'undefined' && res.writable) {  
-        if (frag.then) frag = next(await frag);
-
         if (frag.on) {
-          throw new Error('TODO: no stream handling yet');
+          stream = frag;
+          stream.on('close', loop);
+          return readStream();
         }
 
+        if (frag.then) frag = next(await frag);
         if (res.write(frag)) {
           frag = next();
         } else {

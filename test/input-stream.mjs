@@ -1,5 +1,6 @@
+import fs from 'fs';
 import { _, toStream } from '../src/genz.mjs';
-import { Readable, Writable } from 'stream';
+import { Writable } from 'stream';
 import assert from 'assert';
 
 class ResponseLike extends Writable {
@@ -18,37 +19,18 @@ class ResponseLike extends Writable {
   }
 }
 
-class FakeReadable extends Readable {
-  constructor (options) {
-    super(options);
-    this.i = 0;
-    this.chunks = options.chunks;
-  }
-
-  _read() {
-    this.push(this.chunks[this.i]);
-    this.i = this.i + 1;
-  }
-}
-
 export default [
 
   async function TEST_CONSUME_READABLE () {
-    await new Promise((resolve) => {
-
-      const readable = new FakeReadable({
-        highWaterMark: 1,
-        chunks: ['A', 'B', 'C'],
-      });
-  
+    await new Promise((resolve) => {  
       const res = new ResponseLike();
   
       res.on('close', () => {
-        assert.equal(res.arr.join(','), '<div>ABC</div>');
+        assert.equal(res.arr.join(''), '<div><p>This is on disk</p></div>');
         resolve();
       });
   
-      toStream(res, _.div(readable));
+      toStream(res, _.div(fs.createReadStream('test/_.example.html')));
 
     });
   },
