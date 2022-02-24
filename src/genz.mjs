@@ -181,7 +181,8 @@ export function toStream (res, arr, ctx, errorRender) {
       while (typeof frag !== 'undefined' && res.writable) {  
         if (frag.on) {
           stream = frag;
-          stream.on('close', loop);
+          stream.on('end', loop);
+          stream.on('error', handleError);
           return readStream();
         }
 

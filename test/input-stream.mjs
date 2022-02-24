@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { _, toStream } from '../src/genz.mjs';
-import { Writable } from 'stream';
+import { Writable, Readable } from 'stream';
 import assert from 'assert';
 
 class ResponseLike extends Writable {
@@ -32,6 +32,36 @@ export default [
   
       toStream(res, _.div(fs.createReadStream('test/_.example.html')));
 
+    });
+  },
+
+  async function TEST_READABLE_ERROR () {
+    await new Promise((resolve) => {
+      const chunks = ['World ', 'Hello '];
+      const failure = new Error('broken');
+      const readable = new Readable({
+        read() {
+          const c = chunks.pop();
+          if (c) {
+            this.push(c);
+          } else {
+            this.destroy(failure);
+          }
+        }
+      });
+
+      const res = new ResponseLike();
+
+      res.on('error', (error) => {
+        assert.equal(error, failure);
+      });
+
+      res.on('close', () => {
+        assert.equal(res.arr.join(''), '<div>Hello World Error!');
+        resolve();
+      });
+
+      toStream(res, _.div(readable), {}, 'Error!');
     });
   },
 

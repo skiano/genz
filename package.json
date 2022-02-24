@@ -10,6 +10,7 @@
     "test": "node test/_.mjs",
     "dev": "nodemon example/app.mjs",
     "dev:playground": "vite serve playground --config playground/vite.config.js",
+    "build": "rollup src/genz.mjs --file genz.build.mjs",
     "release:patch": "./RELEASE.sh patch",
     "release:minor": "./RELEASE.sh minor",
     "release:major": "./RELEASE.sh major"
