@@ -1,6 +1,8 @@
+⚠️ WARNING: This is exprimental.
+
 # Gen Z
 
-⚠️ WARNING: This is exprimental.
+Streaming-first SSR for Node Apps
 
 👀 View a [Live demo](https://skiano.github.io/genz/)
 
@@ -12,6 +14,7 @@
   - [Using promises in templates](#using-promises)
   - [Providing a “context” object to templates](#providing-a-context)
   - [Consuming readable streams in templates](#consuming-readable-streams)
+- [Error Handling](#error-handling)
 - [Extras](#rendering-html)
   - [Inline CSS](#inline-css)
   - [Deduping](#deduping)
@@ -130,13 +133,49 @@ const myVoidTag = createTag('my-void-tag', true); // myVoidTag({ id: 'nice' }) =
 
 ```
 
+------
+
 ## Rendering HTML
 
-So far we have only produced a data object that can be sent to a writable stream. Things get a bit more interesting when we render these objects.
+So far we have only produced a data object that can be sent to a writable stream. Things get a bit more interesting when we render these objects. First, though, let’s take a look at rendering strings.
 
+### To a String
 
-More examples:
-- [Deduping experiment](https://skiano.github.io/genz/#Ly8gZGVkdXBlIGVuc3VyZXMgdGhpcyBmcmFnbWVudCBjYW4gb25seSByZW5kZXIgb25jZQpjb25zdCBob29rID0gZGVkdXBlKAogIF8uc2NyaXB0KGBmdW5jdGlvbiB0b2dnbGUobikgeyB0aGlzLmNsYXNzTGlzdC50b2dnbGUobikgfWApLAogICd0b2dnbGUtc2NyaXB0JwopOwoKLy8gdGhlIHRvZ2dsZSBjb21wb25lbnQgcmVxdWlyZXMgdGhlIGJpdCBvZiBqcwovLyBidXQgaXQgb25seSBuZWVkcyB0byBsb2FkIG9uY2UuCi8vIGJ1dCB0aGlzIGFsc28gbWVhbnMgaXQgd291bGQgbm90IGxvYWQgYXQgYWxsCi8vIGlmIG5vIHRvZ2dsZSBpcyBwcmVzZW50CmNvbnN0IHRvZ2dsZSA9ICh0YWcsIGF0dHIsIGNoaWxkcmVuKSA9PiBbCiAgaG9vaywKICBfW3RhZ10oewogICAgLi4uYXR0ciwKICAgIG9uY2xpY2s6IGB0b2dnbGUuY2FsbCh0aGlzLCd0b2dnbGUtLWFjdGl2ZScpYAogIH0sIGNoaWxkcmVuKSwKXTsKCl8uaHRtbCgKICBfLmhlYWQoCiAgICBfLnRpdGxlKCdCYXNpYyBFeGFtcGxlJyksCiAgICBfLnN0eWxlKAogICAgICBjc3MoJ2JvZHknLCB7CiAgICAgICAgYmFja2dyb3VuZENvbG9yOiAnZ2FpbnNib3JvJwogICAgICB9KSwKICAgICAgY3NzKCcudG9nZ2xlLS1hY3RpdmUnLCB7CiAgICAgICAgY29sb3I6ICdyZWQnLAogICAgICAgIGZvbnRTaXplOiAnMzBweCcKICAgICAgfSkKICAgICksCiAgKSwKICBfLmJvZHkoCiAgICBfLmgxKCdIZWxsbyBXb3JsZCcpLAogICAgdG9nZ2xlKCdwJywgeyBjbGFzczogJ215LXAnIH0sICdoZWxsbyB3b3JsZCcpLAogICAgdG9nZ2xlKCdwJywgeyBjbGFzczogJ215LXAnIH0sICdoZWxsbyB3b3JsZCcpLAogICAgdG9nZ2xlKCdwJywgeyBjbGFzczogJ215LXAnIH0sICdoZWxsbyB3b3JsZCcpLAogICkKKQ==)
+_NEEDS DOCUMENTATION_
+
+### To a Writable Stream
+
+_NEEDS DOCUMENTATION_
+
+### Using Promises
+
+_NEEDS DOCUMENTATION_
+
+### Providing a Context
+
+_NEEDS DOCUMENTATION_
+
+### Consuming Readable Streams
+
+_NEEDS DOCUMENTATION_
+
+------
+
+## Error Handling
+
+_NEEDS DOCUMENTATION_
+
+## Extras
+
+### Inline CSS
+
+_NEEDS DOCUMENTATION_
+
+### Deduping
+
+_NEEDS DOCUMENTATION_
+
+[Deduping experiment](https://skiano.github.io/genz/#Ly8gZGVkdXBlIGVuc3VyZXMgdGhpcyBmcmFnbWVudCBjYW4gb25seSByZW5kZXIgb25jZQpjb25zdCBob29rID0gZGVkdXBlKAogIF8uc2NyaXB0KGBmdW5jdGlvbiB0b2dnbGUobikgeyB0aGlzLmNsYXNzTGlzdC50b2dnbGUobikgfWApLAogICd0b2dnbGUtc2NyaXB0JwopOwoKLy8gdGhlIHRvZ2dsZSBjb21wb25lbnQgcmVxdWlyZXMgdGhlIGJpdCBvZiBqcwovLyBidXQgaXQgb25seSBuZWVkcyB0byBsb2FkIG9uY2UuCi8vIGJ1dCB0aGlzIGFsc28gbWVhbnMgaXQgd291bGQgbm90IGxvYWQgYXQgYWxsCi8vIGlmIG5vIHRvZ2dsZSBpcyBwcmVzZW50CmNvbnN0IHRvZ2dsZSA9ICh0YWcsIGF0dHIsIGNoaWxkcmVuKSA9PiBbCiAgaG9vaywKICBfW3RhZ10oewogICAgLi4uYXR0ciwKICAgIG9uY2xpY2s6IGB0b2dnbGUuY2FsbCh0aGlzLCd0b2dnbGUtLWFjdGl2ZScpYAogIH0sIGNoaWxkcmVuKSwKXTsKCl8uaHRtbCgKICBfLmhlYWQoCiAgICBfLnRpdGxlKCdCYXNpYyBFeGFtcGxlJyksCiAgICBfLnN0eWxlKAogICAgICBjc3MoJ2JvZHknLCB7CiAgICAgICAgYmFja2dyb3VuZENvbG9yOiAnZ2FpbnNib3JvJwogICAgICB9KSwKICAgICAgY3NzKCcudG9nZ2xlLS1hY3RpdmUnLCB7CiAgICAgICAgY29sb3I6ICdyZWQnLAogICAgICAgIGZvbnRTaXplOiAnMzBweCcKICAgICAgfSkKICAgICksCiAgKSwKICBfLmJvZHkoCiAgICBfLmgxKCdIZWxsbyBXb3JsZCcpLAogICAgdG9nZ2xlKCdwJywgeyBjbGFzczogJ215LXAnIH0sICdoZWxsbyB3b3JsZCcpLAogICAgdG9nZ2xlKCdwJywgeyBjbGFzczogJ215LXAnIH0sICdoZWxsbyB3b3JsZCcpLAogICAgdG9nZ2xlKCdwJywgeyBjbGFzczogJ215LXAnIH0sICdoZWxsbyB3b3JsZCcpLAogICkKKQ==)
 
 
 
