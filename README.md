@@ -2,7 +2,19 @@
 
 ⚠️ WARNING: This is exprimental.
 
-👀 View a [Live demo.](https://skiano.github.io/genz/)
+👀 View a [Live demo](https://skiano.github.io/genz/)
+
+- [Quick Example](#quick-example)
+- [Creating HTML](#creating-html)
+- [Rendering HTML](#rendering-html)
+  - [To a string](#to-a-string)
+  - [To a writeable stream](#to-a-writable-stream)
+  - [Using promises in templates](#using-promises)
+  - [Providing a “context” object to templates](#providing-a-context)
+  - [Consuming readable streams in templates](#consuming-readable-streams)
+- [Extras](#rendering-html)
+  - [Inline CSS](#inline-css)
+  - [Deduping](#deduping)
 
 ## Why
 
@@ -21,7 +33,7 @@ This option aims to:
 $ npm install genz
 ```
 
-## Hello world example
+## Quick Example
 
 ```javascript
 import http from 'http';
@@ -65,6 +77,8 @@ $ cd path/to/cloned/repo
 $ npm i
 $ npm run dev
 ```
+
+-----
 
 ## Creating HTML
 
