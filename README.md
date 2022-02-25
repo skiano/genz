@@ -175,7 +175,7 @@ _NEEDS DOCUMENTATION_
 
 _NEEDS DOCUMENTATION_
 
-[Deduping experiment](bit.ly/genz-example-1)
+[Deduping experiment](https://bit.ly/genz-example-1)
 
 
 
