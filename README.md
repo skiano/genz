@@ -21,9 +21,9 @@ Streaming-first SSR for Node Apps
 
 ## Why
 
-It’s true, many websites can be and perhaps should be client-side or universal. However, some websites have pages with mostly static content and all the bells and whistles you need to get a universal site working (not to mention reasonably sized) might not be worth it.
+Many websites can and perhaps should be client-side or universal. However, some website really are mostly pages with minimal interactivity. Starting with a monolithic client application and working backwards to render it on the server can be a trap. At the same time, I’m not sure I want to go back to compiling templates.
 
-This option aims to:
+`genz` aims to:
 
 - Require no tooling or "compiling" for rendering the server HTML
 - Requires no dependencies
