@@ -1,14 +1,12 @@
 # Gen Z
 
-Your unversal-isomorphic-supersonic-tooled-out app is so-five-minutes-ago...
-
-⚠️ WARNING: This is VERY exprimental and may, likely, turn out to be a colossal failure.
+⚠️ WARNING: This is exprimental.
 
 👀 View a [Live demo.](https://skiano.github.io/genz/)
 
 ## Why
 
-It’s true, many websites can be and perhaps should be client-side or universal. However, some websites have large pages with mostly static content and the kind of dependencies and tooling required to have all the bells and whistles, just so you can manage the creating and loading of the requisite javascript—well, that is getting to be a drag. This is an experiment to see what can be done by starting by assuming server-side rendering should really be separate some cases.
+It’s true, many websites can be and perhaps should be client-side or universal. However, some websites have pages with mostly static content and all the bells and whistles you need to get a universal site working (not to mention lean) might not always be worth it.
 
 My thinking so far:
 
@@ -16,8 +14,6 @@ My thinking so far:
 - Avoid dependencies (0 would be ideal)
 - Streaming by default (avoid blocking as much as possible)
 - Start sending content, while allowing parts of the render to be async
-- Extremely minimal (prioritize simplicity over safety)
-- Demonstrate a clear path for embedding complex client apps within pages
 
 ## Installation
 
@@ -46,10 +42,12 @@ http.createServer((req, res) => {
       _.p('This is a basic example.')
     )
   );
-
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.setHeader('Transfer-Encoding', 'chunked');
+  
+  res.writeHead(200, {
+    'Content-Type': 'text/html',
+    'Transfer-Encoding': 'chunked'
+  });
+  
   toStream(res, content);
 
 }).listen(3000, () => {
