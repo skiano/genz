@@ -2,9 +2,9 @@
 
 # Gen Z
 
-Streaming-first SSR for Node Apps
+Streaming-first SSR for Node Apps.
 
-👀 View a [Live demo](https://skiano.github.io/genz/)
+## Contents
 
 - [Quick Example](#quick-example)
 - [Creating HTML](#creating-html)
@@ -134,6 +134,8 @@ const myTag = createTag('my-tag'); // myTag({ id: 'nice' }, 'hi') => <my-tag id=
 const myVoidTag = createTag('my-void-tag', true); // myVoidTag({ id: 'nice' }) => <my-void-tag id="nice">
 
 ```
+
+👀 Play with templating in the [playground](https://skiano.github.io/genz/)
 
 ------
 
