@@ -18,6 +18,7 @@ Streaming-first SSR for Node Apps.
 - [Extras](#rendering-html)
   - [Inline CSS](#inline-css)
   - [Deduping](#deduping)
+  - [Creating your own tag](#creating-a-custom-tag)
 
 ## Why
 
@@ -124,17 +125,6 @@ If you want attributes on a tag you must pass them as the first argument:
 _.section({ id: 'my-id', class: 'my-class' }, /* any children... */)
 ```
 
-If you want to create a tag before you make templates you can do this:
-
-```javascript
-
-import { createTag } from 'genz';
-
-const myTag = createTag('my-tag'); // myTag({ id: 'nice' }, 'hi') => <my-tag id="nice">hi</my-tag>
-const myVoidTag = createTag('my-void-tag', true); // myVoidTag({ id: 'nice' }) => <my-void-tag id="nice">
-
-```
-
 👀 Play with templating in the [playground](https://skiano.github.io/genz/)
 
 ------
@@ -180,6 +170,19 @@ _NEEDS DOCUMENTATION_
 _NEEDS DOCUMENTATION_
 
 [Deduping experiment](https://bit.ly/genz-example-1)
+
+### Creating a Custom Tag
+
+If you want to create a tag before you make templates you can do this:
+
+```javascript
+
+import { createTag } from 'genz';
+
+const myTag = createTag('my-tag'); // myTag({ id: 'nice' }, 'hi') => <my-tag id="nice">hi</my-tag>
+const myVoidTag = createTag('my-void-tag', true); // myVoidTag({ id: 'nice' }) => <my-void-tag id="nice">
+
+```
 
 
 
