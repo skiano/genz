@@ -26,9 +26,11 @@ Many websites can and perhaps should be client-side or universal. However, some 
 `genz` aims to:
 
 - Require no tooling or "compiling" for rendering the server HTML
-- Requires no dependencies
-- Chunked streaming render by default (avoids blocking and respects back pressure in response)
-- Immediately start sending content, while allowing parts of the page to wait for async work
+- Require no dependencies
+- Support chunked streaming render out of the box
+- Avoid blocking the event-loop as much as possible
+- Serve content immediately, while allowing parts of the page to wait for async work
+- Be open-ended when it comes to what a “component” might be on the server
 
 ## Installation
 
