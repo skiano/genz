@@ -21,7 +21,7 @@ Streaming-first SSR for Node Apps
 
 ## Why
 
-Many websites can and perhaps should be client-side or universal. However, some website are composed of mildly interactive pages. In these cases, starting with a monolithic client application and working backwards to render it on the server can be a trap. At the same time, I’m not sure I want to go back to compiling templates, and I’m not quite ready to abandon node either.
+Many websites can and perhaps should be client-side or universal. However, some website are composed of mildly interactive pages. In these cases, starting with a monolithic client application and working backwards to render it on the server can be a trap. At the same time, I’m not sure I want to go back to compiling templates, and I’m not quite ready to abandon Node either.
 
 `genz` aims to:
 
