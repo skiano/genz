@@ -4,6 +4,9 @@ import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 
 (async function runTests() {
+
+  let failures = 0;
+
   const filename = fileURLToPath(import.meta.url);
   const dirname = path.dirname(filename);
   const files = await fs.promises.readdir(dirname);
@@ -25,6 +28,7 @@ import { fileURLToPath } from 'url';
         await test();
         console.log(chalk.green(`✓ ${test.name}`));
       } catch (err) {
+        failures++;
         console.log(chalk.redBright(`✗ ${test.name} failed!\n`));
         console.log(err.stack);
         console.log('');
@@ -34,5 +38,11 @@ import { fileURLToPath } from 'url';
     }
     console.log('');
   }
-  console.log(chalk.underline('\nTests Complete!\n'));
+
+  if (failures > 0) {
+    console.log(chalk.redBright('FAIL!!!'));
+    process.exit(1);
+  } else {
+    console.log(chalk.underline('\nTests Complete!\n'));
+  }
 })();
