@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from 'path';
-import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 
 (async function runTests() {
@@ -18,7 +17,7 @@ import { fileURLToPath } from 'url';
     const m = await import(path.resolve(dirname, file));
     if (!Array.isArray(m.default)) throw new Error(`Suite ${file} invalid`);
 
-    console.log(chalk.underline(`Running Suite: ${file}\n`));
+    console.log(`Running Suite: ${file}\n`);
 
     for (let t = 0; t < m.default.length; t++) {
       const test = m.default[t];
@@ -26,11 +25,13 @@ import { fileURLToPath } from 'url';
       try {
         timer = setTimeout(() => { throw new Error(`Test timed out: ${test.name}`); }, 100);
         await test();
-        console.log(chalk.green(`✓ ${test.name}`));
+        console.log(`✓ ${test.name}`);
       } catch (err) {
         failures++;
-        console.log(chalk.redBright(`✗ ${test.name} failed!\n`));
+        console.log(`✗ ${test.name} failed!\n`);
+        console.log('/\\'.repeat(35))
         console.log(err.stack);
+        console.log('/\\'.repeat(35))
         console.log('');
       } finally {
         clearInterval(timer);
@@ -40,9 +41,9 @@ import { fileURLToPath } from 'url';
   }
 
   if (failures > 0) {
-    console.log(chalk.redBright('FAIL!!!'));
+    console.log('FAIL!!!');
     process.exit(1);
   } else {
-    console.log(chalk.underline('\nTests Complete!\n'));
+    console.log('\nTests Complete!\n');
   }
 })();
