@@ -1,9 +1,15 @@
-import { TAG_NAMES, VOID_ELEMENTS } from "./constants.mjs";
+///////////////
+// UTILITIES //
+///////////////
 
 // from https://www.npmjs.com/package/kebab-case
 const KEBAB_REGEX = /[A-Z\u00C0-\u00D6\u00D8-\u00DE]/g;
 const replacer = match => '-' + match.toLowerCase();
 const kebabCase = str => str.replace(KEBAB_REGEX, replacer);
+
+//////////////
+// CREATION //
+//////////////
 
 export function createTag (name, isVoid, opener) {
   opener = name === 'html' ? '<!DOCTYPE html><html': `<${name}`;
@@ -49,10 +55,9 @@ export function createTag (name, isVoid, opener) {
   };
 }
 
-export const _ = TAG_NAMES.reduce((o, name) => {
-  o[name] = createTag(name, VOID_ELEMENTS[name]);
-  return o;
-}, Object.create(null));
+///////////////
+// TRAVERSAL //
+///////////////
 
 export function traverse (arr, ctx = {}) {
   arr = Array.isArray(arr) ? arr : [arr]; // test this..., and, is it necessary?
@@ -124,6 +129,10 @@ export function traverse (arr, ctx = {}) {
     }
   }
 }
+
+///////////////
+// RENDERING //
+///////////////
 
 export function toString (arr, ctx) {
   const next = traverse(arr, ctx);
@@ -205,9 +214,9 @@ export function toStream (res, arr, ctx, errorRender) {
   res.on('drain', loop);
 }
 
-////////////
-// EXTRAS //
-////////////
+/////////////////////////
+// EXTRA FUNCTIONALITY //
+/////////////////////////
 
 export function dedupe(v, id) {
   v.__DEDUPE__ = id;
@@ -243,3 +252,42 @@ export function mediaQuery(chunks, a, arg) {
   chunks.push('}');
   return chunks;
 }
+
+///////////////////////////////
+// CREATE THE HTML FUNCTIONS //
+///////////////////////////////
+
+const TAG_NAMES = [
+  'a', 'abbr', 'address', 'area', 'article', 'aside', 'audio',
+  'b', 'base', 'bdi', 'bdo', 'blockquote', 'body', 'br', 'button',
+  'canvas', 'caption', 'center', 'cite', 'code', 'col', 'colgroup',
+  'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt',
+  'em', 'embed',
+  'fieldset', 'figcaption', 'figure', 'footer', 'form',
+  'head', 'header', 'hgroup', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'html',
+  'i', 'iframe', 'img', 'input', 'ins',
+  'kbd', 'keygen',
+  'label', 'legend', 'li', 'link',
+  'main', 'map', 'mark', 'menu', 'menuitem',
+  'meta', 'meter',
+  'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output',
+  'p', 'param', 'picture', 'pre', 'progress',
+  'q',
+  'rp','rt', 'ruby',
+  's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'svg',
+  'table', 'tbody', 'td', 'template', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track',
+  'u', 'ul',
+  'video',
+  'wbr',
+];
+
+const VOID_ELEMENTS = {
+  area: true, base: true, br: true, col: true, command: true, embed: true, 
+  hr: true, img: true, input: true, keygen: true, link: true, meta: true, 
+  param: true, source: true, track: true, wbr: true,
+};
+
+export const _ = TAG_NAMES.reduce((o, name) => {
+  o[name] = createTag(name, VOID_ELEMENTS[name]);
+  return o;
+}, Object.create(null));

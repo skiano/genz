@@ -5,30 +5,15 @@
   "type": "module",
   "version": "0.9.3",
   "description": "Streaming-first SSR for Node Apps",
-  "main": "genz.build.mjs",
+  "main": "genz.mjs",
   "scripts": {
     "test": "node test/_.mjs",
-    "dev": "nodemon example/app.mjs",
-    "dev:playground": "vite serve playground --config playground/vite.config.js",
-    "build": "rollup src/genz.mjs --file genz.build.mjs",
-    "release:patch": "./RELEASE.sh patch",
-    "release:minor": "./RELEASE.sh minor",
-    "release:major": "./RELEASE.sh major"
+    "release:patch": "node test/_.mjs && npm version patch && git push origin master --tags && npm publish",
+    "release:minor": "node test/_.mjs && npm version minor && git push origin master --tags && npm publish",
+    "release:major": "node test/_.mjs && npm version major && git push origin master --tags && npm publish"
   },
   "devDependencies": {
-    "@vue/compiler-ssr": "^3.2.31",
-    "@codemirror/basic-setup": "^0.19.1",
-    "@codemirror/lang-javascript": "^0.19.7",
-    "@codemirror/view": "^0.19.44",
-    "chalk": "^5.0.0",
-    "express": "^4.17.3",
-    "nodemon": "^2.0.15",
-    "puppeteer": "^13.3.2",
-    "regexparam": "^2.0.0",
-    "rollup": "^2.67.3",
-    "ts-dedent": "^2.2.0",
-    "vue": "^3.2.31",
-    "vite": "^2.8.0"
+    "chalk": "^5.0.0"
   },
   "repository": {
     "type": "git",
