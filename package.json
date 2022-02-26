@@ -12,9 +12,6 @@
     "release:minor": "node test/_.mjs && npm version minor && git push origin master --tags && npm publish",
     "release:major": "node test/_.mjs && npm version major && git push origin master --tags && npm publish"
   },
-  "devDependencies": {
-    "chalk": "5.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skiano/genz.git"
