@@ -1,3 +1,5 @@
+/* @license https://github.com/skiano/genz/blob/main/LICENSE */
+
 ///////////////
 // UTILITIES //
 ///////////////
