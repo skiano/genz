@@ -22,11 +22,11 @@ Streaming-first SSR for Node Apps.
 
 ## Why
 
-Many websites can and perhaps should be client-side or universal. However, some website are composed of mildly interactive pages. In these cases, starting with a monolithic client application and working backwards to render it on the server can be a trap. At the same time, I’m not sure I want to go back to compiling templates, and I’m not quite ready to abandon Node either.
+Many websites can—and perhaps should—be “client-side” or “universal” JavaScript applications. However, some website are composed primarily of _pages_ with slight interaction, a few drop-downs here, some hover effects there, and _within_ such pages the occasional highly interactive experience. In these cases, starting with a monolithic client application and working backwards to render it on the server can become a terrible trap. It is fruitful, I think, to take a fresh look at what working the other way round could look like today. This if only to balance out the super-abundance of client-side frameworks that have popped up over the last several years.
 
 `genz` aims to:
 
-- Require no tooling or "compiling" for rendering the server HTML
+- Require no tooling or template compilation for rendering the server HTML
 - Require no dependencies
 - Support chunked streaming render out of the box
 - Avoid blocking the event-loop as much as possible
@@ -135,39 +135,39 @@ So far we have only produced a data object that can be sent to a writable stream
 
 ### To a String
 
-_NEEDS DOCUMENTATION_
+_Needs documentation..._
 
 ### To a Writable Stream
 
-_NEEDS DOCUMENTATION_
+_Needs documentation..._
 
 ### Using Promises
 
-_NEEDS DOCUMENTATION_
+_Needs documentation..._
 
 ### Providing a Context
 
-_NEEDS DOCUMENTATION_
+_Needs documentation..._
 
 ### Consuming Readable Streams
 
-_NEEDS DOCUMENTATION_
+_Needs documentation..._
 
 ------
 
 ## Error Handling
 
-_NEEDS DOCUMENTATION_
+_Needs documentation..._
 
 ## Extras
 
 ### Inline CSS
 
-_NEEDS DOCUMENTATION_
+_Needs documentation..._
 
 ### Deduping
 
-_NEEDS DOCUMENTATION_
+_Needs documentation..._
 
 [Deduping experiment](https://bit.ly/genz-example-1)
 
