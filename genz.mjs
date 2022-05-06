@@ -180,10 +180,14 @@ export function toStream (res, arr, ctx, errorRender) {
   let stream;
   function readStream () {
     stream.on('data', (d) => {
-      if (res.write(d)) stream.read();
-      else res.on(drain, readStream);
+      if (res.write(d)) {
+        if (stream.read) stream.read();
+        else stream.resume();
+      }
+      else res.on('drain', readStream);
     });
-    stream.read();
+    if (stream.read) stream.read();
+    else stream.resume();
   }
 
   async function loop () {
