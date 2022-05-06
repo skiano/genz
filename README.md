@@ -20,19 +20,6 @@ Streaming-first SSR for Node Apps.
   - [Deduping](#deduping)
   - [Creating your own tag](#creating-a-custom-tag)
 
-## Why
-
-Many websites can—and perhaps should—be “client-side” or “universal” JavaScript applications. However, some website are composed primarily of _pages_ with slight interaction, a few drop-downs here, some hover effects there, and _within_ such pages the occasional highly interactive experience. In these cases, starting with a monolithic client application and working backwards to render it on the server can become a terrible trap. It is fruitful, I think, to take a fresh look at what working the other way round could look like today. This if only to balance out the super-abundance of client-side frameworks that have popped up over the last several years.
-
-`genz` aims to:
-
-- Require no tooling or template compilation for rendering the server HTML
-- Require no dependencies
-- Support chunked streaming render out of the box
-- Avoid blocking the event-loop as much as possible
-- Serve content immediately, while allowing parts of the page to wait for async work
-- Be open-ended when it comes to what a “component” might be on the server
-
 ## Installation
 
 ```bash
